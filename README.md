@@ -1,21 +1,24 @@
-# Supporting the preservation of legacy source code.
+# SW_NAME Depository
 
-Instantiating this template creates a workbench to support the acquisition of legacy source code, according to [SWHAP](https://www.softwareheritage.org/swhap/), the [Software Heritage](https://www.softwareheritage.org/) Acquisition Process defined by the [SWHAP\@Pisa](
-    #TODO:
-) project.
+### This is the depository for the acquisition of SW_NAME, SW_DESCRIPTION.
 
-The workbench comes with the predefined folders that are used in the supported process. Namely:
+OPTIONAL_ADDITIONAL_SW_DESCRIPTION
 
-- Folder [raw materials](./raw_materials) is for the original materials, as they have been found or submitted.
+-------------------
 
-- Folder [browsable source](./browsable_source) is for a browsable version of the source code. Source files, with the right extension, have to be accessible through the GitHub web interface, e.g., archives should be decompressed, code should be transcribed if provided by images, etc.
+__Please note: this file need be renamed as README.md just after instantiation. We suggest that you delete this line, once done.__
 
-- Folder [source](./source) is for the curated revision of the source code, as a base for the reconstruction of the development history as a git repository.
+This repository contains the [raw materials](./raw_materials) and the [browsable source](./browsable_source) of SW_NAME.
 
-- Folder [metadata](/.metadata) holds various files with meta information (catalogue, actors, journal, tags) to be updated throughout the process. 
+[Information on the acquisition process](https://github.com/Unipisa/SW_NAME-Workbench/tree/master/metadata) can be found in the [Workbench](https://github.com/Unipisa/SW_NAME-Workbench).
 
-- Folder [additional materials](./additional_materials) is for materials originated during the recovery process to document it or to shed new light on the recovered software project.
+The resulting 
+[development history](https://github.com/Unipisa/SW_NAME/tree/SourceCode/)  can be found in the [SW_NAME repository](https://github.com/Unipisa/SW_NAME).
 
-Please note that this file need be **replaced** in the instantiated workbench.
 
-Please look at the [SWHAPPE repository](https://github.com/Unipisa/SWHAPPE/blob/master/README.md) and the [guidelines](https://github.com/SoftwareHeritage/swhapguide/blob/master/SWHAP%40Pisa.pdf)  for more details. 
+This repository was created with the support of the 
+[Software Heritage Acquisition Process Pisa Enactor](https://github.com/Unipisa/SWHAPPE).
+
+-------------------
+
+
