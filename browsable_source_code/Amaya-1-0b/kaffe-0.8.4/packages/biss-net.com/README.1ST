@@ -1,9 +1,0 @@
-BISS-AWT
-========
-
-This pacakge provides enough of BISS-AWT to support the standard AWT
-interface under Java.  The full BISS-AWT sources can be found elsewhere
-and come with a number of ultilities and additions.  These are not
-included in this packages.
-
-You can find more details on BISS-AWT in the README file.

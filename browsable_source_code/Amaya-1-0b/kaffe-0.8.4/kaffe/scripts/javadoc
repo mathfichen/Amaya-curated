@@ -1,3 +1,0 @@
-#! /bin/sh
-# Script to run Sun's document using Kaffe.
-kaffe sun.tools.javadoc.Main $*

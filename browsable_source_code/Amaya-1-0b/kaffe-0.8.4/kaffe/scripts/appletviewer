@@ -1,3 +1,0 @@
-#! /bin/sh
-# Script to run Sun's appletviewer using Kaffe.
-kaffe sun.applet.AppletViewer $*
