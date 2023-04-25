@@ -23,7 +23,7 @@ Example of Item link:
 
 # SW_NAME Journal
 
-* **dd/mm/yyyy** 
+* **25/04/2023** 
   * *Items:*  [Item Name](./material/example_file.zip).
   * *Actors:* [Name Surname](./actors.md#name-surname) (role).
   * *Description:* Action done on the Depository.
