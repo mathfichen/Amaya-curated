@@ -2,26 +2,28 @@
     "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
     "@type": "SoftwareSourceCode",
     "identifier": "a unique identifier",
-    "description": "a brief description of the software",
-    "applicationCategory" : "Type of software application, e.g. 'Game, Multimedia'",
-    "name": "software name",
-    "codeRepository":  "URL to related resources",
-    "license": "info about the license",
-    "version": "X.X",
+    "description": "Amaya is a Web editor, i.e. a tool used to create and update documents directly on the Web. Browsing features are seamlessly integrated with the editing and remote access features in a uniform environment.",
+    "applicationCategory" : "Web brower and editor",
+    "name": "Amaya",
+    "codeRepository":  "https://github.com/w3c/Amaya-Editor",
+    "license": "Copyright © 1994-2012 INRIA and W3C® (not Open Source?)",
+    "version": "11.4.7 (website says 11.4.4?)",
     "keywords" : [
-        "tag for the software", 
-        "other tag"
+        "web browser", 
+        "web editor",
+        "W3C",
+        "Inria"
     ],
     "releaseNotes" : "release notes and comments",
     "funding" : "software funded by...(e.g. specific grant)",
-    "runtimePlatform" : "operating system",
+    "runtimePlatform" : "Windows, MacOS, Debian",
     "softwareRequirements" : ["dependencies and other requirements"],
     "developmentStatus" : "from https://www.repostatus.org/ e.g. Unsupported", 
     "dateCreated" : "YYYY-MM-DD",
     "datePublished" : "YYYY-MM-DD",
     "relatedLink" : ["https://..", "http://.."],
-    "programmingLanguage" : "main programming language",
-     "isPartOf" : "maybe the software is part of some project",
+    "programmingLanguage" : "C",
+     "isPartOf" : "mW3C and WAM Project at Inria",
     "referencePublication" : [ 
       {
           "@type": "ScholarlyArticle",
@@ -32,9 +34,9 @@
     "author": [
       {
         "@type": "Person",
-        "givenName": "Given",
-        "familyName": "Family",
-        "affiliation" : "affiliation at the time of development",
+        "givenName": "Vincent",
+        "familyName": "Quint",
+        "affiliation" : "Inria",
         "email": "given.family@org.com"
       }
     ],
