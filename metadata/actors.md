@@ -22,7 +22,7 @@ Example of Item link:
 ~~~
 
 
-# SW_NAME Actors
+# Amaya Actors
 
 
 * # Laurent Carcone
