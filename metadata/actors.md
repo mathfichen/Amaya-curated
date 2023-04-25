@@ -25,13 +25,24 @@ Example of Item link:
 # SW_NAME Actors
 
 
-* # Name Surname
+* # Laurent Carcone
   * *Affiliation* 
-     * *Current:* [Example Departement](www.example.com)
-       * *Email:* <surname@example.com> 
+     * *Current:* [ERCIM](https://www.ercim.eu/), [W3C]
+       * *Email:* <laurent@w3.org> 
        * *Github handle:* [@github](https://github.com/github)
-       * *Website:* <http://www.example.com/~example/>
-     * *Historical:* [Ancient Example Departement](www.ancient.example.com)
+       * *Website:* <[http://www.example.com/~example/](http://carcone.fr/cv.html)>
+     * *Historical:* [Inria](https://www.inria.fr/fr)
        * *Email:* <surname@ancient.example.com> 
-  * *Roles:* Author
+  * *Roles:* Author, Collector
+
+
+* # Mathilde Fichen
+  * *Affiliation* 
+     * *Current:* [Inria](https://www.ercim.eu/), [W3C]
+       * *Email:* <laurent@w3.org> 
+       * *Github handle:* [@github](https://github.com/github)
+       * *Website:* <[http://www.example.com/~example/](http://carcone.fr/cv.html)>
+     * *Historical:* [Inria](https://www.inria.fr/fr)
+       * *Email:* <mathilde.fichen@inria.fr> 
+  * *Roles:* Collector, Curator
   
