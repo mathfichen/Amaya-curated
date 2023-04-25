@@ -27,7 +27,7 @@ Example of Item link:
 
 * # Laurent Carcone
   * *Affiliation* 
-     * *Current:* [ERCIM](https://www.ercim.eu/), [W3C]
+     * *Current:* [ERCIM](https://www.ercim.eu/), [W3C](https://www.w3.org/)
        * *Email:* <laurent@w3.org> 
        * *Github handle:* [@github](https://github.com/github)
        * *Website:* <[http://www.example.com/~example/](http://carcone.fr/cv.html)>
@@ -38,7 +38,7 @@ Example of Item link:
 
 * # Mathilde Fichen
   * *Affiliation* 
-     * *Current:* [Inria](https://www.ercim.eu/), [W3C]
+     * *Current:* [Inria](https://www.ercim.eu/)
        * *Email:* <laurent@w3.org> 
        * *Github handle:* [@github](https://github.com/github)
        * *Website:* <[http://www.example.com/~example/](http://carcone.fr/cv.html)>
