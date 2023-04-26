@@ -38,7 +38,61 @@
         "familyName": "Quint",
         "affiliation" : "Inria",
         "email": "given.family@org.com"
-      }
+      },
+      {
+        "@type": "Person",
+        "givenName": "Vatton",
+        "familyName": "Irène",
+        "affiliation" : "Inria",
+        "email": "given.family@org.com"
+    },
+              {
+        "@type": "Person",
+        "givenName": "Carcone",
+        "familyName": "Laurent",
+        "affiliation" : "Inria",
+        "email": "given.family@org.com"
+    },
+               {
+        "@type": "Person",
+        "givenName": "Guétari",
+        "familyName": "Ramzi",
+        "affiliation" : "Inria",
+        "email": "given.family@org.com"
+    },              {
+        "@type": "Person",
+        "givenName": "Veillard",
+        "familyName": "Daniel",
+        "affiliation" : "Inria",
+        "email": "given.family@org.com"
+    },
+                      {
+        "@type": "Person",
+        "givenName": "Cheyrou-Lagreze",
+        "familyName": "Paul",
+        "affiliation" : "Inria",
+        "email": "given.family@org.com"
+    },
+                      {
+        "@type": "Person",
+        "givenName": "Kahan",
+        "familyName": "José",
+        "affiliation" : "Inria",
+        "email": "given.family@org.com"
+    },
+                      {
+        "@type": "Person",
+        "givenName": "Gully",
+        "familyName": "Stéphane",
+        "affiliation" : "Inria",
+        "email": "given.family@org.com"
+    },              {
+        "@type": "Person",
+        "givenName": "Kia",
+        "familyName": "Emilien",
+        "affiliation" : "Inria",
+        "email": "given.family@org.com"
+    }
     ],
     "contributor": [
     {
@@ -47,7 +101,8 @@
         "familyName": "Family",
         "affiliation" : "affiliation at the time of development",
         "email": "given.family@org.com"
-    }
+    },
+        
     ]
 }
 
