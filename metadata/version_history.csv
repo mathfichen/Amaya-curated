@@ -1,7 +1,4 @@
 directory name,author name,author email,date,curator name,curator email,release tag,commit message
-v1.0,Me,me@example.com,09/16/1972 09:54:00,The Curation Team,l.bussi1@studenti.unipi.it,1.0,"First release|First commit description|and so on"
-v1.1,Me,me@example.com,10/16/1972 09:14:00,The Curation Team,l.bussi1@studenti.unipi.it,1.1,"Second release|Second commit description|and so on"
-
 Amaya-0-9, W3C and Inria, laurent.carcone@inria.fr, 14/11/1996 00:00:00, Software Heritage, mathilde.fichen@inria.fr, Amaya-0-9, Not on Github
 Amaya-0-9-5b, W3C and Inria, laurent.carcone@inria.fr, 09/01/1997 00:00:00, Software Heritage, mathilde.fichen@inria.fr, Amaya-0-9-5b, Not on Github
 Amaya-1-0, W3C and Inria, laurent.carcone@inria.fr, 03/04/1997 00:00:00, Software Heritage, mathilde.fichen@inria.fr, Amaya-0-9-5b, Not on Github
