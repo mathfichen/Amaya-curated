@@ -33,16 +33,16 @@ Example of Item link:
        * *Website:* <[http://www.example.com/~example/](http://carcone.fr/cv.html)>
      * *Historical:* [Inria](https://www.inria.fr/fr)
        * *Email:* <surname@ancient.example.com> 
-  * *Roles:* Author, Collector
+  * *Roles:* Author, Collector, Curator
 
 
 * # Mathilde Fichen
   * *Affiliation* 
-     * *Current:* [Inria](https://www.ercim.eu/)
-       * *Email:* <laurent@w3.org> 
-       * *Github handle:* [@github](https://github.com/github)
-       * *Website:* <[http://www.example.com/~example/](http://carcone.fr/cv.html)>
-     * *Historical:* [Inria](https://www.inria.fr/fr)
+     * *Current:* [Inria]([https://www.ercim.eu/](https://www.inria.fr/fr))
        * *Email:* <mathilde.fichen@inria.fr> 
+       * *Github handle:* [@github](https://github.com/github)
+       * *Website:* 
+     * *Historical:* 
+       * *Email:* 
   * *Roles:* Collector, Curator
   
