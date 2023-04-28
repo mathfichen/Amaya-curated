@@ -30,7 +30,7 @@ Example of Item link:
      * *Current:* [ERCIM](https://www.ercim.eu/), [W3C](https://www.w3.org/)
        * *Email:* <laurent@w3.org> 
        * *Github handle:* [@github](https://github.com/github)
-       * *Website:* <[http://www.example.com/~example/](http://carcone.fr/cv.html)>
+       * *Website:* <[Carcone personal page](http://carcone.fr/cv.html)>
      * *Historical:* [Inria](https://www.inria.fr/fr)
        * *Email:* <surname@ancient.example.com> 
   * *Roles:* Author, Collector, Curator
