@@ -1,0 +1,58 @@
+KAFFE                                                       COMMON PROBLEMS
+===========================================================================
+Written by Tim Wilkinson <tim@tjwassoc.demon.co.uk>, 1996-97.
+Ported to AmigaOS by Matthias Hopf <mshopf@informatik.uni-erlangen.de>
+
+
+
+COMMON CONFIGURATION PROBLEMS
+
+- 'version ixemul.library'
+  You will need at least V44.0 of ixemul.library. The kaffe binaries that
+  can be fetched from ftp.ninemoons.com need at least V45.0 of
+  ixemul.library.
+
+- Sun's classes.zip file.
+  For kaffe to work properly you will need the JDK 1.0.2 classes.zip file
+  from Sun, available from Sunsoft or from any kaffe-sun-* archive from
+  ftp.ninemoons.com.
+  *NOTE* The JDK 1.0.1 classes.zip file does not work with kaffe! Guavac
+  seems to be shipped with the old Sun classes.
+
+- 'echo "$CLASSPATH"'
+  The classpath has to include at least '.' (the current directory) and
+  Sun's classes.zip file (the file itself, not the directory where it is
+  located). A valid classpath may be set with e.g.
+    setenv CLASSPATH ".;ADE:share/kaffe/classes.zip"
+  Don't forget the doublequotes (';' is the comment specifier in AmigaDos).
+  And do not forget the trailing dot when specifying the current directory
+  or volumes (e.g. 'kaffe:.'). Of course the CLASSPATH specification is
+  also affected by your ixprefs settings!
+
+- 'ixprefs -i 0'
+  Either you will have to make ixemul.library recognize global environment
+  variables, or you will have to set the local environment variable
+    set CLASSPATH="$CLASSPATH"
+  Again, don't forget the doublequotes.
+
+- 'EMT Trap.'
+  When kaffe simply aborts with 'EMT Trap', then you have probably an
+  executable compiled for Amigas with coprozessors (versions before 0.7.1
+  from ADE were compiled with -m68881 by accident).
+  It is possible, that you have the wrong ixemul.library installed, too.
+  If you do not get this problem regulary, it may well be that you just
+  encountered a problem inherrited to several IDE drives which cannot
+  handle high MaxTransfer settings (if any is set up at all...).
+  If you run kaffe from a SCSI drive, it can also be a drive and/or host
+  adaptor with reselection problems. In that case disable reselection.
+
+
+That's it, folks :)
+
+Matthias Hopf
+<mshopf@informatik.uni-erlangen.de>
+
+
+----
+* Java and Javasoft are registered trademark of Sun Microsystems, Inc.
+

@@ -1,0 +1,84 @@
+KAFFE                                                            KNOWN BUGS
+===========================================================================
+Written by Tim Wilkinson <tim@tjwassoc.demon.co.uk>, 1996-97.
+Ported to AmigaOS by Matthias Hopf <mshopf@informatik.uni-erlangen.de>
+
+
+
+KNOWN BUGS of the current version
+
+- NullPointerExceptions are not generated right now. The kaffe code
+  currently relys on SIGSEGV signals for NULL pointer access, which cannot
+  work on AmigaOS. This will change in the future.
+  *NOTE* On NULL pointer access you *will* encounter Enforcer hits.
+  These can even crash your computer...
+
+
+
+KNOWN BUGS of former versions
+
+* distributions before V0.7.1
+
+- When kaffe simply aborts with 'EMT Trap', then you have probably an
+  executable compiled for Amigas with coprozessors (binary archives from
+  ADE were compiled with -m68881 by accident and the configure script
+  added the options -m68020-40 and -m68881).
+
+* distributions before V0.7.0
+
+- kaffeh produced loads of (most times harmless) Enforcer hits and
+  generated wrong files sometimes.
+
+- kaffeh liked toabort with 'Bus error' when invoked without the
+  '-stubs' option.
+
+* distributions before V0.6.0
+
+- kaffeh of distributions before V0.6.0 used a different CLASSPATH scheme
+  (':' as seperator).
+
+- kaffevm/thread.c did not compile without warnings because of the thread
+  switching macros.
+
+- kaffe-0.5p4 aborted with an 'Exception thrown on NULL object' when the
+  classes.zip file (see below) couldn't be found. kaffe-0.5.5 simply
+  crashes, however. Begining with kaffe-0.6.0 this abnormal exception is
+  caught.
+
+
+KNOWN COMPILATION BUGS of former versions
+
+* distributions before V0.7.1
+
+- Kaffe was compiled with -m68020-40 and -m68881 by accident.
+
+- Several version did not compile when fetched from Tim's original kaffe
+  site. The ADE versions had several bug fixes.
+
+
+NONWORKING CLASSES
+
+* distributions before V0.7.1
+
+- exception/NullTest  (see BUGS)
+- exception/StackDump
+- some more...
+
+
+OTHER NOTES
+
+* distributions before V0.7.1
+
+- The thread switching code was not perfect. However, you should not notice
+  that except when compiling kaffe...
+
+
+That's it, folks :)
+
+Matthias Hopf
+<mshopf@informatik.uni-erlangen.de>
+
+
+----
+* Java and Javasoft are registered trademark of Sun Microsystems, Inc.
+

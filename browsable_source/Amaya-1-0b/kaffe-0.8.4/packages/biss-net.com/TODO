@@ -1,0 +1,20 @@
+---
+The java app server (start module via socket) will be the very next.
+This, eventually, will let the "run" menu item re-appear in the CUBrowser
+---
+java.awt compatibility has not been tested thoroughly. MenuItems / hotkeys
+in particular are not compatible yet (within handleEvent() re-implementations,
+you can't map an ACTION event by comparing MenuItem objects, you have to rely
+on the MenuItem text argument to check for a certain command - but this
+should be the standard case anyway).  
+---
+Hotkey / MenuItem handling will be restructured in a more JDK 1.1
+compliant way
+---
+The biss.awt.kernel native layer doesn't shrink requested Frame sizes by
+the window manager decoration extends. This means a "resize( 200, 200)"
+will yield a client area of this size (located within a toplevel window).
+---
+jpeg image files are not yet handled by the biss.awt.kernel package
+(but interlaced GIFs now whould work)
+

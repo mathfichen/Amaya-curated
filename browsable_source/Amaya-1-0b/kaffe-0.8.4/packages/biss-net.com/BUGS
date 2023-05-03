@@ -1,0 +1,16 @@
+OS/2 byte aligns Windows (ChoiceWindows may have wrong widths). Dear IBM,
+please set FCF_NOBYTEALIGN in the WinCreateStdWindow call to fix this
+
+Motif (JDK) left upper Frame resize (via mouse) looses location (causing
+popups and Choices to appear at wrong locations). Could be fixed like
+it is done in display.c (in the biss.awt.kernel native layer for kaffe)
+
+Windows keystrokes with 'alt' modifiers are not reported (by JDK 1.0.2) as
+Java events (as a workaround, we use Ctrl+Shift as global hotkey modifier)
+
+Uggly OS/2 bold fonts on some machines (e.g. Toshiba laptops). Dear IBM again,
+if you read this, please add a workaround which maps Java fonts to OS/2
+bitmap fonts (maybe something like it is done in font.c with non-standard
+Java font names). I know it is not really your fault, but it can make a real
+difference
+

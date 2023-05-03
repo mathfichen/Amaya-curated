@@ -1,0 +1,61 @@
+# Makefile.in for kaffeh - kaffe native code stub generator.
+#
+# Copyright (c) 1996 T. J. Wilkinson & Associates, London, UK.
+#
+# See the file "license.terms" for information on usage and redistribution
+# of this file, and for a DISCLAIMER OF ALL WARRANTIES.
+#
+# Written by Tim Wilkinson <tim@tjwassoc.demon.co.uk>, 1996.
+
+@VPATHOPT@=	@srcdir@
+srcdir=		@srcdir@
+prefix=		@prefix@
+exec_prefix=	@exec_prefix@
+bindir=		@bindir@
+INSTALL=	@INSTALL@
+INSTALL_PROGRAM=@INSTALL_PROGRAM@
+MKDIR=		@MKDIR@
+CC=		@CC@
+INCLUDES=	-I. -I$(srcdir) -I../../config -I$(srcdir)/../kaffevm -I$(srcdir)/../../config -I../../include
+CFLAGS=		@CFLAGS@
+ALL_CFLAGS=	$(CFLAGS) $(INCLUDES) -DKAFFEH -DKVER=\"@KVER@\"
+LDFLAGS=	@LDFLAGS@
+LIBS=		@LIBS@
+OBJEXT=		@OBJEXT@
+EXEEXT=		@EXEEXT@
+
+OBJECT=\
+		constants$(OBJEXT) \
+		sigs$(OBJEXT) \
+		support$(OBJEXT) \
+		main$(OBJEXT) \
+		zextract$(OBJEXT) \
+		util$(OBJEXT) \
+		readClass$(OBJEXT)
+
+all:		kaffeh$(EXEEXT)
+
+kaffeh$(EXEEXT):	$(OBJECT)
+		$(CC) $(LDFLAGS) -o kaffeh$(EXEEXT) $(OBJECT) $(LIBS)
+
+readClass$(OBJEXT):	$(srcdir)/../kaffevm/readClass.c
+		$(CC) $(ALL_CFLAGS) -c $?
+
+zextract$(OBJEXT):	$(srcdir)/../kaffevm/zextract.c
+		$(CC) $(ALL_CFLAGS) -c $?
+
+util$(OBJEXT):	$(srcdir)/../kaffevm/util.c
+		$(CC) $(ALL_CFLAGS) -c $?
+
+.c$(OBJEXT):
+		$(CC) $(ALL_CFLAGS) -c $?
+
+clean:
+		rm -f kaffeh$(EXEEXT) kaffeh.core $(OBJECT)
+
+distclean:	clean
+		rm -f Makefile
+
+install:
+		test -d $(bindir) || $(MKDIR) $(bindir)
+		$(INSTALL_PROGRAM) kaffeh$(EXEEXT) $(bindir)/kaffeh$(EXEEXT)

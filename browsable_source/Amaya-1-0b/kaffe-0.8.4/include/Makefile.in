@@ -1,0 +1,29 @@
+# Library support
+#
+# Copyright (c) 1996 T. J. Wilkinson & Associates, London, UK.
+#
+# See the file "license.terms" for information on usage and redistribution
+# of this file, and for a DISCLAIMER OF ALL WARRANTIES.
+#
+# Written by Tim Wilkinson <tim@tjwassoc.demon.co.uk>, 1996.
+
+prefix=		@prefix@
+srcdir=		@srcdir@
+incdir=		@includedir@/kaffe
+INSTALL=	@INSTALL@
+INSTALL_DATA=	@INSTALL_DATA@
+MKDIR=		@MKDIR@
+
+all:
+
+clean:
+
+distclean:
+		rm -f Makefile jtypes.h
+
+install:
+		test -d $(incdir) || $(MKDIR) $(incdir)
+		$(INSTALL_DATA) jtypes.h $(incdir)/jtypes.h
+		$(INSTALL_DATA) $(srcdir)/native.h $(incdir)/native.h
+		$(INSTALL_DATA) $(srcdir)/StubPreamble.h $(incdir)/StubPreamble.h
+		$(INSTALL_DATA) $(srcdir)/java_lang_String.h $(incdir)/java_lang_String.h

@@ -1,0 +1,20 @@
+List of active contributors (or who's doing what):
+==================================================
+
+Name                                              Project
+----                                              -------
+
+Tim Wilkinson <tim@tjwassoc.demon.co.uk>          Virtual machine.
+						  Kaffe for i386 & Sparc.
+
+Attila Molnar <gusthy@hu.bonus.com>               Kaffe for PPC
+Matthias Hopf <mshopf@informatik.uni-erlangen.de> Kaffe for Amiga & m68k NeXT.
+Richard Henderson <rth@tamu.edu>		  Kaffe for Alpha.
+Lee Iverson <leei@Canada.AI.SRI.COM>		  Kaffe for MIPS.
+
+Claude Lecommandeur <Claude.Lecommandeur@Epfl.Ch> AWT
+Patrick Caulfield <patrick@pandh.demon.co.uk>     AWT
+Peter C. Mehlitz <pm@biss-net.com>		  BISS-AWT
+
+Mark Huizer <xaa@stack.nl>                        FreeBSD package of Kaffe
+Erik Troan <ewt@redhat.com>                       Linux package of Kaffe

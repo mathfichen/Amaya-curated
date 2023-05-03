@@ -1,0 +1,13 @@
+Known problems and things to fix:
+=================================
+
+InetAddress 
+        not sure if your threads package or model
+        handles this, but the gethostby*() routines
+        use a static buffer and arent thread safe.
+
+Finish native and net libraries.
+
+Bytecode verification.
+
+Floating point printout format does not correspond to the spec.

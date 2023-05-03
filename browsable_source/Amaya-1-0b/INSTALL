@@ -1,0 +1,142 @@
+
+
+	  How to compile Thot and Amaya from sources
+
+
+Starting with Thot version 2.1b and Amaya 1.0b, the source tree
+uses autoconf to solve the platform specific dependancies and
+ease the overall installation of both Thot and Amaya packages.
+
+Compiling and Installing in 4 steps:
+------------------------------------
+
+   1/ install your source code tree:
+      
+      the thot library sources are mandatory:
+
+      gunzip -c /tmp/thot-src-xxx.tar.gz | tar xvf -
+
+      this will create a Thot subtree of approximately 13 MBytes
+      Then add the Thot editor sources and/or the Amaya sources.
+
+      cd Thot
+      gunzip -c /tmp/thoteditor-src-xxx.tar.gz | tar xvf -
+      gunzip -c /tmp/amaya-src-yyy.tar.gz | tar xvf -
+
+      This will add the specific Thot and/or Amaya sources.
+      The tree can grow up to 33 MBytes if both are extracted.
+
+   2/ Lauch configure to create the Makefile(s), it is cleaner
+      to create a subtree for objects:
+
+      mkdir objects
+      cd objects
+      ../configure
+
+      This creates all the Makefiles needed and generate an
+      Options.orig file containing all the variable which can
+      be tuned. For example one can just change the CFLAGS values.
+      Be careful, autoconf usually set up the debug flag "-g" which
+      tends to generate very big library and binaries.
+      With -g the object tree can grow up to 100 MBytes while without
+      it it won't use more than 20 MBytes.
+      It also gives some hints on how the source tree is configured.
+
+      Configure accepts 4 specific parameters allowing to select
+      packages to be compiled:
+      
+      --with-thot             Build the Thot editor
+      --with-amaya            Build the Amaya HTML browser/editor
+      --enable-java           Add Kaffe Java virtual machine
+      --enable-plugin         Add Netscape Plug-Ins support
+
+      By default configure tries to compile both Amaya and Thot editor
+      if found, it also enable Java by default (otherwise network
+      accesses are done using libWWW). Since Kaffe Java V.M. and Plugins
+      usually don't work well together, plugins support are disabled
+      by default if Java is enabled.
+
+      To compile Amaya without Java (for example if Kaffe doesn't work
+      well on your platform) use the following:
+
+      ../configure --disable-java
+
+      To not compile Thot even it is available in the source tree:
+
+      ../configure --without-thot
+
+   3/ Build everything:
+
+      make all
+      make schemas      (Only if you need Thot editor)
+
+      It is strongly recommended to use GNU make, which may not be
+      the default make on your system. In this case try 
+
+      gmake all
+
+      or
+
+      gnumake all
+
+      The compilation process can take a fair amount of time, 15 minutes
+      at least.
+      You can test the result immediately by lauching Thot or Amaya
+      generated in the bin directory:
+
+      bin/amaya
+      bin/thot
+
+   4/ Install the program:
+
+      make install
+
+      By default, the binaries are installed in /usr/local/bin,
+      libraries in /usr/local/lib and all data are in /usr/local/share/thot.
+      This can be overrided by specifying different values for prefix(es)
+      as configure command line options in step 2/
+
+      Ultimately, if you're not satisfied with your current Thot
+      and Amaya installation, you can clean up with:
+
+      make uninstall
+
+A few hints:
+------------
+
+   - If the Amaya Java default configuration doesn't work on your
+     platform (should work Ok on Linux/PC or Sparc, SunOs and Solaris)
+     then you can reconfigure the object tree using --disable-java
+     flag. Then
+
+     cd amaya
+     rm *.*    <= Will preserve the Makefile
+     make
+
+     should recompile only the object needed for Amaya with libWWW
+
+   - If the object tree has been configured and that you want to
+     change the installation location, rerun configure on the object
+     directory with the appropriate flags. Then remove the object
+     thotdir/base/registry.o
+     since the instalation paths are compiled in.
+
+   - Be sure to have compatible versions of Thot and Amaya :
+        Thot  |  2.0   |  2.0a  |  2.0b  |  2.1   |  2.1a  |  2.1b  | ...
+       Amaya  |  0.95  | 0.95a  | 0.95b  |  1.0   |  1.0a  |  1.0b  | ...
+
+
+In case of errors:
+------------------
+
+In case something went wrong, check out the WWW pages for compiling
+and porting Amaya to a new platform located at:
+
+     http://www.w3.org/pub/WWW/Amaya/User/Compiling.html
+     http://www.w3.org/pub/WWW/Amaya/User/Porting.html
+
+These pages are also available in the documentation located on the
+source tree under Thot/doc/amaya.
+
+Daniel Veillard, 16th May 1997
+Daniel.Veillard@w3.org

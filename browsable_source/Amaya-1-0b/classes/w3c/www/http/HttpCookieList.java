@@ -1,0 +1,154 @@
+// HttpCookieList.java
+// $Id: HttpCookieList.java,v 1.2 1997/03/27 13:57:38 cvs Exp $
+// (c) COPYRIGHT MIT and INRIA, 1996.
+// Please first read the full copyright statement in file COPYRIGHT.html
+
+package w3c.www.http;
+
+import java.util.*;
+
+public class HttpCookieList extends BasicValue {
+    Vector cookies = null;
+
+    protected void updateByteValue() {
+	HttpBuffer buf = new HttpBuffer();
+	// Dump all cookies:
+	int sz = cookies.size();
+	for (int i = 0 ; i < sz ; i++) {
+	    HttpCookie c = (HttpCookie) cookies.elementAt(i);
+	    if ( i == 0 ) {
+		// We use the first cookie version here:
+		buf.append(c.getVersion());
+		buf.append((byte) ';');
+	    }
+	    // Dump the cookie values:
+	    buf.append(c.getName(), (byte) '=', c.getValue());
+	    buf.append((byte) ';');
+	    String s = c.getPath();
+	    if ( s != null ) {
+		buf.append((byte) ';');
+		buf.append("$Path", (byte) '=', s);
+	    }
+	    if ((s = c.getDomain()) != null) {
+		buf.append((byte) ';');
+		buf.append("$Domain", (byte) '=', s);
+	    }
+	}
+	raw  = buf.getByteCopy();
+	roff = 0;
+	rlen = raw.length;
+    }
+
+    protected void parse()
+	throws HttpParserException
+    {
+	// Requires a small twist, but:
+	ParseState cv = new ParseState(roff, rlen);
+	ParseState it = new ParseState(0, 0);
+	cv.separator = (byte) ';';
+	it.separator = (byte) '=';
+	// We will get only one cokoie for the time being:
+	while ( HttpParser.nextItem(raw, cv) >= 0 ) {
+	    it.ioff   = cv.start;
+	    it.bufend = cv.end;
+	    HttpCookie c = new HttpCookie();
+	    if ( HttpParser.nextItem(raw, it) < 0 )
+		error("Invalid item in cookie value.");
+	    String item = it.toString(raw, true);
+	    // Get the item's value:
+	    it.prepare();
+	    if ( HttpParser.nextItem(raw, it) < 0 )
+		error("Cookie item ["+item+"] has no value.");
+	    if ( item.equals("$path") ) {
+		c.setPath(it.toString(raw));
+	    } else if ( item.equals("$domain") ) {
+		c.setDomain(it.toString(raw));
+	    } else if ( item.equals("$version") ) {
+		c.setVersion(HttpParser.parseInt(raw, it));
+	    } else {
+		if ( c.getName() != null )
+		    error("Invalid cookie item ["+item+"]");
+		c.setName(item);
+		c.setValue(it.toString(raw));
+	    }
+	    cookies.addElement(c);
+	    cv.prepare();
+	}
+    }
+
+    /**
+     * Get this HTTP value, parsed value.
+     */
+
+    public Object getValue() {
+	return this;
+    }
+
+    /**
+     * Add a cookie to this header value.
+     * @param name The name of the cookie to add.
+     * @param value It's value.
+     * @return A HttpCookie instance, tha represents this cookie in the header
+     * value.
+     */
+
+    public HttpCookie addCookie(String name, String value) {
+	validate();
+	HttpCookie c = new HttpCookie(true, name, value);
+	cookies.addElement(c);
+	return c;
+    }
+
+    /**
+     * Remove a cookie from this header value.
+     * @param name The name of the cookie to remove.
+     * @return A boolean, <strong>true</strong> If the cookie was found, and
+     * removed, <strong>false</strong> otherwise.
+     */
+
+    public boolean removeCookie(String name) {
+	validate();
+	int sz = cookies.size();
+	for (int i = 0 ; i < sz ; i++) {
+	    HttpCookie c = (HttpCookie) cookies.elementAt(i);
+	    if ( c.getName().equals(name) ) {
+		cookies.removeElementAt(i);
+		return true;
+	    }
+	}
+	return false;
+    }
+
+    /**
+     * Lookup a cookie by name.
+     * @param name The name of the cooie to lookup.
+     * @return A HttpCookie instance, or <strong>null</strong> if not found.
+     */
+
+    public HttpCookie getCookie(String name) {
+	validate();
+	int sz = cookies.size();
+	for (int i = 0 ; i < sz ; i++) {
+	    HttpCookie c = (HttpCookie) cookies.elementAt(i);
+	    if ( c.getName().equals(name) )
+		return c;
+	}
+	return null;
+    }
+
+    HttpCookieList(HttpCookie c[]) {
+	this.isValid = true;
+	this.cookies = new Vector(8);
+	if ( c != null ) {
+	    // FIXME Don't tell me this is broken, I *know* it
+	    for (int i = 0 ; i < c.length ; i++)
+		cookies.addElement(c[i]);
+	}
+    }
+
+    public HttpCookieList() {
+	this.isValid = false;
+	this.cookies = new Vector(2);
+    }
+
+}

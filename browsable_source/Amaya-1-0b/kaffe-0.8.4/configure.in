@@ -1,0 +1,796 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(kaffe)
+
+dnl Setup version number.
+KVER=0.84
+
+dnl Find the compiler early on in case we need to override.
+AC_PROG_CC
+
+dnl Find the machine type and setup the relevant links
+AC_CANONICAL_HOST
+
+dnl By default we use dynamic libraries for everything
+dynamic_libraries=yes
+vm_dynamic_library=yes
+
+dnl Force use of staic libraries
+AC_ARG_ENABLE(staticlib,  --enable-staticlib        Force the use of static libraries rather than shared,dynamic_libraries=no)
+
+changequote(<<, >>)dnl
+case "$host_cpu-$host_os" in
+
+dnl =======================================================================
+dnl = Need a line here for each architecture we support.  This enables the
+dnl = configuration system to select the right files and fixup the bits
+dnl = it cant work out for itself.
+dnl =======================================================================
+
+i[3456]86-freebsd[23]*)
+	host_cpu=i386
+	host_os=freebsd2
+	PIC=-fPIC
+	LIBSHARE=-Bshareable
+	LIBEXT=.so
+	;;
+
+dnl -----------------------------------------------------------------------
+dnl This is an example configuration which doen't use shared libraries.
+dnl
+dnl i[3456]86-freebsd2*)
+dnl	host_cpu=i386
+dnl	host_os=freebsd2
+dnl	dynamic_libraries=no
+dnl	;;
+dnl
+dnl -----------------------------------------------------------------------
+
+i[3456]86-linuxoldld)
+	AC_MSG_ERROR(This version of Linux is not supported)
+	;;
+
+i[3456]86-linux*)
+	host_cpu=i386
+	host_os=linux
+	PIC=-fPIC
+	LIBSHARE=-shared
+	LIBEXT=.so
+	;;
+
+i[3456]86-netbsd*)
+	host_cpu=i386
+	host_os=netbsd1
+	PIC=-fpic
+	LIBSHARE=-Bshareable
+	LIBEXT=.so
+	;;
+
+i[3456]86-openbsd*)
+	host_cpu=i386
+	host_os=openbsd2
+	PIC=-fpic
+	LIBSHARE=-Bshareable
+	LIBEXT=.so
+	;;
+
+i[3456]86-bsdi*)
+	host_cpu=i386
+	host_os=bsdi
+#	LIBSHARE=-r
+#	LINKLIB='$(LD) $(LDFLAGS) -o $(LIB) $(OBJECT) $(LDTAIL)'
+	dynamic_libraries=no
+	;;
+
+i[3456]86-solaris2*)
+	host_cpu=i386
+	host_os=solaris2
+	PIC=-fPIC
+	LIBSHARE=-G
+	LIBEXT=.so
+	;;
+
+i[3456]86-sysv*)
+	host_cpu=i386
+	host_os=univel_svr4
+	PIC=-fPIC
+	LIBSHARE=-G
+	LIBEXT=.so
+	;;
+
+i[3456]86-sco3.2v5*)
+	host_cpu=i386
+	host_os=sco3.2v5
+	PIC=-fPIC
+	LIBSHARE=-G
+	LIBEXT=.so
+	LDTAIL="$(LIBS) $LDTAIL"
+	;;
+
+dnl i[3456]86-nextstep3)
+dnl	host_cpu=i386
+dnl	host_os=nextstep3
+dnl	dynamic_libraries=no
+dnl	LDTAIL="$(LIBS) $LDTAIL"
+dnl	;;
+
+i[3456]86-nextstep3)
+	host_cpu=i386
+	host_os=nextstep3
+	CFLAGS="-g -seglinkedit -all_load"
+	LIBSHARE=-r
+	LIBEXT=.o
+	vm_dynamic_library=no
+	;;
+
+i[3456]86-win32/cygnus)
+	host_cpu=i386
+	host_os=win32/cygnus
+	EXEEXT=.exe
+	SCREXT=.bat
+	dynamic_libraries=no
+	LN_S="cp"
+	;;
+
+i[3456]86-dgux*)
+	host_cpu=i386
+	host_os=dgux
+	PIC=-fPIC
+	LIBSHARE=-G
+	LIBEXT=.so
+	LDTAIL="$(LIBS) $LDTAIL"
+	;;
+
+dnl -----------------------------------------------------------------------
+dnl This is the theoretical configurations for win32 Microsoft & Borland.
+dnl
+
+i[3456]86-win32bc)
+	host_cpu=i386
+	host_os=win32/bc
+	OBJEXT=.obj
+	LIBEXT=.dll
+	VPATHOPT=".c.path"
+	VPATHSEP=";"
+	;;
+
+i[3456]86-win32msvc)
+	host_cpu=i386
+	host_os=win32/mscv
+	OBJEXT=.obj
+	LIBEXT=.dll
+	VPATHOPT="__VPATH_IGNORED"
+	;;
+dnl 
+dnl -----------------------------------------------------------------------
+
+sparc-netbsd*)
+	host_cpu=sparc
+	host_os=netbsd1
+	PIC=-fpic
+	LIBSHARE=-Bshareable
+	LIBEXT=.so
+	;;
+
+sparc-sunos4*)
+	host_cpu=sparc
+	host_os=sunos
+	PIC=-fPIC
+	LIBSHARE=-Bdynamic
+	LIBEXT=.so
+	;;
+
+sparc-solaris2*)
+	host_cpu=sparc
+	host_os=solaris2
+	PIC=-fPIC
+	LIBSHARE=-G
+	LIBEXT=.so
+	;;
+
+sparc-linux*)
+	host_cpu=sparc
+	host_os=linux
+	PIC=-fPIC
+	LIBSHARE=-shared
+	LIBEXT=.so
+	;;
+
+sparc-uxpds*)
+	host_cpu=sparc
+	host_os=uxpds
+	PIC=-fPIC
+	LIBSHARE=-G
+	LIBEXT=.so
+	;;
+
+
+dnl -----------------------------------------------------------------------
+dnl Current use static kaffe version until I have time to fix NeXT config.
+dnl problems.
+dnl
+dnl sparc-nextstep3)
+dnl	host_cpu=sparc
+dnl	host_os=nextstep3
+dnl	LIBSHARE=-r
+dnl	KAFFEFLAGS="-seglinkedit -all_load"
+dnl	;;
+dnl
+dnl -----------------------------------------------------------------------
+
+dnl sparc-nextstep3)
+dnl	host_cpu=sparc
+dnl	host_os=nextstep3
+dnl	dynamic_libraries=no
+dnl	;;
+
+sparc-nextstep3)
+	host_cpu=sparc
+	host_os=nextstep3
+	CFLAGS="-g -seglinkedit -all_load"
+	LIBSHARE=-r
+	LIBEXT=.o
+	vm_dynamic_library=no
+	;;
+
+powerpc-linux*)
+	host_cpu=powerpc
+	host_os=linux
+	CFLAGS="-g -fsigned-char"
+	dynamic_libraries=no
+	;;
+
+powerpc-machten*)
+	host_cpu=powerpc
+	host_os=machten
+	CFLAGS="-g -fsigned-char"
+	dynamic_libraries=no
+	;;
+
+powerpc-aix*)
+	host_cpu=powerpc
+	host_os=aix
+	CFLAGS="-g -fsigned-char -DAIX -Dunix"
+	dynamic_libraries=no
+	;;
+
+m68k-amigaos*)
+	host_cpu=m68k
+	host_os=amigaos
+	CFLAGS="-g -O2 -fno-omit-frame-pointer"
+	dynamic_libraries=no
+	VPATHSEP=" "
+	;;
+
+m68k-aux*)
+	host_cpu=m68k
+	host_os=a-ux
+	CFLAGS="-g -O2 -fno-omit-frame-pointer"
+	dynamic_libraries=no
+	;;
+
+dnl m68k-nextstep3)
+dnl	host_cpu=m68k   
+dnl	host_os=nextstep3
+dnl	dynamic_libraries=no
+dnl	;;
+
+m68k-nextstep3)
+	host_cpu=m68k   
+	host_os=nextstep3
+	CFLAGS="-g -seglinkedit -all_load"
+	LIBSHARE=-r
+	LIBEXT=.o
+	vm_dynamic_library=no
+	;;
+
+m68k-netbsd*)
+	host_cpu=m68k
+	host_os=netbsd1
+	PIC=-fpic
+	LIBSHARE=-Bshareable
+	LIBEXT=.so
+	;;
+
+m68k-sunos4*)
+	host_cpu=m68k
+	host_os=sunos4
+	dynamic_libraries=no
+	;;
+
+mips-irix5*)
+	host_cpu=mips
+	host_os=irix5
+	PIC=
+	LIBSHARE=-shared
+	OBJEXT=.o
+	LIBEXT=.so
+	;;
+
+mips-irix6*)
+	host_cpu=mips
+	host_os=irix6
+	PIC=
+	LIBSHARE=-shared
+	OBJEXT=.o
+	LIBEXT=.so
+	;;
+
+mips-netbsd*)
+	host_cpu=mips
+	host_os=netbsd1
+	PIC=-fpic
+	LIBSHARE=-Bshareable
+	LIBEXT=.so
+	;;
+
+alpha-linux*)
+	host_cpu=alpha
+	host_os=linux
+	PIC=-fPIC
+	LIBSHARE=-shared
+	LIBEXT=.so
+	LD=$ac_cv_prog_CC
+	;;
+
+alpha-osf*)
+	host_cpu=alpha
+	host_os=osf
+	PIC=
+	LIBSHARE='-shared -Wl,-expect_unresolved,\*'
+	LIBEXT=.so
+	LD=$ac_cv_prog_CC
+	;;
+
+hppa1.1-hpux*)
+	host_cpu=parisc
+	host_os=hpux
+	if test ac_cv_prog_gcc = yes ; then
+		PIC=fpic
+		#LDFLAGS='-Wl,+b,${libdir}'
+		#LDSHARE='-b -E'
+		LIBEXT=.sl
+		INSTALL_DATA='${INSTALL} -m 555'
+	else
+		# for the HP-UX c compiler only
+		dynamic_libraries=no
+		CFLAGS="-g -Aa +e -Dunix -Dhpux -D_HPUX_SOURCE"
+	fi
+	;;
+
+dnl =======================================================================
+dnl = End of configurations
+dnl =======================================================================
+
+*)
+	AC_MSG_ERROR(Configuration $host_cpu-$host_os not supported)
+esac
+
+dnl =======================================================================
+dnl = Start of default configurations
+dnl =======================================================================
+
+if test "$dynamic_libraries" = "no" ; then
+	KAFFEVMFLAGS="-DNO_SHARED_LIBRARIES"
+	LIBEXT=".a"
+fi
+if test "$OBJEXT" = "" ; then
+	OBJEXT=".o"
+fi
+if test "$LIBEXT" = "" ; then
+	LIBEXT=".a"
+fi
+if test "$SCREXT" = "" ; then
+	SCREXT=""
+fi
+if test "$LD" = "" ; then
+	LD=ld
+fi
+if test "$LINKLIB" = "" ; then
+	if test "$LIBEXT" = ".a" ; then
+		LINKLIB='$(AR) $(LIB) $(OBJECT)\
+		$(RANLIB) $(LIB)'
+	else
+		LINKLIB='$(LD) $(LDFLAGS) -o $(LIB) $(OBJECT) $(LDTAIL)'
+	fi
+fi
+
+if test "$VPATHSEP" = "" ; then
+	VPATHSEP=":"
+fi
+if test "$VPATHOPT" = "" ; then
+	VPATHOPT="VPATH"
+fi
+
+dnl What kind of system are we using?
+case $host_os in
+win32*)
+	SYSTEM=win32 ;;
+*)
+	SYSTEM=unix ;;
+esac
+
+dnl =======================================================================
+dnl = End of default configurations
+dnl =======================================================================
+
+changequote([, ])dnl
+
+dnl Allow selection of a specific execution engine
+AC_ARG_WITH(engine, --with-engine={intrp|jit} Force use of a specific execution engine)
+
+dnl Translate 'interpreter' to 'intrp'
+if test "$with_engine" = "interpreter" ; then
+	with_engine=intrp
+fi
+
+dnl Save the requested engine and set the default to 'jit'
+want_engine=$with_engine
+if test "$with_engine" = "" ; then
+	with_engine="jit"
+fi
+
+dnl Check for JIT support and add in the necessary configuration files
+if test -f $srcdir/config/$host_cpu/$host_os/${with_engine}-md.h ; then
+	jitsrc="config/$host_cpu/${with_engine}-$host_cpu.def config/$host_cpu/${with_engine}-icode.h config/$host_cpu/$host_os/${with_engine}-md.h"
+	jitdst="kaffe/kaffevm/jit.def kaffe/kaffevm/icode.h config/jit-md.h"
+else
+	jitsrc=""
+	jitdst=""
+	with_engine="intrp"
+fi
+dnl Make sure we support jit mode if requested.
+if test "$jitsrc" = "" && test "$want_engine" != "" && test "$want_engine" != "intrp" ; then
+	AC_MSG_ERROR(Configuration $host_cpu-$host_os does not support $want_engine mode)
+fi
+AC_MSG_CHECKING(execution engine)
+AC_MSG_RESULT($with_engine)
+
+AC_SUBST_FILE(engine_frag)dnl
+engine_frag=$srcdir/kaffe/kaffevm/$with_engine/Makefile.frag
+
+AC_MSG_CHECKING(library type)
+if test "$dynamic_libraries" = "no" ; then
+	AC_MSG_RESULT(static)
+else
+	AC_MSG_RESULT(shared)
+fi
+
+AC_SUBST(KVER)
+AC_SUBST(LIBSHARE)
+AC_SUBST(PIC)
+AC_SUBST(PICVM)
+AC_SUBST(NOSHAREDLIBS)
+AC_SUBST(LDFLAGS)
+AC_SUBST(LIBEXT)
+AC_SUBST(LIBVMEXT)
+AC_SUBST(OBJEXT)
+AC_SUBST(EXEEXT)
+AC_SUBST(SCREXT)
+AC_SUBST(with_engine)
+AC_SUBST(KAFFEFLAGS)
+AC_SUBST(KAFFEVMFLAGS)
+AC_SUBST(VPATHSEP)
+AC_SUBST(VPATHOPT)
+AC_SUBST(LINKLIB)
+AC_SUBST(LINKVMLIB)
+AC_SUBST(LD)
+AC_DEFINE_UNQUOTED(LIBRARYSUFFIX, "$LIBEXT")
+AC_DEFINE_UNQUOTED(KAFFEVERSION, "$KVER")
+
+AC_LINK_FILES(config/$host_cpu/$host_os/md.h config/$host_cpu/$host_os/md.c $jitsrc, config/md.h kaffe/kaffevm/md.c $jitdst)
+
+dnl Checks for programs.
+AC_PROG_INSTALL
+AC_PROG_MAKE_SET
+AC_PROG_RANLIB
+AC_CHECK_PROG(AR, ar, ar cr)
+AC_CHECK_PROGS(MKDIR, mkdirs 'mkdir -p', mkdir -p)
+AC_CHECK_PROG(DLLTOOL, dlltool, dlltool)
+dnl We also need to install scripts
+INSTALL_SCRIPT='${INSTALL} -m 755'
+AC_SUBST(INSTALL_SCRIPT)
+
+dnl If symlink is overridden then don't bother with the test.
+if test "$LN_S" = "" ; then
+	AC_PROG_LN_S
+fi
+dnl If dlltool is found then we must generate and use the 'lib.exp' file.
+dnl  If not found then just use true to avoid the command erroring.
+if test "$DLLTOOL" != "" ; then
+	LDTAIL='lib.exp '$LDTAIL
+else
+	DLLTOOL="true"
+fi
+AC_SUBST(LDTAIL)
+
+dnl Checks for types
+AC_CHECK_SIZEOF(short,0)
+AC_CHECK_SIZEOF(int,0)
+AC_CHECK_SIZEOF(long,0)
+AC_CHECK_SIZEOF(long long,0)
+AC_CHECK_SIZEOF(__int64,0)
+AC_CHECK_SIZEOF(void*,0)
+AC_TYPE_SIGNAL
+AC_TYPE_SIZE_T
+AC_CHECK_TYPE(ssize_t,int)
+
+AC_DEFUN(AC_CHECK_LIBRARY,
+AC_CHECK_LIB($1,$2,
+  changequote(, )dnl
+  $3="-l$1 $$3";
+  LIBS="-l$1 $LIBS"
+  ac_tr_lib=HAVE_LIB`echo $1 | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'`
+changequote([, ])dnl
+  AC_DEFINE_UNQUOTED($ac_tr_lib)
+))
+
+dnl Checks for libraries for vm library.
+if test "$dynamic_libraries" = "yes" ; then
+	dnl Don't bother with dynamic loaders if we're using static linking
+	AC_CHECK_LIBRARY(dl,dlopen,STD_LIBRARIES)
+	if test $ac_cv_lib_dl_dlopen = no ; then
+		AC_CHECK_LIBRARY(dl,_dlopen,STD_LIBRARIES)
+		if test $ac_cv_lib_dl__dlopen = no ; then
+			AC_CHECK_LIBRARY(dld,dld_init,STD_LIBRARIES)
+		fi
+	fi
+fi
+AC_CHECK_LIBRARY(m,sin,STD_LIBRARIES)
+AC_SUBST(STD_LIBRARIES)
+
+dnl Check libraries for native library.
+dnl None required.
+
+dnl Check for libraries for net library.
+AC_CHECK_LIBRARY(nsl,dial,NET_LIBRARIES)
+AC_CHECK_LIBRARY(socket,socket,NET_LIBRARIES)
+AC_SUBST(NET_LIBRARIES)
+
+dnl Checks for libraries for X related libraries.
+AC_PATH_X
+if test "${x_libraries}" != NONE && test -n "${x_libraries}"; then
+	X_LIBRARIES=-L`echo ${x_libraries} | sed -e "s/:/ -L/g"`
+fi
+X_LIBRARIES="$X_LIBRARIES -lX11"
+if test "${x_includes}" != NONE && test -n "${x_includes}"; then
+	X_INCLUDES=-I`echo ${x_includes} | sed -e "s/:/ -I/g"`
+fi
+AC_SUBST(X_INCLUDES)
+AC_SUBST(X_LIBRARIES)
+AC_CHECK_LIBRARY(ipc,shmat,X_LIBRARIES)
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS(fcntl.h sys/time.h unistd.h sys/socket.h winnt.h wintypes.h wtypes.h winbase.h windows.h winsock.h dlfcn.h sys/ioctl.h sys/filio.h malloc.h alloca.h sys/param.h sys/utsname.h pwd.h asm/sigcontext.h asm/signal.h mach-o/rld.h sys/types.h sys/stat.h string.h sys/select.h memory.h bsd/libc.h dl.h)
+AC_HEADER_DIRENT
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_HEADER_TIME
+AC_STRUCT_TM
+AC_STRUCT_TIMEZONE
+AC_C_BIGENDIAN
+AC_C_CHAR_UNSIGNED
+AC_C_INLINE
+
+dnl Check for struct sigcontext.
+AC_CACHE_CHECK([for struct sigcontext],
+  ac_cv_struct_sigcontext,
+[AC_TRY_COMPILE([#include <asm/signal.h>
+#include <asm/sigcontext.h>], 
+[struct sigcontext t;],
+  ac_cv_struct_sigcontext=yes, ac_cv_struct_sigcontext=no)])
+if test $ac_cv_struct_sigcontext = yes; then
+  AC_DEFINE(HAVE_STRUCT_SIGCONTEXT)
+fi
+
+dnl Check for struct sigcontext_struct.
+dnl Just to complicate things there are two different sets of assembly files
+dnl we must check which are mutually incompatible.
+AC_CACHE_CHECK([for struct sigcontext_struct (without asm/sigcontext.h)],
+  ac_cv_struct_sigcontext_struct,
+[AC_TRY_COMPILE([#include <asm/signal.h>],
+[struct sigcontext_struct t;],
+  ac_cv_struct_sigcontext_struct=yes, ac_cv_struct_sigcontext_struct=no)])
+
+AC_CACHE_CHECK([for struct sigcontext_struct (with asm/sigcontext.h)],
+  ac_cv_struct_sigcontext_struct_with,
+[AC_TRY_COMPILE([#include <asm/signal.h>
+#include <asm/sigcontext.h>], 
+[struct sigcontext_struct t;],
+  ac_cv_struct_sigcontext_struct_with=yes, ac_cv_struct_sigcontext_struct_with=no)])
+
+if test $ac_cv_struct_sigcontext_struct = yes -o $ac_cv_struct_sigcontext_struct_with = yes; then
+  AC_DEFINE(HAVE_STRUCT_SIGCONTEXT_STRUCT)
+fi
+
+dnl Checks for library functions.
+AC_FUNC_STRFTIME
+AC_FUNC_MMAP
+AC_CHECK_FUNCS(select socket getsockname)
+AC_CHECK_FUNCS(memcpy memmove)
+AC_CHECK_FUNCS(mkdir)
+AC_CHECK_FUNCS(getcwd getwd gettimeofday uname getuid)
+AC_CHECK_FUNCS(remainder remainderf fmod drem rint floor finite isinf isnan strtod)
+AC_CHECK_FUNCS(strerror hstrerror)
+AC_CHECK_FUNCS(fcntl ioctl)
+AC_CHECK_FUNCS(alarm setitimer)
+AC_CHECK_FUNCS(sigprocmask sigsetmask sigemptyset sigaddset)
+AC_CHECK_FUNCS(mallopt dlerror)
+AC_CHECK_FUNCS(waitpid kill fork execve)
+AC_CHECK_FUNCS(dlopen rld_load shl_load LoadLibrary dld_link)
+
+AC_CACHE_CHECK([for alpha support of amask instruction],
+  ac_cv_alpha_asm_amask,
+[AC_TRY_COMPILE(, [ long r; __asm__("amask 1,%0" : "=r"(r)); return !r; ],
+  ac_cv_alpha_asm_amask=yes; AC_DEFINE(HAVE_ALPHA_ASM_AMASK), ac_cv_alpha_asm_amask=no)
+])
+
+AC_CACHE_CHECK([for declaration of select],
+  ac_cv_declared_select,
+[AC_TRY_COMPILE([
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+#ifdef HAVE_SYS_TIME_H
+#include <sys/time.h>
+#endif
+#ifdef HAVE_SYS_SELECT_H
+#include <sys/select.h>
+#endif
+], [ void *foo = select; ],
+  ac_cv_declared_select=yes; AC_DEFINE(HAVE_DECLARED_SELECT), ac_cv_declared_select=no)
+])
+
+dnl Some dynamic library need an underscore on the loading name, some don't
+AC_CACHE_CHECK(for underscore in dlsym, ac_cv_underscore,
+echo "#define _LIBC_ \"`ls /lib/lib*c.so* /usr/lib/lib*c.so.* 2>/dev/null | head -1`\"" >> confdefs.h
+AC_TRY_RUN(main()
+{[void* lib = (void*)dlopen(_LIBC_);
+  if (dlsym(lib, "_printf") != 0) { exit(0); } else { exit(1); } }],
+ac_cv_underscore=yes, ac_cv_underscore=no, ac_cv_underscore=cross))
+if test "$ac_cv_underscore" = "yes"; then
+  AC_DEFINE(HAVE_DYN_UNDERSTORE)
+fi
+
+changequote(<<, >>)dnl
+subdirs="config include packages kaffe test"
+make_output="\
+Makefile \
+config/Makefile include/Makefile kaffe/Makefile test/Makefile \
+packages/Makefile \
+kaffe/kaffevm/Makefile kaffe/kaffe/Makefile kaffe/kaffeh/Makefile \
+kaffe/man/Makefile kaffe/scripts/Makefile \
+"
+
+dnl Default packages written by me.
+packages="tjwassoc.co.uk"
+make_output="$make_output \
+packages/tjwassoc.co.uk/Makefile \
+packages/tjwassoc.co.uk/APIcore/Makefile \
+packages/tjwassoc.co.uk/APIcore/lib/Makefile \
+packages/tjwassoc.co.uk/APIcore/classes/Makefile \
+packages/tjwassoc.co.uk/APInet/Makefile \
+packages/tjwassoc.co.uk/APInet/lib/Makefile \
+packages/tjwassoc.co.uk/APInet/classes/Makefile \
+packages/tjwassoc.co.uk/APIagent/Makefile \
+packages/tjwassoc.co.uk/APIagent/lib/Makefile \
+packages/tjwassoc.co.uk/APIagent/classes/Makefile \
+"
+changequote([, ])dnl
+AC_DEFINE(HAVE_PACKAGE_TJWASSOC_CO_UK)
+NOSHAREDLIBS=" \
+-L../../packages/tjwassoc.co.uk/APIcore/lib -lkaffe_native \
+-L../../packages/tjwassoc.co.uk/APInet/lib -lkaffe_net \
+"
+
+changequote(<<, >>)dnl
+dnl Configure in the Sun stuff if present.
+if test -f $srcdir/packages/javasoft.com/Makefile.in ; then
+	packages="$packages javasoft.com"
+	make_output="$make_output \
+		packages/javasoft.com/Makefile \
+		packages/javasoft.com/APIcore/Makefile \
+	"
+	changequote([, ])dnl
+	AC_DEFINE(HAVE_PACKAGE_JAVASOFT_COM)
+fi
+
+changequote(<<, >>)dnl
+dnl Select an AWT toolkit (only if we have X).
+dnl We give preference to BISS since this is more complete.
+awt_toolkit=none
+if test "$have_x" = "yes" ; then
+
+	dnl Configure in the BISS AWT library if present.
+	if test -f $srcdir/packages/biss-net.com/Makefile.in -a "$awt_toolkit" = "none" ; then
+		awt_toolkit=biss
+		packages="$packages biss-net.com"
+		make_output="$make_output \
+			packages/biss-net.com/Makefile \
+			packages/biss-net.com/APIawt/Makefile \
+			packages/biss-net.com/APIawt/lib/Makefile \
+		"
+		NOSHAREDLIBS="$NOSHAREDLIBS \
+		    -L../../packages/biss-net.com/APIawt/lib -lkaffe_bissawt \
+		"
+	fi
+
+	dnl Configure in the SAWT library if present.
+	if test -f $srcdir/packages/epfl.ch/Makefile.in -a "$awt_toolkit" = "none" ; then
+		awt_toolkit=sawt
+		packages="$packages epfl.ch"
+		make_output="$make_output \
+			packages/epfl.ch/Makefile \
+			packages/epfl.ch/APIawt/Makefile \
+			packages/epfl.ch/APIawt/lib/Makefile \
+		"
+		NOSHAREDLIBS="$NOSHAREDLIBS \
+			-L../../packages/epfl.ch/APIawt/lib -lkaffe_sawt \
+		"
+	fi
+	NOSHAREDLIBS="$NOSHAREDLIBS $X_LIBRARIES"
+fi
+changequote([, ])dnl
+
+if test "$awt_toolkit" = "biss"; then
+  AC_DEFINE(HAVE_PACKAGE_BISS_NET_COM)
+elif test "$awt_toolkit" = "sawt"; then
+  AC_DEFINE(HAVE_PACKAGE_EPFL_CH)
+fi
+
+dnl If we have share libraries, cancel all the non-shared ones.
+dnl  Otherwise, add on the machine again to help linking.
+if test "$dynamic_libraries" = "yes" ; then
+	NOSHAREDLIBS="-L../kaffevm -lkaffe_vm"
+else
+	NOSHAREDLIBS="-L../kaffevm -lkaffe_vm $NOSHAREDLIBS -lkaffe_vm $LIBS"
+	PIC=""
+	PICVM=""
+	LIBSHARE=""
+fi
+
+dnl If the vm is to be static but everything else isn't, set it up.
+if test "$vm_dynamic_library" = "no" -a "$dynamic_libraries" = "yes"; then
+	LINKVMLIB='ld -r -o $(LIB) $(OBJECT)'
+	PICVM=""
+	LIBVMEXT=.o
+	NOSHAREDLIBS="../kaffevm/libkaffe_vm.o $STD_LIBRARIES"
+else
+	LINKVMLIB=$LINKLIB
+	PICVM=$PIC
+	LIBVMEXT=$LIBEXT
+fi
+
+AC_SUBST(subdirs)
+AC_SUBST(packages)
+
+AC_CONFIG_HEADER(config/config.h include/jtypes.h)
+AC_OUTPUT($make_output)
+
+dnl Generate example environment
+libdir=`eval echo $libdir` ; libdir=`eval echo $libdir`
+bindir=`eval echo $bindir` ; bindir=`eval echo $bindir`
+datadir=`eval echo $datadir`
+
+if test "$SYSTEM" = "unix" ; then
+	if test "$awt_toolkit" != "none" ; then
+		echo CLASSPATH=.:$datadir/kaffe/classes.zip:$datadir/kaffe/$awt_toolkit.zip > ENVIRONMENT
+	else
+		echo CLASSPATH=.:$datadir/kaffe/classes.zip > ENVIRONMENT
+	fi
+	echo KAFFEHOME=$datadir/kaffe >> ENVIRONMENT
+	if test "$dynamic_libraries" = "yes" ; then
+		echo LD_LIBRARY_PATH=$libdir:\$LD_LIBRARY_PATH >> ENVIRONMENT
+	fi
+	echo PATH=$bindir:\$PATH >> ENVIRONMENT
+	echo export CLASSPATH KAFFEHOME LD_LIBRARY_PATH PATH >> ENVIRONMENT
+elif test "$SYSTEM" = "win32" ; then
+	echo @echo off > ENVIRONMENT.BAT
+	if test "$awt_toolkit" != "none" ; then
+		echo set CLASSPATH=.\;$datadir/kaffe/classes.zip\;$datadir/kaffe/$awt_toolkit >> ENVIRONMENT.BAT
+	else
+		echo set CLASSPATH=.\;$datadir/kaffe/classes.zip >> ENVIRONMENT.BAT
+	fi
+	echo set KAFFEHOME=$datadir/kaffe >> ENVIRONMENT.BAT
+	echo set PATH=%PATH%\;$bindir >> ENVIRONMENT.BAT
+fi

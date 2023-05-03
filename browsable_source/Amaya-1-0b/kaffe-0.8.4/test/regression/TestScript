@@ -1,0 +1,328 @@
+#! /bin/sh
+#
+# Perform a standard set of test on the Kaffe system.  This script should
+# be built up as we add more test and so, hopefully, avoid re-releasing
+# bugs which have been fixed.
+#
+# Copyright (c) 1997 T. J. Wilkinson & Associates, London, UK.
+#
+# See the file "license.terms" for information on usage and redistribution
+# of this file, and for a DISCLAIMER OF ALL WARRANTIES.
+#
+# Written by Tim Wilkinson <tim@tjwassoc.demon.co.uk>
+
+RESULT=/tmp/kaffer.$$
+CHECK=/tmp/kaffec.$$
+JAVA=kaffe
+JAVAC=javac
+overallerror=0
+
+# If we have a destination directory, clean it and make sure we use it
+# for later compilations.
+if test "$DESTDIR" != "" ; then
+	rm -f $DESTDIR/*.class
+else
+	DESTDIR="."
+fi
+
+compile()
+{
+	echo ERROR > $RESULT
+	$JAVAC -d $DESTDIR $1.java > $RESULT 2>&1
+	if test "`cat $RESULT`" != "" ; then
+		echo "error compiling"
+		error=1
+	fi
+	rm -f $RESULT $CHECK
+}
+
+run()
+{
+	echo "$2" > $CHECK
+	echo ERROR > $RESULT
+	(cd $DESTDIR ; $JAVA $1 > $RESULT 2>&1)
+	if cmp -s $RESULT $CHECK ; then
+		:
+	else
+		echo "error running"
+		error=1
+	fi
+	rm -f $RESULT $CHECK
+}
+
+runtest()
+{
+	error=0
+	echo -n "$1 ... " 1>&2
+	compile $1
+	if test $error = 0 ; then
+		run $1 "$2"
+	fi
+	if test $error = 0 ; then
+		echo "passed" 1>&2
+	else
+		overallerror=1
+	fi
+}
+
+# Simple health check
+cp HelloWorldApp.class.save $DESTDIR/HelloWorldApp.class
+run HelloWorldApp "Hello World!"
+
+# Now test the compiler
+rm -f $DESTDIR/HelloWorldApp.class
+runtest HelloWorldApp "Hello World!"
+
+# Test floats and longs
+runtest TestFloatDoubleLong "Some mathmatical tests
+Results Good"
+
+# Test strings
+runtest Str "12abcd34567890"
+runtest Str2 "12"
+
+# Test exceptions
+runtest IndexTest "0
+1
+2
+3
+4
+5
+Catch
+java.lang.ArrayIndexOutOfBoundsException
+	at IndexTest.main(7)"
+runtest StackDump "java.lang.NullPointerException
+	at StackDump.f(8)
+	at StackDump.f(8)
+	at StackDump.f(8)
+	at StackDump.f(8)
+	at StackDump.f(8)
+	at StackDump.f(8)
+	at StackDump.f(8)
+	at StackDump.f(8)
+	at StackDump.f(8)
+	at StackDump.f(8)
+	at StackDump.f(8)
+	at StackDump.main(14)"
+
+# Test threads
+runtest tname "Hello, my name is main"
+runtest ttest "run 0
+run 1
+run 2
+run 3
+run 4
+run 5
+run 6
+run 7
+run 8
+run 9
+run 10
+run 11
+run 12
+run 13
+run 14
+run 15
+run 16
+run 17
+run 18
+run 19
+run 20
+run 21
+run 22
+run 23
+run 24
+run 25
+run 26
+run 27
+run 28
+run 29
+run 30
+run 31
+run 32
+run 33
+run 34
+run 35
+run 36
+run 37
+run 38
+run 39
+run 40
+run 41
+run 42
+run 43
+run 44
+run 45
+run 46
+run 47
+run 48
+run 49
+run 50
+run 51
+run 52
+run 53
+run 54
+run 55
+run 56
+run 57
+run 58
+run 59
+run 60
+run 61
+run 62
+run 63
+run 64
+run 65
+run 66
+run 67
+run 68
+run 69
+run 70
+run 71
+run 72
+run 73
+run 74
+run 75
+run 76
+run 77
+run 78
+run 79
+run 80
+run 81
+run 82
+run 83
+run 84
+run 85
+run 86
+run 87
+run 88
+run 89
+run 90
+run 91
+run 92
+run 93
+run 94
+run 95
+run 96
+run 97
+run 98
+run 99
+run 0
+run 1
+run 2
+run 3
+run 4
+run 5
+run 6
+run 7
+run 8
+run 9
+run 10
+run 11
+run 12
+run 13
+run 14
+run 15
+run 16
+run 17
+run 18
+run 19
+run 20
+run 21
+run 22
+run 23
+run 24
+run 25
+run 26
+run 27
+run 28
+run 29
+run 30
+run 31
+run 32
+run 33
+run 34
+run 35
+run 36
+run 37
+run 38
+run 39
+run 40
+run 41
+run 42
+run 43
+run 44
+run 45
+run 46
+run 47
+run 48
+run 49
+run 50
+run 51
+run 52
+run 53
+run 54
+run 55
+run 56
+run 57
+run 58
+run 59
+run 60
+run 61
+run 62
+run 63
+run 64
+run 65
+run 66
+run 67
+run 68
+run 69
+run 70
+run 71
+run 72
+run 73
+run 74
+run 75
+run 76
+run 77
+run 78
+run 79
+run 80
+run 81
+run 82
+run 83
+run 84
+run 85
+run 86
+run 87
+run 88
+run 89
+run 90
+run 91
+run 92
+run 93
+run 94
+run 95
+run 96
+run 97
+run 98
+run 99"
+
+runtest IllegalInterface "Exception caught: java.lang.InstantiationException: Illegalif"
+
+runtest GetInterfaces "Hello world!
+interface0: if0
+interface1: if1"
+
+runtest DeadThread "1 true
+true 1"
+
+runtest SignedShort "-1"
+
+runtest BadFloatTest "1.2345 9.8765"
+
+runtest ExecTest "Okay
+Okay"
+
+# All done okay
+exit $overallerror

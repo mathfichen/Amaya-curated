@@ -1,0 +1,91 @@
+# Net support for standard Java libraries
+#
+# Copyright (c) 1996 T. J. Wilkinson & Associates, London, UK.
+#
+# See the file "license.terms" for information on usage and redistribution
+# of this file, and for a DISCLAIMER OF ALL WARRANTIES.
+#
+# Written by Tim Wilkinson <tim@tjwassoc.demon.co.uk>, 1996.
+
+@VPATHOPT@=	@srcdir@/java.net@VPATHSEP@@srcdir@/java.net.stubs
+srcdir=		@srcdir@
+prefix=		@prefix@
+exec_prefix=	@exec_prefix@
+libdir=		@libdir@
+CC=		@CC@
+LD=		@LD@
+AR=		@AR@
+RANLIB=		@RANLIB@
+INCLUDES=	-I$(srcdir) -I../../../../include -I$(srcdir)/../../../../include -I../../../../config -I$(srcdir)/../../../../config
+CFLAGS=		@CFLAGS@
+ALL_CFLAGS=	$(CFLAGS) $(INCLUDES)
+INSTALL=	@INSTALL@
+INSTALL_DATA=	@INSTALL_DATA@
+MKDIR=		@MKDIR@
+LN=		@LN_S@
+DLLTOOL=	@DLLTOOL@
+PIC=		@PIC@
+LDFLAGS=	@LIBSHARE@
+LIBS=		@LIBS@
+LDTAIL=		@LDTAIL@ @NET_LIBRARIES@
+KVER=		@KVER@
+OBJEXT=		@OBJEXT@
+LIBEXT=		@LIBEXT@
+
+LIBNAME=	libkaffe_net
+LIB=		$(LIBNAME)$(LIBEXT).$(KVER)
+LLIB=		$(LIBNAME)$(LIBEXT)
+
+OBJECT.NET=	DatagramSocketStub$(OBJEXT) \
+		DatagramSocket$(OBJEXT) \
+		InetAddressStub$(OBJEXT) \
+		InetAddress$(OBJEXT) \
+		PlainSocketImplStub$(OBJEXT) \
+		PlainSocketImpl$(OBJEXT) \
+		SocketInputStreamStub$(OBJEXT) \
+		SocketInputStream$(OBJEXT) \
+		SocketOutputStreamStub$(OBJEXT) \
+		SocketOutputStream$(OBJEXT)
+
+OBJECT=		$(OBJECT.NET)
+
+all:		$(LLIB)
+
+$(LLIB):	$(LIB)
+		rm -f $(LLIB)
+		$(LN) $(LIB) $(LLIB)
+
+$(LIB):         $(OBJECT) lib.exp
+		@LINKLIB@
+
+.c$(OBJEXT):
+		$(CC) $(ALL_CFLAGS) -c $(PIC) $<
+
+clean:
+		rm -f $(LLIB) $(LIB) $(OBJECT) lib.exp
+
+distclean:	clean
+		rm -f Makefile
+
+install:
+		test -d $(libdir) || $(MKDIR) $(libdir)
+		$(INSTALL_DATA) $(LIB) $(libdir)/$(LIB)
+		rm -f $(libdir)/$(LLIB)
+		$(LN) $(LIB) $(libdir)/$(LLIB)
+
+lib.exp:
+		$(DLLTOOL) --def $(srcdir)/$(LIBNAME).def --output-exp lib.exp --output-lib $(LIBNAME).a --dllname $(LLIB)
+		touch lib.exp
+
+# -----------------------------------------------------------------------
+# Stuff to regenerate stubs.
+
+JAVANET=	java.net.DatagramSocket java.net.InetAddress \
+		java.net.PlainSocketImpl java.net.SocketInputStream \
+		java.net.SocketOutputStream
+
+stubs:
+	(cd $(srcdir)/java.net.stubs;\
+		kaffeh -base $(JAVANET)\
+		  java.net.DatagramPacket java.net.SocketImpl;\
+		kaffeh -postfix Stub -base -stubs $(JAVANET))
