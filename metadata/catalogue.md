@@ -25,13 +25,25 @@ Example of Item links:
 # SW_NAME Catalogue
 
 
-* **[Screenshot Amaya 1998](./raw_materials/example_file.zip)**
+* **[Screenshot Amaya User Interface 1998](./raw_materials/other/
+1998-amaya-ui.gif)**
   * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19980703153334/https://www.w3.org/Amaya/)
   * *Warehouse:* 
   * *Authors:* W3C and Inria
   * *Date:* 1998 
   * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
   * *Description:* A screenshot view of Amaya's user interface. Possibly version 1.1 or earlier.
+  * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+  * *Notes:* 
+ 
+ * **[Screenshot Amaya MathML application 1998](./raw_materials/other/
+1999-amaya-math.gif )**
+  * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19980703153334/https://www.w3.org/Amaya/)
+  * *Warehouse:* 
+  * *Authors:* W3C and Inria
+  * *Date:* 1998 
+  * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+  * *Description:* A screenshot view of Amaya's MathML application. Possibly version 1.1 or earlier.
   * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
   * *Notes:* 
   
