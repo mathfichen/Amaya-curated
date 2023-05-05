@@ -145,6 +145,16 @@ Example of Item links:
    * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
    * *Notes:*  
  
+ 
+* **[Screenshot Amaya User Interface 2006 v9.52](./raw_materials/other/2006-v-9-5-2-amaya-ui.png )**
+  * *Origin:* [Amaya Website - Wayback Machine]([[[[https://web.archive.org/web/19990914133746/https://www.w3.org/Amaya/](https://web.archive.org/web/20011116163408/http://www.w3.org/Amaya/Amaya.html)](https://web.archive.org/web/20050401021204/http://www.w3.org/Amaya/Amaya.html)](https://web.archive.org/web/20051218224723/http://www.w3.org/Amaya/Amaya.html)](https://web.archive.org/web/20061025203901/http://www.w3.org/Amaya/Amaya.html))
+  * *Authors:* W3C and Inria
+  * *Date:* 2006 
+  * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+  * *Description:* A screenshot view of Amaya's user interface v9.52
+  * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+  * *Notes:*  
+ 
 # SW_NAME Catalogue Tree
 
 
