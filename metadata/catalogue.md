@@ -25,22 +25,24 @@ Example of Item links:
 # SW_NAME Catalogue
 
 
-* **[Item Name](./raw_materials/example_file.zip)**
-  * *Origin:* 
+* **[Screenshot Amaya 1998](./raw_materials/example_file.zip)**
+  * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19980703153334/https://www.w3.org/Amaya/)
   * *Warehouse:* 
-  * *Authors:* [Name Surname](./actors.md#name-surname)
-  * *Date:* 1970/01/25 (circa) 
-  * *Collectors:* [Name Surname](./actors.md#name-surname)
-  * *Description:* 
+  * *Authors:* W3C and Inria
+  * *Date:* 1998 
+  * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+  * *Description:* A screenshot view of Amaya's user interface. Possibly version 1.1 or earlier.
+  * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
   * *Notes:* 
   
-* **[Additional Material Item Name](./additional_materials/example.ppt)**
-  * *Origin:* 
-  * *Authors:* [Name Surname](./actors.md#name-surname)
-  * *Date:* 1979/05/20 
-  * *Collectors:* [Name Surname](./actors.md#name-surname)
-  * *Description:* 
-  * *Notes:* Additional materials;
+* **[Orignial Amya logo](./additional_materials/example.ppt)**
+  * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19970605010725/https://www.w3.org/Amaya/)
+  * *Authors:* [Unknown](./actors.md#name-surname)
+  * *Date:* 1997
+  * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+  * *Description:* Original logo of Amaya
+  * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+  * *Notes:* 
 
 # SW_NAME Catalogue Tree
 
