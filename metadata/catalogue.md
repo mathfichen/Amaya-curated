@@ -72,6 +72,14 @@ Example of Item links:
    * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
    * *Notes:*  
 
+  * **[Screenshot Amaya MathML application 1999](./raw_materials/other/2001-amaya-math.gif)**
+    * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/20010802113526/http://www.w3.org/Amaya/Amaya.html)
+    * *Authors:* W3C and Inria
+    * *Date:* 2001
+    * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+    * *Description:* A screenshot view of Amaya's MathML application. Possibly version 5.1 or earlier.
+    * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+    * *Notes:*  
  
 # SW_NAME Catalogue Tree
 
