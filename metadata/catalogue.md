@@ -72,7 +72,7 @@ Example of Item links:
    * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
    * *Notes:*  
 
-  * **[Screenshot Amaya MathML application 1999](./raw_materials/other/2001-amaya-math.gif)**
+  * **[Screenshot Amaya MathML application 2001](./raw_materials/other/2001-amaya-math.gif)**
     * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/20010802113526/http://www.w3.org/Amaya/Amaya.html)
     * *Authors:* W3C and Inria
     * *Date:* 2001
@@ -90,6 +90,25 @@ Example of Item links:
   * *Description:* A screenshot view of Amaya's user interface. Possibly version 5.2
   * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
   * *Notes:*  
+
+  * **[Screenshot Amaya MathML application 2005](./raw_materials/other/2001-amaya-math.gif)**
+    * *Origin:* [Amaya Website - Wayback Machine]([https://web.archive.org/web/20010802113526/http://www.w3.org/Amaya/Amaya.html](https://web.archive.org/web/20050401021204/http://www.w3.org/Amaya/Amaya.html))
+    * *Authors:* W3C and Inria
+    * *Date:* 2005
+    * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+    * *Description:* A screenshot view of Amaya's MathML application. Possibly version 9.0.
+    * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+    * *Notes:*  
+ 
+
+* **[Screenshot Amaya User Interface 2005 v9.0](./raw_materials/other/2005-v-9-0-amaia-ui.png )**
+  * *Origin:* [Amaya Website - Wayback Machine]([[https://web.archive.org/web/19990914133746/https://www.w3.org/Amaya/](https://web.archive.org/web/20011116163408/http://www.w3.org/Amaya/Amaya.html)](https://web.archive.org/web/20050401021204/http://www.w3.org/Amaya/Amaya.html))
+  * *Authors:* W3C and Inria
+  * *Date:* 2005 
+  * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+  * *Description:* A screenshot view of Amaya's user interface v9.0
+  * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+  * *Notes:*   
  
 # SW_NAME Catalogue Tree
 
