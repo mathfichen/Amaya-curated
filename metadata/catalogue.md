@@ -109,6 +109,42 @@ Example of Item links:
   * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
   * *Notes:*   
  
+* **[Screenshot Amaya User Interface 2005 v9.3](./raw_materials/other/2005-v-9-3-amaya-ui.png)**
+  * *Origin:* [Amaya Website - Wayback Machine]([[[https://web.archive.org/web/19990914133746/https://www.w3.org/Amaya/](https://web.archive.org/web/20011116163408/http://www.w3.org/Amaya/Amaya.html)](https://web.archive.org/web/20050401021204/http://www.w3.org/Amaya/Amaya.html)](https://web.archive.org/web/20051218224723/http://www.w3.org/Amaya/Amaya.html))
+  * *Authors:* W3C and Inria
+  * *Date:* 2005 
+  * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+  * *Description:* A screenshot view of Amaya's user interface v9.3
+  * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+  * *Notes:* 
+ 
+ * **[Screenshot Amaya support for CSS 2005 v9.3](./raw_materials/other/2005-9-3-amaya-CSS.png)**
+   * *Origin:* [Amaya Website - Wayback Machine]([[[https://web.archive.org/web/19990914133746/https://www.w3.org/Amaya/](https://web.archive.org/web/20011116163408/http://www.w3.org/Amaya/Amaya.html)](https://web.archive.org/web/20050401021204/http://www.w3.org/Amaya/Amaya.html)](https://web.archive.org/web/20051218224723/http://www.w3.org/Amaya/Amaya.html))
+   * *Authors:* W3C and Inria
+   * *Date:* 2005 
+   * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+   * *Description:* A screenshot view of Amaya's support interface for CSS v9.3
+   * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+   * *Notes:*  
+ 
+ * **[Screenshot Amaya support for SVG 2005 v9.3](./raw_materials/other/2005-v-9-3-amaya-ui-svg.png)**
+   * *Origin:* [Amaya Website - Wayback Machine]([[[https://web.archive.org/web/19990914133746/https://www.w3.org/Amaya/](https://web.archive.org/web/20011116163408/http://www.w3.org/Amaya/Amaya.html)](https://web.archive.org/web/20050401021204/http://www.w3.org/Amaya/Amaya.html)](https://web.archive.org/web/20051218224723/http://www.w3.org/Amaya/Amaya.html))
+   * *Authors:* W3C and Inria
+   * *Date:* 2005 
+   * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+   * *Description:* A screenshot view of Amaya's support interface for SVG v9.3
+   * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+   * *Notes:*   
+ 
+ * **[Screenshot Amaya support for RDF 2005 v9.3](./raw_materials/other/2005-v-9-3-amaya-RDF.png)**
+   * *Origin:* [Amaya Website - Wayback Machine]([[[https://web.archive.org/web/19990914133746/https://www.w3.org/Amaya/](https://web.archive.org/web/20011116163408/http://www.w3.org/Amaya/Amaya.html)](https://web.archive.org/web/20050401021204/http://www.w3.org/Amaya/Amaya.html)](https://web.archive.org/web/20051218224723/http://www.w3.org/Amaya/Amaya.html))
+   * *Authors:* W3C and Inria
+   * *Date:* 2005 
+   * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+   * *Description:* A screenshot view of Amaya's support interface for RDF v9.3
+   * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+   * *Notes:*  
+ 
 # SW_NAME Catalogue Tree
 
 
