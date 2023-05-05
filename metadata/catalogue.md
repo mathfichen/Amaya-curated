@@ -36,13 +36,13 @@ Example of Item links:
   * *Notes:* 
  
  * **[Screenshot Amaya MathML application 1998](./raw_materials/other/1998-amaya-math.gif)**
-  * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19980703153334/https://www.w3.org/Amaya/)
-  * *Authors:* W3C and Inria
-  * *Date:* 1998 
-  * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
-  * *Description:* A screenshot view of Amaya's MathML application. Possibly version 1.1 or earlier.
-  * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
-  * *Notes:* 
+   * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19980703153334/https://www.w3.org/Amaya/)
+   * *Authors:* W3C and Inria
+   * *Date:* 1998 
+   * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+   * *Description:* A screenshot view of Amaya's MathML application. Possibly version 1.1 or earlier.
+   * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+   * *Notes:* 
   
 * **[Orignial Amya logo](./additional_materials/other/amaya-logo-1997.gif)**
   * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19970605010725/https://www.w3.org/Amaya/)
@@ -65,14 +65,14 @@ Example of Item links:
   * *Notes:* 
 
  * **[Screenshot Amaya MathML application 1999](./raw_materials/other/1999-v-2-1-amaya-math.gif)**
-  * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19990914133746/https://www.w3.org/Amaya/)
-  * *Authors:* W3C and Inria
-  * *Date:* 1999 
-  * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
-  * *Description:* A screenshot view of Amaya's MathML application. Possibly version 1.1 or earlier.
-  * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
-  * *Notes:*  
- 
+   * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19990914133746/https://www.w3.org/Amaya/)
+   * *Authors:* W3C and Inria
+   * *Date:* 1999 
+   * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+   * *Description:* A screenshot view of Amaya's MathML application. Possibly version 1.1 or earlier.
+   * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+   * *Notes:*  
+
  
 # SW_NAME Catalogue Tree
 
