@@ -24,7 +24,7 @@ Example of Item links:
 
 # SW_NAME Catalogue
 
-* **[Original Amaya logo](./additional_materials/other/amaya_logo_65x50.png)**
+* **[Original Amaya logo](./raw_materials/other/amaya_logo_65x50.png)**
   * *Origin:* [Amaya Website - Wayback Machine]([https://web.archive.org/web/19970605010725/https://www.w3.org/Amaya/](https://www.w3.org/Amaya/Overview.html))
   * *Authors:* [Unknown](./actors.md#name-surname)
   * *Date:* 2023
@@ -33,7 +33,7 @@ Example of Item links:
   * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
   * *Notes:* 
  
-* **[Aamya logo](./additional_materials/other/amaya-logo-1997.gif)**
+* **[Aamya logo](./raw_materials/other/amaya-logo-1997.gif)**
   * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19970605010725/https://www.w3.org/Amaya/)
   * *Authors:* [Unknown](./actors.md#name-surname)
   * *Date:* 1997
