@@ -1,0 +1,216 @@
+0 File
+1 File
+2 File
+3 File
+4 File
+5 Edita
+6 Struttura
+7 Elementi
+8 Collegamenti
+9 Viste
+10 Stile
+11 Speciale
+12 Attributi
+13 **Annotations
+14 Aiuto
+15 Nuovo
+16 Nuovo documento HTML...
+17 Modello
+18 Nuovo stile CSS...
+19 Apri documento...
+20 Apri in una nuova finestra...
+21 Ricarica documento
+22 Precedente
+23 Successivo
+24 Salva
+25 Salva con nome...
+26 Sincronizza
+27 Imposta e stampa...
+28 Stampa
+29 Chiudi
+30 Esci
+31 Chiudi vista
+32 Ritratta
+33 Rifai
+34 Taglia
+35 Copia
+36 Incolla
+37 Cancella
+38 Modo Editor
+39 Trova...
+40 Controllo ortografico...
+41 Trasforma...
+42 base
+43 meta
+44 link
+45 script
+46 style
+47 Commento
+48 Indirizzo (address)
+49 Zona attiva (area)
+50 Cerchio
+51 Poligono
+52 Rettangolo
+53 blockquote
+54 A capo (br)
+55 Divisione (div)
+56 Modulo
+57 form
+58 Pulsante (input)
+59 Checkbox (input)
+60 Selettore di file (input)
+61 Controllo nascosto (input)
+62 Image (input)...
+63 Password (input)
+64 Pulsante radio (input)
+65 Reset (input)
+66 Invia (input)
+67 Testo (input)
+68 Gruppo di campi (fieldset)
+69 Etichetta (label)
+70 Menu (option)
+71 Sottomenu (optgroup)
+72 Area testo (textarea)
+73 Intestazione
+74 h1
+75 h2
+76 h3
+77 h4
+78 h5
+79 h6
+80 Riga orizzontale (hr)
+81 Cornice (iframe)
+82 Immagine (img)...
+83 Lista
+84 Lista puntata (ul)
+85 Lista numerata (ol)
+86 Lista di definizioni (dl)
+87 Termine (dt)
+88 Definizione (dd)
+89 Math
+90 math (math)
+91 **Plain text (mtext)
+92 **Identifier (mi)
+93 **Number (mn)
+94 **Operator (mo)
+95 **Character (mchar)
+96 Radice (mroot)
+97 Radice quadrata (msqrt)
+98 **Enclose (menclose)
+99 Frazione (mfrac)
+100 Pedice e indice (msubsup)
+101 Pedice (msub)
+102 Indice (msup)
+103 Sotto e sopra (munderover)
+104 Sotto (munder)
+105 Sopra (mover)
+106 Parentesi (mrow)
+107 Multiscripts (mmultiscripts)
+108 Matrice (mtable)
+109 Cancella colonna della matrice
+110 noscript
+111 Oggetto
+112 Oggetto (object)
+113 Parametro (param)
+114 Paragrafo (p)
+115 Preformattato (pre)
+116 Tabella
+117 Tabella (table)
+118 Legenda (caption)
+119 colgroup
+120 col
+121 Intestazione (thead)
+122 Corpo (tbody)
+123 tfoot
+124 Linea (tr)
+125 Cella dati (td)
+126 Cella intestazione (th)
+127 Cancella colonna della tabella
+128 Collega al precedente obiettivo
+129 Crea o cambia collegamento...
+130 Crea obiettivo
+131 Cancella ancora
+132 Mostra barra dei pulsanti
+133 Mostra indirizzo
+134 Mostra le zone attive
+135 Mostra obiettivi
+136 Ingrandisci
+137 Rimpicciolisci
+138 Mostra struttura
+139 Mostra la vista alternativa
+140 Mostra collegamenti
+141 Mostra sommario
+142 Mostra sorgente
+143 Stile dei caratteri...
+144 Colori...
+145 Formattazione...
+146 Immagine di sfondo...
+147 Crea una regola...
+148 Applica una classe...
+149 Fogli di stile
+150 Collegamento...
+151 Apri...
+152 Disabilita...
+153 Abilita...
+154 Rimuovi...
+155 Tipo di informazione
+156 Enfasi (em)
+157 Forte (strong)
+158 Cita (cite)
+159 Definizione (dfn)
+160 Codice (code)
+161 Variabile (var)
+162 Sample (samp)
+163 Tastiera (kbd)
+164 Abbreviazione (abbr)
+165 Acronimo (acronym)
+166 Inserzione (ins)
+167 Cancellazione (del)
+168 Elementi carattere
+169 Italico (i)
+170 Grassetto (b)
+171 Macchina da scrivere (tt)
+172 Grande (big)
+173 Piccolo (small)
+174 Pedice (sub)
+175 Indice (sup)
+176 Citazione (q)
+177 BiDi (bdo)
+178 Numerazione delle sezioni
+179 Crea libro
+180 Mostra il log file
+181 Preferenze
+182 Generali...
+183 Pubblicazione...
+184 Cache...
+185 Proxy...
+186 Colori...
+187 Dimensioni della finestra...
+188 Negoziazione della lingua...
+189 Profili...
+190 Modelli...
+191 Annota
+192 **Show annotations
+193 Carica annotazioni
+194 **Post annotation
+195 Informazioni su Amaya
+196 Informazioni su Amaya al W3C
+197 Navigazione
+198 Selezione
+199 Ricerca
+200 Viste
+201 Creazione elementi
+202 Collegamenti
+203 Ristrutturazione
+204 Tabelle
+205 Matematica
+206 Zone attive
+207 Fogli di stile
+208 Attributi
+209 Controllo ortografico
+210 Pubblicazione
+211 Stampa
+212 Numerazione
+213 Creare un libro
+214 Configurazione di Amaya
+215 Accessibility in Amaya

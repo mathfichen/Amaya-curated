@@ -1,0 +1,3426 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+GENERALMENU DIALOG DISCARDABLE  100, 100, 202, 230
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "General Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Apply",ID_APPLY,7,209,50,14
+    PUSHBUTTON      "Done",ID_DONE,145,209,50,14
+    PUSHBUTTON      "Defaults",ID_DEFAULTS,76,209,50,14
+    LTEXT           "Home Page",IDC_THOMEPAGE,8,68,65,11
+    EDITTEXT        IDC_HOMEPAGE,8,82,187,13,ES_AUTOHSCROLL | NOT WS_TABSTOP
+    LTEXT           "Font zoom (-10...10)",IDC_TZOOM,7,99,116,10
+    EDITTEXT        IDC_ZOOM,7,113,41,12,ES_AUTOHSCROLL
+    LTEXT           "Dialogue language",IDC_TDIALOGUELANG,7,129,105,8
+    EDITTEXT        IDC_DIALOGUELANG,7,141,60,12,ES_AUTOHSCROLL
+    CONTROL         "Enable multikey",IDC_MULTIKEY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,162,127,8
+    CONTROL         "Show background images",IDC_BGIMAGES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,174,157,10
+    CONTROL         "Double click activates link",IDC_DOUBLECLICK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,188,171,10
+    LTEXT           "Amaya user directory",IDC_TAPPHOME,7,7,111,8
+    EDITTEXT        IDC_APPHOME,7,19,188,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Temporary directory",IDC_TTMPDIR,7,37,135,8
+    EDITTEXT        IDC_TMPDIR,7,49,188,14,ES_AUTOHSCROLL
+END
+
+PUBLISHMENU DIALOG DISCARDABLE  0, 0, 204, 125
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Publishing Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Apply",ID_APPLY,7,104,50,14
+    PUSHBUTTON      "Done",ID_DONE,147,104,50,14
+    PUSHBUTTON      "Defaults",ID_DEFAULTS,77,104,50,14
+    LTEXT           "Default name for URLs finishing in '/'",
+                    IDC_TDEFAULTNAME,7,38,190,8
+    CONTROL         "Use ETAGS and preconditions",IDC_LOSTUPDATECHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,182,8
+    CONTROL         "Verify each PUT with a GET",IDC_VERIFYPUBLISH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,19,174,10
+    EDITTEXT        IDC_DEFAULTNAME,7,51,164,12,ES_AUTOHSCROLL
+    LTEXT           "Allow automatic PUT redirections on these domains",
+                    IDC_TSAFEPUTREDIRECT,7,70,182,8
+    EDITTEXT        IDC_SAFEPUTREDIRECT,7,81,164,12,ES_AUTOHSCROLL
+END
+
+CACHEMENU DIALOG DISCARDABLE  0, 0, 243, 178
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Cache Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Apply",ID_APPLY,8,156,50,14
+    PUSHBUTTON      "Done",ID_DONE,183,156,50,14
+    PUSHBUTTON      "Defaults",ID_DEFAULTS,64,156,50,14
+    LTEXT           "Cache directory",IDC_IDC_TCACHEDIRECTORY,8,68,147,8
+    EDITTEXT        IDC_CACHEDIRECTORY,8,79,202,12,ES_AUTOHSCROLL
+    CONTROL         "Enable cache",IDC_ENABLECACHE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,13,66,8
+    CONTROL         "Cache protected documents",IDC_CACHEPROTECTEDDOCS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,25,207,10
+    CONTROL         "Disconnected mode",IDC_CACHEDISCONNECTEDMODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,39,79,10
+    CONTROL         "Ignore Expires: header",IDC_CACHEEXPIREIGNORE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,52,191,10
+    LTEXT           "Cache size (Mb)",IDC_TCACHESIZE,8,94,96,8
+    EDITTEXT        IDC_CACHESIZE,8,105,42,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Cache entry size limit (Mb)",IDC_TMAXCACHEFILE,8,120,
+                    130,8,WS_TABSTOP
+    EDITTEXT        IDC_MAXCACHEFILE,8,131,42,12,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Flush Cache",ID_FLUSHCACHE,120,156,57,14
+END
+
+PROXYMENU DIALOG DISCARDABLE  0, 0, 189, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Proxy Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Apply",ID_APPLY,7,116,50,14
+    PUSHBUTTON      "Done",ID_DONE,132,116,50,14
+    PUSHBUTTON      "Defaults",ID_DEFAULTS,70,116,50,14
+    LTEXT           "HTTP proxy",IDC_THTTPPROXY,7,7,129,8
+    EDITTEXT        IDC_HTTPPROXY,7,19,175,14,ES_AUTOHSCROLL
+    LTEXT           "Proxy domain list",IDC_TPROXYDOMAIN,7,41,137,8
+    EDITTEXT        IDC_PROXYDOMAIN,7,54,175,14,ES_AUTOHSCROLL
+    LTEXT           "(Separate entries with a space)",IDC_TSEPENTRIESSPACE,7,
+                    73,162,8
+    CONTROL         "Don't proxy these domains",IDC_NOPROXY,"Button",
+                    BS_AUTORADIOBUTTON,7,86,114,9
+    CONTROL         "Proxy only these domains",IDC_ONLYPROXY,"Button",
+                    BS_AUTORADIOBUTTON,7,99,115,9
+END
+
+GEOMETRYMENU DIALOG DISCARDABLE  0, 0, 292, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Geometry Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Save current geometry",ID_APPLY,7,45,96,14
+    PUSHBUTTON      "Done",ID_DONE,235,45,50,14
+    PUSHBUTTON      "Restore default geometry",ID_DEFAULTS,109,45,120,14
+    LTEXT           "The change will be effective when you open a new window.",
+                    IDC_GEOMCHANGE,39,18,213,16
+END
+
+COLORMENU DIALOG DISCARDABLE  0, 0, 194, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Color Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Defaults",ID_DEFAULTS,75,98,50,14
+    PUSHBUTTON      "Done",ID_DONE,137,98,50,14
+    DEFPUSHBUTTON   "Apply",ID_APPLY,7,98,56,14
+    LTEXT           "Document foreground color",IDC_TFGCOLOR,7,8,148,8
+    LTEXT           "Document background color",IDC_TBGCOLOR,7,37,151,8
+    PUSHBUTTON      "Use Palette",IDC_CHANGCOLOR,7,72,98,14
+    EDITTEXT        IDC_FGCOLOR,7,21,96,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BGCOLOR,7,50,96,12,ES_AUTOHSCROLL
+END
+
+LANNEGMENU DIALOG DISCARDABLE  100, 100, 198, 68
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Language Negotiation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Apply",ID_APPLY,7,47,50,14
+    PUSHBUTTON      "Done",ID_DONE,140,47,50,14
+    PUSHBUTTON      "Defaults",ID_DEFAULTS,76,47,50,14
+    LTEXT           "List of preferred languages, like ""en, fr""",
+                    IDC_TLANNEG,7,7,170,11
+    EDITTEXT        IDC_LANNEG,7,22,183,13,ES_AUTOHSCROLL | NOT WS_TABSTOP
+END
+
+TEMPLATESMENU DIALOG DISCARDABLE  100, 100, 198, 68
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Templates Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Apply",ID_APPLY,7,47,50,14
+    PUSHBUTTON      "Done",ID_DONE,141,47,50,14
+    PUSHBUTTON      "Defaults",ID_DEFAULTS,76,47,50,14
+    LTEXT           "Enter the URL of the templates server",
+                    IDC_TTEMPLATESURL,7,7,178,11
+    EDITTEXT        IDC_TEMPLATESURL,7,22,184,13,ES_AUTOHSCROLL | NOT 
+                    WS_TABSTOP
+END
+
+PROFILEMENU DIALOG DISCARDABLE  100, 100, 228, 167
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Profile Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Location of profiles definition file",IDC_TPROFILESLOCA,
+                    7,7,214,11
+    EDITTEXT        IDC_PROFILESLOCATION,7,22,168,13,ES_AUTOHSCROLL | NOT 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "Apply",ID_APPLY,23,146,50,14
+    PUSHBUTTON      "Done",ID_DONE,155,146,50,14
+    PUSHBUTTON      "Defaults",ID_DEFAULTS,89,146,50,14
+    EDITTEXT        IDC_PROFILENAME,7,111,131,13,ES_AUTOHSCROLL | NOT 
+                    WS_TABSTOP
+    LTEXT           "Location of profiles definition file",
+                    IDC_TPROFILESELECT,7,43,214,11
+    LTEXT           "These changes won't be effective until Amaya is restarted",
+                    IDC_TPROFILECHANGE,7,129,214,11
+END
+
+INITCONFIRM3LDIALOG DIALOG DISCARDABLE  100, 100, 265, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Confirm"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Confirm",ID_CONFIRM,76,60,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,139,60,50,14
+    LTEXT           "Message1",IDC_MESSAGE1,4,7,251,11
+    LTEXT           "Message 2",IDC_MESSAGE2,4,23,251,11
+    LTEXT           "Message 3",IDC_MESSAGE3,4,39,251,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    GENERALMENU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    PUBLISHMENU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 197
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    CACHEMENU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    PROXYMENU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    GEOMETRYMENU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    COLORMENU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    LANNEGMENU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 190
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    TEMPLATESMENU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 191
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    PROFILEMENU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    INITCONFIRM3LDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DE_BGIMAGEDIALOG DIALOG DISCARDABLE  100, 100, 184, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Confirm",ID_CONFIRM,19,100,33,15
+    PUSHBUTTON      "Cancel",IDCANCEL,135,101,33,14
+    PUSHBUTTON      "Clear",ID_CLEAR,60,101,28,14
+    LTEXT           "Open location",IDC_OPENLOCATION,7,7,49,8
+    EDITTEXT        IDC_BGLOCATION,7,18,168,15,ES_AUTOHSCROLL
+    GROUPBOX        "Repeat Mode",IDC_REPEATMODE,62,40,59,51,WS_GROUP
+    CONTROL         "Repeat",IDC_REPEAT,"Button",BS_AUTORADIOBUTTON,68,49,42,
+                    8
+    CONTROL         "Repeat-X",IDC_REPEATX,"Button",BS_AUTORADIOBUTTON,68,58,
+                    47,11
+    CONTROL         "Repeat-Y",IDC_REPEATY,"Button",BS_AUTORADIOBUTTON,68,69,
+                    48,9
+    CONTROL         "No-repeat",IDC_NOREPEAT,"Button",BS_AUTORADIOBUTTON,68,
+                    78,46,10
+    PUSHBUTTON      "Browse",IDC_BROWSE,93,101,36,14
+END
+
+DE_FORMATDIALOG DIALOG DISCARDABLE  100, 100, 184, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Format ..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Apply",ID_APPLY,35,193,50,14
+    PUSHBUTTON      "Done",ID_DONE,97,193,50,14
+    GROUPBOX        "Align",-1,7,7,51,79,WS_GROUP
+    CONTROL         "",IDC_LEFT,"Button",BS_AUTORADIOBUTTON,13,18,11,12
+    CONTROL         "",IDC_RIGHT,"Button",BS_AUTORADIOBUTTON,13,33,9,17
+    CONTROL         "",IDC_CENTER,"Button",BS_AUTORADIOBUTTON,13,49,11,17
+    CONTROL         "Default",IDC_DEFAULTALIGN,"Button",BS_AUTORADIOBUTTON,
+                    13,68,42,14
+    CONTROL         1104,IDC_BLEFT,"Static",SS_BITMAP | SS_NOTIFY,25,17,25,
+                    12
+    CONTROL         1106,IDC_BCENTER,"Static",SS_BITMAP | SS_NOTIFY,27,52,25,
+                    12
+    CONTROL         1107,IDC_BRIGHT,"Static",SS_BITMAP | SS_NOTIFY,25,34,25,
+                    12
+    LTEXT           "Indent (pt)",IDC_INDENTPT,70,26,38,10
+    LTEXT           "0 .. 300",IDC_INDENTPTVALUE,76,39,28,11
+    EDITTEXT        IDC_INDENTPTEDIT,66,51,48,16,ES_AUTOHSCROLL
+    GROUPBOX        "Indent",-1,121,7,56,78,WS_GROUP
+    CONTROL         "",IDC_INDENT1,"Button",BS_AUTORADIOBUTTON,125,18,10,10
+    CONTROL         "",IDC_INDENT2,"Button",BS_AUTORADIOBUTTON,125,44,11,12
+    CONTROL         "Default",IDC_INDENTDEFAULT,"Button",BS_AUTORADIOBUTTON,
+                    125,68,51,13
+    CONTROL         150,IDC_BINDENT1,"Static",SS_BITMAP | SS_NOTIFY,140,18,
+                    25,12
+    CONTROL         151,IDC_BINDENT2,"Static",SS_BITMAP | SS_NOTIFY,140,44,
+                    25,12
+    GROUPBOX        "Justification",-1,7,100,51,84,WS_GROUP
+    CONTROL         "Yes",IDC_JUSTIFYES,"Button",BS_AUTORADIOBUTTON,14,113,
+                    43,17
+    CONTROL         "No",IDC_JUSTIFNO,"Button",BS_AUTORADIOBUTTON,15,129,46,
+                    19
+    CONTROL         "Default",IDC_JUSTIFDEFAULT,"Button",BS_AUTORADIOBUTTON,
+                    15,147,47,21
+    LTEXT           "Line spacing (pt)",IDC_LINESPACINGPT,64,122,58,11
+    LTEXT           "1 .. 200",IDC_LINESPACINGPTVALUE,77,137,30,9
+    EDITTEXT        IDC_LINESPACINGEDIT,67,150,50,15,ES_AUTOHSCROLL
+    GROUPBOX        "Line spacing",-1,122,99,55,86,WS_GROUP
+    CONTROL         "",IDC_SSMALL,"Button",BS_AUTORADIOBUTTON,130,112,9,12
+    CONTROL         "",IDC_SMEDIUM,"Button",BS_AUTORADIOBUTTON,130,130,9,13
+    CONTROL         "",IDC_SLARGE,"Button",BS_AUTORADIOBUTTON,130,148,9,12
+    CONTROL         "Default",IDC_SPACINGDEFAULT,"Button",BS_AUTORADIOBUTTON,
+                    130,167,46,12
+    CONTROL         152,IDC_BSSMALL,"Static",SS_BITMAP | SS_NOTIFY,140,111,
+                    30,14
+    CONTROL         153,IDC_BSMEDIUM,"Static",SS_BITMAP | SS_NOTIFY,140,129,
+                    30,14
+    CONTROL         154,IDC_BSLARGE,"Static",SS_BITMAP | SS_NOTIFY,140,149,
+                    30,14
+END
+
+DE_GALPHABETDIALOG DIALOGEX 400, 200, 185, 293
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Greek alphabet"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,69,268,50,14
+    CONTROL         201,IDC_GKEY002,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         202,IDC_GKEY003,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         203,IDC_GKEY004,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         204,IDC_GKEY005,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         205,IDC_GKEY006,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,6,18,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         206,IDC_GKEY007,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         207,IDC_GKEY008,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         200,IDC_GKEY001,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         208,IDC_GKEY009,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         209,IDC_GKEY010,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         210,IDC_GKEY011,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         211,IDC_GKEY012,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         212,IDC_GKEY013,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         216,IDC_GKEY014,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         217,IDC_GKEY015,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         218,IDC_GKEY016,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,22,18,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         219,IDC_GKEY017,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,23,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         220,IDC_GKEY018,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         221,IDC_GKEY019,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         222,IDC_GKEY020,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         223,IDC_GKEY021,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         224,IDC_GKEY022,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         225,IDC_GKEY023,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         226,IDC_GKEY024,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         227,IDC_GKEY025,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         228,IDC_GKEY026,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,38,18,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         229,IDC_GKEY027,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         230,IDC_GKEY028,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         231,IDC_GKEY029,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         232,IDC_GKEY030,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         233,IDC_GKEY031,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         234,IDC_GKEY032,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         235,IDC_GKEY033,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,55,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         236,IDC_GKEY034,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         237,IDC_GKEY035,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         238,IDC_GKEY036,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,54,18,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         239,IDC_GKEY037,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         240,IDC_GKEY038,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         241,IDC_GKEY039,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         242,IDC_GKEY040,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         243,IDC_GKEY041,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         244,IDC_GKEY042,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         245,IDC_GKEY043,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         246,IDC_GKEY044,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         247,IDC_GKEY045,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         248,IDC_GKEY046,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,70,18,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         249,IDC_GKEY047,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         250,IDC_GKEY048,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         251,IDC_GKEY049,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         252,IDC_GKEY050,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         253,IDC_GKEY051,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         254,IDC_GKEY052,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         255,IDC_GKEY053,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         256,IDC_GKEY054,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         257,IDC_GKEY055,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         258,IDC_GKEY056,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         259,IDC_GKEY057,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         260,IDC_GKEY058,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         261,IDC_GKEY059,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         262,IDC_GKEY060,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         263,IDC_GKEY061,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         264,IDC_GKEY062,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         265,IDC_GKEY063,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         266,IDC_GKEY064,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         267,IDC_GKEY065,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         268,IDC_GKEY066,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         269,IDC_GKEY067,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         270,IDC_GKEY068,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         271,IDC_GKEY069,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         272,IDC_GKEY070,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         273,IDC_GKEY071,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         274,IDC_GKEY072,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         275,IDC_GKEY073,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         276,IDC_GKEY074,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         277,IDC_GKEY075,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         278,IDC_GKEY076,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         279,IDC_GKEY077,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         280,IDC_GKEY078,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         281,IDC_GKEY079,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         282,IDC_GKEY080,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         283,IDC_GKEY081,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         284,IDC_GKEY082,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         285,IDC_GKEY083,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         286,IDC_GKEY084,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         287,IDC_GKEY085,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         288,IDC_GKEY086,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         289,IDC_GKEY087,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         290,IDC_GKEY088,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         291,IDC_GKEY089,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         292,IDC_GKEY090,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         293,IDC_GKEY091,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         294,IDC_GKEY092,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         295,IDC_GKEY093,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         296,IDC_GKEY094,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         297,IDC_GKEY095,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         298,IDC_GKEY096,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         299,IDC_GKEY097,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         300,IDC_GKEY098,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         301,IDC_GKEY099,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         302,IDC_GKEY100,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         303,IDC_GKEY101,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         304,IDC_GKEY102,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         305,IDC_GKEY103,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         306,IDC_GKEY104,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         307,IDC_GKEY105,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         308,IDC_GKEY106,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         309,IDC_GKEY107,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         310,IDC_GKEY108,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         311,IDC_GKEY109,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         312,IDC_GKEY110,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         313,IDC_GKEY111,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         314,IDC_GKEY112,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         315,IDC_GKEY113,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         316,IDC_GKEY114,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         317,IDC_GKEY115,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         318,IDC_GKEY116,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         319,IDC_GKEY117,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         320,IDC_GKEY118,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         321,IDC_GKEY119,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         322,IDC_GKEY120,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         323,IDC_GKEY121,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         324,IDC_GKEY122,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         325,IDC_GKEY123,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         326,IDC_GKEY124,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         327,IDC_GKEY125,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         328,IDC_GKEY126,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         329,IDC_GKEY127,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         330,IDC_GKEY128,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         331,IDC_GKEY129,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         332,IDC_GKEY130,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         333,IDC_GKEY131,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         334,IDC_GKEY132,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         335,IDC_GKEY133,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         336,IDC_GKEY134,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         337,IDC_GKEY135,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         338,IDC_GKEY136,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         339,IDC_GKEY137,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         340,IDC_GKEY138,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         341,IDC_GKEY139,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         342,IDC_GKEY140,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         343,IDC_GKEY141,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         344,IDC_GKEY142,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         345,IDC_GKEY143,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         346,IDC_GKEY144,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         347,IDC_GKEY145,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         348,IDC_GKEY146,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         349,IDC_GKEY147,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         350,IDC_GKEY148,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         351,IDC_GKEY149,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         352,IDC_GKEY150,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         353,IDC_GKEY151,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         354,IDC_GKEY152,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         355,IDC_GKEY153,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         356,IDC_GKEY154,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         357,IDC_GKEY155,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         358,IDC_GKEY156,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         359,IDC_GKEY157,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         360,IDC_GKEY158,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         361,IDC_GKEY159,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         362,IDC_GKEY160,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+END
+
+DE_GETSAVEDIALOG DIALOG DISCARDABLE  100, 100, 263, 65
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Save File as"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Confirm",ID_CONFIRM,44,40,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,170,40,50,14
+    EDITTEXT        IDC_EDITDOCSAVE,7,7,246,17,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BROWSE,102,40,57,14
+END
+
+DE_PRINTINPROGRESS DIALOG DISCARDABLE  100, 100, 131, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Printing ..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel print job",IDCANCEL,32,28,67,14
+    LTEXT           "Printing in progress ...",IDC_STATIC,29,14,72,9
+END
+
+DE_SPELLCHECKDIALOG DIALOG DISCARDABLE  100, 100, 258, 198
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Spell checking"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Search",ID_SKIPNEXT,8,180,49,15
+    PUSHBUTTON      "Skip (+dic)",ID_SKIPDIC,60,180,39,15
+    PUSHBUTTON      "Replace and next",ID_REPLACENEXT,103,180,62,15
+    PUSHBUTTON      "Replace (+dic)",ID_REPLACEDIC,169,180,53,15
+    PUSHBUTTON      "Done",ID_DONE,227,180,25,15
+    GROUPBOX        "Checking",-1,8,113,100,61,WS_GROUP
+    CONTROL         "Before selection",IDC_BEFORE,"Button",
+                    BS_AUTORADIOBUTTON,14,124,93,11
+    CONTROL         "Within selection",IDC_WITHIN,"Button",
+                    BS_AUTORADIOBUTTON,14,135,93,13
+    CONTROL         "After selection",IDC_AFTER,"Button",BS_AUTORADIOBUTTON,
+                    14,146,92,13
+    CONTROL         "In whole document",IDC_WHOLEDOC,"Button",
+                    BS_AUTORADIOBUTTON,14,158,94,10
+    LTEXT           "Number of proposals",IDC_NBPROPOSALS,137,42,69,10
+    LTEXT           "1..10",IDC_PROPOSALS,162,54,22,9
+    EDITTEXT        IDC_EDITPROPOSALS,137,66,68,18,ES_AUTOHSCROLL
+    GROUPBOX        "Ignore",-1,137,95,115,79,WS_GROUP
+    CONTROL         "words that are all caps",IDC_IGNORE1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,146,106,94,13
+    CONTROL         "words with digits",IDC_IGNORE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,146,119,91,11
+    CONTROL         "roman numerals",IDC_IGNORE3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,146,130,96,11
+    CONTROL         "Words containing",IDC_IGNORE4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,146,143,96,11
+    EDITTEXT        IDC_EDITIGNORE,158,154,81,15,ES_AUTOHSCROLL
+END
+
+DE_TEMPLATESMENU DIALOG DISCARDABLE  100, 100, 198, 68
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Templates Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Apply",ID_APPLY,7,47,50,14
+    PUSHBUTTON      "Done",ID_DONE,141,47,50,14
+    PUSHBUTTON      "Defaults",ID_DEFAULTS,76,47,50,14
+    LTEXT           "Enter the URL of the templates server",-1,7,7,152,11
+    EDITTEXT        IDC_TEMPLATESURL,7,22,184,13,ES_AUTOHSCROLL | NOT 
+                    WS_TABSTOP
+END
+
+DE_AUTHENTIFICATIONDIALOG DIALOG DISCARDABLE  100, 100, 151, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Anmeldung"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",ID_CONFIRM,18,131,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,84,131,50,14
+    LTEXT           "Name",IDC_STATIC,7,68,30,12
+    EDITTEXT        IDC_NAMEEDIT,7,80,135,13,ES_AUTOHSCROLL
+    LTEXT           "Password",IDC_STATIC,7,96,38,10
+    EDITTEXT        IDC_PASSWDEDIT,7,108,135,13,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_AUTHSERVER,35,48,80,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Please authenticate for:",IDC_STATIC,6,10,78,13
+    LTEXT           "Server",IDC_STATIC,7,50,26,13
+    EDITTEXT        IDC_AUTHREALM,35,25,80,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Realm",IDC_STATIC,7,27,23,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    DE_BGIMAGEDIALOG, DIALOG
+    BEGIN
+        VERTGUIDE, 68
+        HORZGUIDE, 115
+    END
+
+    DE_FORMATDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        VERTGUIDE, 7
+        VERTGUIDE, 122
+        VERTGUIDE, 130
+        VERTGUIDE, 140
+        VERTGUIDE, 176
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 207
+        HORZGUIDE, 105
+        HORZGUIDE, 185
+        HORZGUIDE, 207
+    END
+
+    DE_GETSAVEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    "DE_PRINTINPROGRESS", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 124
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    DE_SPELLCHECKDIALOG, DIALOG
+    BEGIN
+        VERTGUIDE, 14
+        VERTGUIDE, 164
+        BOTTOMMARGIN, 195
+        HORZGUIDE, 135
+        HORZGUIDE, 146
+        HORZGUIDE, 158
+        HORZGUIDE, 168
+        HORZGUIDE, 174
+    END
+
+    DE_TEMPLATESMENU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 191
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    DE_AUTHENTIFICATIONDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        VERTGUIDE, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+PRINTDIALOG DIALOG DISCARDABLE  100, 100, 222, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_PRINT,144,7,71,19
+    PUSHBUTTON      "",IDCANCEL,144,32,71,19
+    GROUPBOX        "",IDC_OPTIONS,9,0,130,80,WS_GROUP
+    CONTROL         "",IDC_TABOFCONTENTS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,10,121,14
+    CONTROL         "",IDC_LINKS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,28,
+                    122,15
+    CONTROL         "",IDC_PRINTURL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,
+                    47,118,15
+    CONTROL         "",IDC_IGNORE_CSS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    14,67,120,13
+END
+
+SEARCHDIALOG DIALOG DISCARDABLE  100, 100, 195, 210
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Search"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,7,191,52,14
+    PUSHBUTTON      "",ID_NOREPLACE,62,190,73,15
+    PUSHBUTTON      "",ID_DONE,137,191,52,14
+    LTEXT           "",IDC_SEARCHFOR,7,2,182,9
+    EDITTEXT        IDC_SEARCHEDIT,7,11,182,15,ES_AUTOHSCROLL
+    CONTROL         "",IDC_UPPERLOWER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    7,28,99,12
+    LTEXT           "",IDC_REPLACEDBY,7,43,48,10
+    EDITTEXT        IDC_REPLACEDIT,7,52,182,14,ES_AUTOHSCROLL
+    GROUPBOX        "",IDC_REPLACEGROUP,7,70,182,50
+    CONTROL         "",IDC_NOREPLACE,"Button",BS_AUTORADIOBUTTON,14,81,170,
+                    11
+    CONTROL         "",IDC_ONREQUEST,"Button",BS_AUTORADIOBUTTON,14,91,171,
+                    12
+    CONTROL         "",IDC_AUTOMATIC,"Button",BS_AUTORADIOBUTTON,14,102,169,
+                    11
+    GROUPBOX        "",IDC_WHEREGROUP,7,122,182,63,WS_GROUP
+    CONTROL         "",IDC_BEFORE,"Button",BS_AUTORADIOBUTTON,14,132,171,10
+    CONTROL         "",IDC_WITHIN,"Button",BS_AUTORADIOBUTTON,14,146,170,11
+    CONTROL         "",IDC_AFTER,"Button",BS_AUTORADIOBUTTON,14,158,171,10
+    CONTROL         "",IDC_WHOLEDOC,"Button",BS_AUTORADIOBUTTON,14,171,171,
+                    11
+END
+
+CLOSEDOCDIALOG DIALOG DISCARDABLE  100, 100, 298, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_SAVEDOC,7,58,92,14
+    PUSHBUTTON      "",IDCANCEL,207,58,84,14
+    PUSHBUTTON      "",IDC_DONTSAVE,107,58,91,14
+    CTEXT           "",IDC_CLOSEMSG,7,16,284,30
+END
+
+OPENDOCDIALOG DIALOG DISCARDABLE  100, 100, 297, 74
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,7,53,85,14
+    PUSHBUTTON      "",IDCANCEL,209,53,81,14
+    PUSHBUTTON      "",IDC_BROWSE,101,52,99,15
+    EDITTEXT        IDC_GETURL,7,30,283,16,ES_AUTOHSCROLL
+    LTEXT           "",IDC_URLMESSAGE,7,14,283,13
+END
+
+CHARACTERSDIALOG DIALOG DISCARDABLE  100, 100, 250, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_APPLY,21,204,101,14
+    PUSHBUTTON      "",ID_DONE,131,204,95,14
+    GROUPBOX        "",IDC_FONTFAMILYGROUP,7,0,71,88,WS_GROUP
+    CONTROL         "",IDC_TIMES,"Button",BS_AUTORADIOBUTTON,12,9,61,11
+    CONTROL         "",IDC_HELVETICA,"Button",BS_AUTORADIOBUTTON,12,28,63,11
+    CONTROL         "",IDC_COURIER,"Button",BS_AUTORADIOBUTTON,12,47,61,11
+    CONTROL         "",IDC_DEFAULTFAMILY,"Button",BS_AUTORADIOBUTTON,12,68,
+                    61,11
+    GROUPBOX        "",IDC_CHARSTYLEGROUP,6,110,74,84,WS_GROUP
+    CONTROL         "",IDC_ROMAN,"Button",BS_AUTORADIOBUTTON,12,122,43,11
+    CONTROL         "",IDC_ITALIC,"Button",BS_AUTORADIOBUTTON,12,138,42,11
+    CONTROL         "",IDC_OBLIQUE,"Button",BS_AUTORADIOBUTTON,12,154,44,12
+    CONTROL         "",IDC_DEFAULTSTYLE,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFT,12,174,49,12
+    GROUPBOX        "",IDC_UNDERLINEGROUP,87,0,67,99,WS_GROUP
+    CONTROL         "",IDC_NORMAL,"Button",BS_AUTORADIOBUTTON,95,15,54,10
+    CONTROL         "",IDC_UNDERLINE,"Button",BS_AUTORADIOBUTTON,95,31,56,10
+    CONTROL         "",IDC_OVERLINE,"Button",BS_AUTORADIOBUTTON,95,48,55,11
+    CONTROL         "",IDC_CROSSOUT,"Button",BS_AUTORADIOBUTTON,95,66,54,9
+    CONTROL         "",IDC_DEFAULTUNDERLINE,"Button",BS_AUTORADIOBUTTON,95,
+                    82,53,11
+    GROUPBOX        "",IDC_BODYSIZEGROUP,161,0,80,199,WS_GROUP
+    CONTROL         "",IDC_06PT,"Button",BS_AUTORADIOBUTTON,173,13,61,13
+    CONTROL         "",IDC_10PT,"Button",BS_AUTORADIOBUTTON,173,44,63,10
+    CONTROL         "",IDC_08PT,"Button",BS_AUTORADIOBUTTON,173,28,61,12
+    CONTROL         "",IDC_12PT,"Button",BS_AUTORADIOBUTTON,173,57,64,13
+    CONTROL         "",IDC_14PT,"Button",BS_AUTORADIOBUTTON,173,72,60,13
+    CONTROL         "",IDC_16PT,"Button",BS_AUTORADIOBUTTON,173,86,61,13
+    CONTROL         "",IDC_20PT,"Button",BS_AUTORADIOBUTTON,173,104,61,13
+    CONTROL         "",IDC_24PT,"Button",BS_AUTORADIOBUTTON,173,118,60,13
+    CONTROL         "",IDC_30PT,"Button",BS_AUTORADIOBUTTON,173,134,60,12
+    CONTROL         "",IDC_40PT,"Button",BS_AUTORADIOBUTTON,173,148,63,11
+    CONTROL         "",IDC_60PT,"Button",BS_AUTORADIOBUTTON,174,165,63,12
+    CONTROL         "",IDC_DEFAULTSIZE,"Button",BS_AUTORADIOBUTTON,173,178,
+                    63,14
+    GROUPBOX        "",IDC_BOLDGROUP,88,140,66,57
+    CONTROL         "",IDC_NORMALBOLD,"Button",BS_AUTORADIOBUTTON,94,151,56,
+                    8
+    CONTROL         "",IDC_BOLD,"Button",BS_AUTORADIOBUTTON,94,165,56,8
+    CONTROL         "",IDC_DEFAULTBOLD,"Button",BS_AUTORADIOBUTTON,94,179,57,
+                    8
+END
+
+INITCONFIRMDIALOG DIALOG DISCARDABLE  100, 100, 265, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Confirm"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Confirm",ID_CONFIRM,76,60,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,139,60,50,14
+END
+
+EN_FORMATDIALOG DIALOG DISCARDABLE  100, 100, 184, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Format ..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Apply",ID_APPLY,35,193,50,14
+    PUSHBUTTON      "Done",ID_DONE,97,193,50,14
+    GROUPBOX        "Align",-1,7,7,51,79,WS_GROUP
+    CONTROL         "",IDC_LEFT,"Button",BS_AUTORADIOBUTTON,13,18,11,12
+    CONTROL         "",IDC_RIGHT,"Button",BS_AUTORADIOBUTTON,13,33,9,17
+    CONTROL         "",IDC_CENTER,"Button",BS_AUTORADIOBUTTON,13,49,11,17
+    CONTROL         "Default",IDC_DEFAULTALIGN,"Button",BS_AUTORADIOBUTTON,
+                    13,68,42,14
+    CONTROL         1104,IDC_BLEFT,"Static",SS_BITMAP | SS_NOTIFY,25,17,25,
+                    12
+    CONTROL         1106,IDC_BCENTER,"Static",SS_BITMAP | SS_NOTIFY,27,52,25,
+                    12
+    CONTROL         1107,IDC_BRIGHT,"Static",SS_BITMAP | SS_NOTIFY,25,34,25,
+                    12
+    LTEXT           "Indent (pt)",IDC_INDENTPT,70,26,38,10
+    LTEXT           "0 .. 300",IDC_INDENTPTVALUE,76,39,28,11
+    EDITTEXT        IDC_INDENTPTEDIT,66,51,48,16,ES_AUTOHSCROLL
+    GROUPBOX        "Indent",-1,121,7,56,78,WS_GROUP
+    CONTROL         "",IDC_INDENT1,"Button",BS_AUTORADIOBUTTON,125,18,10,10
+    CONTROL         "",IDC_INDENT2,"Button",BS_AUTORADIOBUTTON,125,44,11,12
+    CONTROL         "Default",IDC_INDENTDEFAULT,"Button",BS_AUTORADIOBUTTON,
+                    125,68,51,13
+    CONTROL         150,IDC_BINDENT1,"Static",SS_BITMAP | SS_NOTIFY,140,18,
+                    25,12
+    CONTROL         151,IDC_BINDENT2,"Static",SS_BITMAP | SS_NOTIFY,140,44,
+                    25,12
+    GROUPBOX        "Justification",-1,7,100,51,84,WS_GROUP
+    CONTROL         "Yes",IDC_JUSTIFYES,"Button",BS_AUTORADIOBUTTON,14,113,
+                    43,17
+    CONTROL         "No",IDC_JUSTIFNO,"Button",BS_AUTORADIOBUTTON,15,129,46,
+                    19
+    CONTROL         "Default",IDC_JUSTIFDEFAULT,"Button",BS_AUTORADIOBUTTON,
+                    15,147,47,21
+    LTEXT           "Line spacing (pt)",IDC_LINESPACINGPT,64,122,58,11
+    LTEXT           "1 .. 200",IDC_LINESPACINGPTVALUE,77,137,30,9
+    EDITTEXT        IDC_LINESPACINGEDIT,67,150,50,15,ES_AUTOHSCROLL
+    GROUPBOX        "Line spacing",-1,122,99,55,86,WS_GROUP
+    CONTROL         "",IDC_SSMALL,"Button",BS_AUTORADIOBUTTON,130,112,9,12
+    CONTROL         "",IDC_SMEDIUM,"Button",BS_AUTORADIOBUTTON,130,130,9,13
+    CONTROL         "",IDC_SLARGE,"Button",BS_AUTORADIOBUTTON,130,148,9,12
+    CONTROL         "Default",IDC_SPACINGDEFAULT,"Button",BS_AUTORADIOBUTTON,
+                    130,167,46,12
+    CONTROL         152,IDC_BSSMALL,"Static",SS_BITMAP | SS_NOTIFY,140,111,
+                    30,14
+    CONTROL         153,IDC_BSMEDIUM,"Static",SS_BITMAP | SS_NOTIFY,140,129,
+                    30,14
+    CONTROL         154,IDC_BSLARGE,"Static",SS_BITMAP | SS_NOTIFY,140,149,
+                    30,14
+END
+
+EN_SPELLCHECKDIALOG DIALOG DISCARDABLE  100, 100, 258, 198
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Spell checking"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Search",ID_SKIPNEXT,8,180,49,15
+    PUSHBUTTON      "Skip (+dic)",ID_SKIPDIC,60,180,39,15
+    PUSHBUTTON      "Replace and next",ID_REPLACENEXT,103,180,62,15
+    PUSHBUTTON      "Replace (+dic)",ID_REPLACEDIC,169,180,53,15
+    PUSHBUTTON      "Done",ID_DONE,227,180,25,15
+    GROUPBOX        "Checking",-1,8,113,100,61,WS_GROUP
+    CONTROL         "Before selection",IDC_BEFORE,"Button",
+                    BS_AUTORADIOBUTTON,14,124,93,11
+    CONTROL         "Within selection",IDC_WITHIN,"Button",
+                    BS_AUTORADIOBUTTON,14,135,93,13
+    CONTROL         "After selection",IDC_AFTER,"Button",BS_AUTORADIOBUTTON,
+                    14,146,92,13
+    CONTROL         "In whole document",IDC_WHOLEDOC,"Button",
+                    BS_AUTORADIOBUTTON,14,158,94,10
+    LTEXT           "Number of proposals",IDC_NBPROPOSALS,137,42,69,10
+    LTEXT           "1..10",IDC_PROPOSALS,162,54,22,9
+    EDITTEXT        IDC_EDITPROPOSALS,137,66,68,18,ES_AUTOHSCROLL
+    GROUPBOX        "Ignore",-1,137,95,115,79,WS_GROUP
+    CONTROL         "words that are all caps",IDC_IGNORE1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,146,106,94,13
+    CONTROL         "words with digits",IDC_IGNORE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,146,119,91,11
+    CONTROL         "roman numerals",IDC_IGNORE3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,146,130,96,11
+    CONTROL         "Words containing",IDC_IGNORE4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,146,143,96,11
+    EDITTEXT        IDC_EDITIGNORE,158,154,81,15,ES_AUTOHSCROLL
+END
+
+CREATERULEDIALOG DIALOG DISCARDABLE  100, 100, 148, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,7,117,69,14
+    PUSHBUTTON      "",ID_DONE,79,117,62,14
+END
+
+APPLYCLASSDIALOG DIALOG DISCARDABLE  100, 100, 146, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,7,98,67,14
+    PUSHBUTTON      "",ID_DONE,78,98,61,14
+END
+
+LANGUAGEDIALOG DIALOG DISCARDABLE  100, 100, 222, 210
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_APPLY,8,187,55,14
+    PUSHBUTTON      "",ID_DELETE,67,187,86,14
+    PUSHBUTTON      "",ID_DONE,156,187,58,14
+    LTEXT           "",IDC_LANGELEM,8,1,206,15
+    LTEXT           "",IDC_INHERITEDLANG,8,173,206,14
+    EDITTEXT        IDC_LNGEDIT,8,155,206,15,ES_AUTOHSCROLL
+END
+
+ATTR5ITEMSDIALOG DIALOG DISCARDABLE  100, 100, 249, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_APPLY,5,116,67,15
+    PUSHBUTTON      "",ID_DELETE,76,116,96,15
+    PUSHBUTTON      "",ID_DONE,179,116,59,15
+END
+
+SAVEASDIALOG DIALOG DISCARDABLE  100, 100, 328, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,9,96,71,14
+    PUSHBUTTON      "",ID_CLEAR,86,96,74,14
+    PUSHBUTTON      "",IDC_BROWSE,165,97,76,13
+    PUSHBUTTON      "",IDCANCEL,248,96,72,14
+    GROUPBOX        "",IDC_OUTPUTGROUP,7,3,79,51,WS_GROUP
+    CONTROL         "",IDC_HTML,"Button",BS_AUTORADIOBUTTON,10,10,73,13
+    CONTROL         "",IDC_XML,"Button",BS_AUTORADIOBUTTON,10,26,72,8
+    CONTROL         "",IDC_TEXT,"Button",BS_AUTORADIOBUTTON,10,38,69,11
+    CONTROL         "",IDC_COPYIMG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,
+                    67,310,12
+    CONTROL         "",IDC_TRANSFORMURL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,78,310,16
+    LTEXT           "",IDC_DOCLOCATION,91,3,226,13
+    EDITTEXT        IDC_EDITDOCSAVE,91,14,226,16,ES_AUTOHSCROLL
+    LTEXT           "",IDC_IMGLOCATION,91,35,227,12
+    EDITTEXT        IDC_EDITIMGSAVE,91,46,228,16,ES_AUTOHSCROLL
+END
+
+EN_AUTHENTIFICATIONDIALOG DIALOG DISCARDABLE  100, 100, 150, 135
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Authentification dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Confirm",ID_CONFIRM,17,115,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,83,115,50,14
+    LTEXT           "Name",IDC_STATIC,7,51,30,12
+    EDITTEXT        IDC_NAMEEDIT,7,63,135,13,ES_AUTOHSCROLL
+    LTEXT           "Password",IDC_STATIC,7,82,38,10
+    EDITTEXT        IDC_PASSWDEDIT,7,94,135,13,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_AUTHSERVER,35,36,80,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Please authenticate for:",IDC_STATIC,7,10,78,13
+    LTEXT           "Server",IDC_STATIC,7,36,26,13
+    EDITTEXT        IDC_AUTHREALM,35,23,80,13,ES_READONLY | NOT WS_BORDER
+    LTEXT           "Realm",IDC_STATIC,7,23,23,13
+END
+
+ATTR3ITEMSDIALOG DIALOG DISCARDABLE  100, 100, 250, 105
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_APPLY,9,81,61,15
+    PUSHBUTTON      "",ID_DELETE,78,82,91,14
+    PUSHBUTTON      "",ID_DONE,175,82,65,14
+END
+
+EN_PRINTINPROGRESS DIALOG DISCARDABLE  100, 100, 131, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Printing ..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel print job",IDCANCEL,32,28,67,14
+    LTEXT           "Printing in progress ...",IDC_STATIC,29,14,72,9
+END
+
+CSSDIALOG DIALOG DISCARDABLE  100, 100, 281, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,37,117,89,14
+    PUSHBUTTON      "",ID_DONE,158,117,90,14
+    LTEXT           "",IDC_CSSFILES,7,7,110,15
+END
+
+ATTR4ITEMSDIALOG DIALOG DISCARDABLE  100, 100, 251, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_APPLY,7,98,65,14
+    PUSHBUTTON      "",ID_DELETE,75,98,100,14
+    PUSHBUTTON      "",ID_DONE,181,98,61,14
+END
+
+GRAPHICSDIALOG DIALOGEX 400, 20, 68, 148
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "",ID_DONE,12,127,44,14
+    CONTROL         405,IDC_GELLIPSE,"Static",SS_BITMAP | SS_NOTIFY,7,44,27,
+                    18,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         401,IDC_GLINE,"Static",SS_BITMAP | SS_NOTIFY,7,7,27,18,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         407,IDC_GCPOLYLINE,"Static",SS_BITMAP | SS_NOTIFY,7,63,
+                    27,18,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         404,IDC_GCIRCLE,"Static",SS_BITMAP | SS_NOTIFY,34,25,27,
+                    18,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         409,IDC_GCCURVE,"Static",SS_BITMAP | SS_NOTIFY,7,82,27,
+                    18,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         408,IDC_GCURVE,"Static",SS_BITMAP | SS_NOTIFY,34,63,27,
+                    18,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         402,IDC_GRECT,"Static",SS_BITMAP | SS_NOTIFY,34,7,27,18,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         410,IDC_GALPHA1,"Static",SS_BITMAP | SS_NOTIFY,34,82,27,
+                    18,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         406,IDC_GPOLYLINE,"Static",SS_BITMAP | SS_NOTIFY,34,44,
+                    27,18,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         403,IDC_GRRECT,"Static",SS_BITMAP | SS_NOTIFY,7,25,27,18,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         411,IDC_GALPHA2,"Static",SS_BITMAP | SS_NOTIFY,7,101,27,
+                    18,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         412,IDC_GGROUP,"Static",SS_BITMAP | SS_NOTIFY,34,101,27,
+                    18,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+END
+
+ATTR2ITEMSDIALOG DIALOG DISCARDABLE  100, 100, 250, 85
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_APPLY,7,64,67,14
+    PUSHBUTTON      "",ID_DELETE,80,64,96,14
+    PUSHBUTTON      "",ID_DONE,182,64,61,14
+END
+
+TABLEDIALOG DIALOG DISCARDABLE  100, 100, 148, 151
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,7,128,66,14
+    PUSHBUTTON      "",IDCANCEL,77,128,64,14
+    CTEXT           "",IDC_NUMCOL,0,6,148,12
+    EDITTEXT        IDC_NUMCOLEDIT,24,17,99,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NUMROWSEDIT,25,54,97,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BORDEREDIT,25,92,98,16,ES_AUTOHSCROLL
+    CTEXT           "",IDC_NUMROWS,0,41,148,11
+    CTEXT           "",IDC_BORDER,0,79,148,12
+END
+
+MATRIXDIALOG DIALOG DISCARDABLE  100, 100, 149, 117
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,5,94,69,18
+    PUSHBUTTON      "",IDCANCEL,78,94,64,18
+    CTEXT           "",IDC_NUMCOL,0,7,149,17
+    EDITTEXT        IDC_NUMCOLEDIT,23,22,107,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NUMROWSEDIT,21,70,106,18,ES_AUTOHSCROLL
+    CTEXT           "",IDC_NUMROWS,0,52,149,15
+END
+
+OPENIMAGEDIALOG DIALOG DISCARDABLE  100, 100, 299, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add an Image"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,7,74,87,14
+    PUSHBUTTON      "",IDCANCEL,207,74,85,14
+    PUSHBUTTON      "",IDC_BROWSE,99,74,102,14
+    EDITTEXT        IDC_GETURL,7,18,283,16,ES_AUTOHSCROLL
+    LTEXT           "",IDC_URLMESSAGE,7,7,257,11
+    EDITTEXT        IDC_GETALT,7,52,283,16,ES_AUTOHSCROLL
+    LTEXT           "",IDC_ALTMESSAGE,7,41,284,11
+END
+
+EN_BGIMAGEDIALOG DIALOG DISCARDABLE  100, 100, 184, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Confirm",ID_CONFIRM,19,100,33,15
+    PUSHBUTTON      "Cancel",IDCANCEL,135,101,33,14
+    PUSHBUTTON      "Clear",ID_CLEAR,60,101,28,14
+    LTEXT           "Open location",IDC_OPENLOCATION,7,7,49,8
+    EDITTEXT        IDC_BGLOCATION,7,18,168,15,ES_AUTOHSCROLL
+    GROUPBOX        "Repeat Mode",IDC_REPEATMODE,62,40,59,51,WS_GROUP
+    CONTROL         "Repeat",IDC_REPEAT,"Button",BS_AUTORADIOBUTTON,68,49,42,
+                    8
+    CONTROL         "Repeat-X",IDC_REPEATX,"Button",BS_AUTORADIOBUTTON,68,58,
+                    47,11
+    CONTROL         "Repeat-Y",IDC_REPEATY,"Button",BS_AUTORADIOBUTTON,68,69,
+                    48,9
+    CONTROL         "No-repeat",IDC_NOREPEAT,"Button",BS_AUTORADIOBUTTON,68,
+                    78,46,10
+    PUSHBUTTON      "Browse",IDC_BROWSE,93,101,36,14
+END
+
+EN_GALPHABETDIALOG DIALOGEX 400, 200, 185, 293
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Greek alphabet"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,69,268,50,14
+    CONTROL         201,IDC_GKEY002,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         202,IDC_GKEY003,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         203,IDC_GKEY004,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         204,IDC_GKEY005,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         205,IDC_GKEY006,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,6,18,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         206,IDC_GKEY007,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         207,IDC_GKEY008,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         200,IDC_GKEY001,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         208,IDC_GKEY009,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         209,IDC_GKEY010,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         210,IDC_GKEY011,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         211,IDC_GKEY012,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         212,IDC_GKEY013,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         216,IDC_GKEY014,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         217,IDC_GKEY015,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         218,IDC_GKEY016,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,22,18,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         219,IDC_GKEY017,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,23,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         220,IDC_GKEY018,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         221,IDC_GKEY019,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         222,IDC_GKEY020,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         223,IDC_GKEY021,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         224,IDC_GKEY022,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         225,IDC_GKEY023,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         226,IDC_GKEY024,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         227,IDC_GKEY025,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         228,IDC_GKEY026,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,38,18,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         229,IDC_GKEY027,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         230,IDC_GKEY028,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         231,IDC_GKEY029,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         232,IDC_GKEY030,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         233,IDC_GKEY031,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         234,IDC_GKEY032,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         235,IDC_GKEY033,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,55,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         236,IDC_GKEY034,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         237,IDC_GKEY035,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         238,IDC_GKEY036,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,54,18,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         239,IDC_GKEY037,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         240,IDC_GKEY038,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         241,IDC_GKEY039,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         242,IDC_GKEY040,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         243,IDC_GKEY041,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         244,IDC_GKEY042,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         245,IDC_GKEY043,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         246,IDC_GKEY044,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         247,IDC_GKEY045,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         248,IDC_GKEY046,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,70,18,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         249,IDC_GKEY047,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         250,IDC_GKEY048,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         251,IDC_GKEY049,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         252,IDC_GKEY050,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         253,IDC_GKEY051,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         254,IDC_GKEY052,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         255,IDC_GKEY053,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         256,IDC_GKEY054,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         257,IDC_GKEY055,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         258,IDC_GKEY056,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         259,IDC_GKEY057,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         260,IDC_GKEY058,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         261,IDC_GKEY059,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         262,IDC_GKEY060,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         263,IDC_GKEY061,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         264,IDC_GKEY062,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         265,IDC_GKEY063,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         266,IDC_GKEY064,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         267,IDC_GKEY065,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         268,IDC_GKEY066,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         269,IDC_GKEY067,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         270,IDC_GKEY068,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         271,IDC_GKEY069,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         272,IDC_GKEY070,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         273,IDC_GKEY071,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         274,IDC_GKEY072,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         275,IDC_GKEY073,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         276,IDC_GKEY074,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         277,IDC_GKEY075,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         278,IDC_GKEY076,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         279,IDC_GKEY077,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         280,IDC_GKEY078,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         281,IDC_GKEY079,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         282,IDC_GKEY080,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         283,IDC_GKEY081,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         284,IDC_GKEY082,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         285,IDC_GKEY083,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         286,IDC_GKEY084,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         287,IDC_GKEY085,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         288,IDC_GKEY086,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         289,IDC_GKEY087,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         290,IDC_GKEY088,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         291,IDC_GKEY089,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         292,IDC_GKEY090,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         293,IDC_GKEY091,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         294,IDC_GKEY092,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         295,IDC_GKEY093,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         296,IDC_GKEY094,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         297,IDC_GKEY095,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         298,IDC_GKEY096,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         299,IDC_GKEY097,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         300,IDC_GKEY098,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         301,IDC_GKEY099,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         302,IDC_GKEY100,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         303,IDC_GKEY101,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         304,IDC_GKEY102,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         305,IDC_GKEY103,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         306,IDC_GKEY104,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         307,IDC_GKEY105,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         308,IDC_GKEY106,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         309,IDC_GKEY107,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         310,IDC_GKEY108,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         311,IDC_GKEY109,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         312,IDC_GKEY110,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         313,IDC_GKEY111,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         314,IDC_GKEY112,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         315,IDC_GKEY113,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         316,IDC_GKEY114,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         317,IDC_GKEY115,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         318,IDC_GKEY116,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         319,IDC_GKEY117,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         320,IDC_GKEY118,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         321,IDC_GKEY119,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         322,IDC_GKEY120,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         323,IDC_GKEY121,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         324,IDC_GKEY122,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         325,IDC_GKEY123,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         326,IDC_GKEY124,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         327,IDC_GKEY125,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         328,IDC_GKEY126,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         329,IDC_GKEY127,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         330,IDC_GKEY128,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         331,IDC_GKEY129,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         332,IDC_GKEY130,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         333,IDC_GKEY131,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         334,IDC_GKEY132,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         335,IDC_GKEY133,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         336,IDC_GKEY134,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         337,IDC_GKEY135,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         338,IDC_GKEY136,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         339,IDC_GKEY137,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         340,IDC_GKEY138,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         341,IDC_GKEY139,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         342,IDC_GKEY140,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         343,IDC_GKEY141,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         344,IDC_GKEY142,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         345,IDC_GKEY143,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         346,IDC_GKEY144,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         347,IDC_GKEY145,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         348,IDC_GKEY146,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         349,IDC_GKEY147,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         350,IDC_GKEY148,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         351,IDC_GKEY149,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         352,IDC_GKEY150,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         353,IDC_GKEY151,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         354,IDC_GKEY152,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         355,IDC_GKEY153,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         356,IDC_GKEY154,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         357,IDC_GKEY155,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         358,IDC_GKEY156,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         359,IDC_GKEY157,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         360,IDC_GKEY158,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         361,IDC_GKEY159,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         362,IDC_GKEY160,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+END
+
+EN_GETSAVEDIALOG DIALOG DISCARDABLE  100, 100, 263, 65
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Save File as"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Confirm",ID_CONFIRM,44,40,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,170,40,50,14
+    EDITTEXT        IDC_EDITDOCSAVE,7,7,246,17,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BROWSE,102,40,57,14
+END
+
+HELPDIALOG DIALOG DISCARDABLE  150, 10, 194, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Amaya"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,46,74,102,14
+    CONTROL         182,IDC_LOGO,"Static",SS_BITMAP,7,7,38,30
+    LTEXT           "",IDC_VERSION,70,7,116,15
+    LTEXT           "",IDC_ABOUT1,7,41,179,12
+    LTEXT           "",IDC_ABOUT2,7,57,179,13
+END
+
+MATHDIALOG DIALOGEX 400, 0, 55, 178
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "",ID_DONE,4,158,49,16
+    CONTROL         183,IDC_MATH,"Static",SS_BITMAP | SS_NOTIFY,4,6,23,21,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         185,IDC_ROOT,"Static",SS_BITMAP | SS_NOTIFY,28,6,23,21,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         186,IDC_SROOT,"Static",SS_BITMAP | SS_NOTIFY,4,27,23,21,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         187,IDC_DIV,"Static",SS_BITMAP | SS_NOTIFY,28,27,23,21,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         188,IDC_POWIND,"Static",SS_BITMAP | SS_NOTIFY,4,48,23,21,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         189,IDC_POW,"Static",SS_BITMAP | SS_NOTIFY,28,48,23,21,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         190,IDC_IND,"Static",SS_BITMAP | SS_NOTIFY,4,68,23,21,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         191,IDC_UPDN,"Static",SS_BITMAP | SS_NOTIFY,28,68,23,21,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         192,IDC_UP,"Static",SS_BITMAP | SS_NOTIFY,4,89,23,21,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         193,IDC_DOWN,"Static",SS_BITMAP | SS_NOTIFY,28,90,23,21,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         194,IDC_PAREXP,"Static",SS_BITMAP | SS_NOTIFY,4,111,23,
+                    21,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         195,IDC_UDLR,"Static",SS_BITMAP | SS_NOTIFY,28,111,23,21,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    CONTROL         397,IDC_MATRIX,"Static",SS_BITMAP | SS_NOTIFY,4,132,23,
+                    21,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         196,IDC_SYM,"Static",SS_BITMAP | SS_NOTIFY,28,132,23,21,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+END
+
+SAVELISTDIALOG DIALOG DISCARDABLE  100, 100, 186, 162
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,7,141,85,14
+    PUSHBUTTON      "",IDCANCEL,100,141,79,14
+    CTEXT           "",IDC_MSG,7,7,172,11
+END
+
+GETALTERNATEDIALOG DIALOG DISCARDABLE  0, 0, 267, 68
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,42,47,84,14
+    PUSHBUTTON      "",ID_DONE,150,47,79,14
+    EDITTEXT        IDC_GETALT,7,23,253,17,ES_AUTOHSCROLL
+    LTEXT           "",IDC_ALTTEXT,7,7,161,12
+END
+
+MATH_ENTITY_DLG DIALOG DISCARDABLE  0, 0, 186, 74
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,21,53,70,14
+    PUSHBUTTON      "",IDCANCEL,101,53,65,14
+    EDITTEXT        IDC_EDIT_NAME,7,22,172,21,ES_AUTOHSCROLL
+    LTEXT           "",IDC_ENTITY_NAME,7,7,172,14
+END
+
+LINKDIALOG DIALOG DISCARDABLE  100, 100, 290, 77
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",ID_CONFIRM,40,56,96,14
+    PUSHBUTTON      "",ID_DONE,170,56,87,14
+    EDITTEXT        IDC_URLEDIT,17,32,258,15,ES_AUTOHSCROLL
+    LTEXT           "URI",IDC_URL_TEXT,17,13,172,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    PRINTDIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 215
+        VERTGUIDE, 9
+        VERTGUIDE, 14
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+        HORZGUIDE, 7
+        HORZGUIDE, 62
+    END
+
+    CLOSEDOCDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    OPENDOCDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    CHARACTERSDIALOG, DIALOG
+    BEGIN
+        HORZGUIDE, 204
+        HORZGUIDE, 218
+    END
+
+    INITCONFIRMDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    EN_FORMATDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        VERTGUIDE, 7
+        VERTGUIDE, 122
+        VERTGUIDE, 130
+        VERTGUIDE, 140
+        VERTGUIDE, 176
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 207
+        HORZGUIDE, 105
+        HORZGUIDE, 185
+        HORZGUIDE, 207
+    END
+
+    EN_SPELLCHECKDIALOG, DIALOG
+    BEGIN
+        VERTGUIDE, 14
+        VERTGUIDE, 164
+        BOTTOMMARGIN, 195
+        HORZGUIDE, 135
+        HORZGUIDE, 146
+        HORZGUIDE, 158
+        HORZGUIDE, 168
+        HORZGUIDE, 174
+    END
+
+    CREATERULEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    APPLYCLASSDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 139
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    LANGUAGEDIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 176
+        VERTGUIDE, 8
+        VERTGUIDE, 214
+        HORZGUIDE, 187
+        HORZGUIDE, 201
+    END
+
+    ATTR5ITEMSDIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 248
+        BOTTOMMARGIN, 131
+    END
+
+    SAVEASDIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 294
+        VERTGUIDE, 10
+        VERTGUIDE, 320
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 97
+        HORZGUIDE, 110
+    END
+
+    EN_AUTHENTIFICATIONDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 143
+        VERTGUIDE, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    ATTR3ITEMSDIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 153
+        BOTTOMMARGIN, 101
+        HORZGUIDE, 96
+    END
+
+    "EN_PRINTINPROGRESS", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 124
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    CSSDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    ATTR4ITEMSDIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 242
+        VERTGUIDE, 7
+        BOTTOMMARGIN, 120
+        HORZGUIDE, 112
+    END
+
+    ATTR2ITEMSDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 78
+    END
+
+    OPENIMAGEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    EN_BGIMAGEDIALOG, DIALOG
+    BEGIN
+        VERTGUIDE, 68
+        HORZGUIDE, 115
+    END
+
+    EN_GETSAVEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    HELPDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 186
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    MATHDIALOG, DIALOG
+    BEGIN
+        VERTGUIDE, 4
+        VERTGUIDE, 28
+        HORZGUIDE, 6
+        HORZGUIDE, 27
+        HORZGUIDE, 48
+        HORZGUIDE, 68
+        HORZGUIDE, 89
+        HORZGUIDE, 111
+        HORZGUIDE, 132
+    END
+
+    SAVELISTDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    GETALTERNATEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    MATH_ENTITY_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    LINKDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDC_BLEFT               BITMAP  DISCARDABLE     "bleft.bmp"
+IDC_BRIGHT              BITMAP  DISCARDABLE     "bright.bmp"
+IDC_BCENTER             BITMAP  DISCARDABLE     "bcenter.bmp"
+IDB_BINDENT1            BITMAP  DISCARDABLE     "bindent1.bmp"
+IDB_BINDENT2            BITMAP  DISCARDABLE     "bindent2.bmp"
+IDB_BSSMALL             BITMAP  DISCARDABLE     "bssmall.bmp"
+IDB_BSMEDIUM            BITMAP  DISCARDABLE     "bsmedium.bmp"
+IDB_BSLARGE             BITMAP  DISCARDABLE     "bslarge.bmp"
+IDR_TOOLBAR1            BITMAP  DISCARDABLE     "toolbar1.bmp"
+IDB_MATRIX              BITMAP  DISCARDABLE     "matrix.bmp"
+IDB_GLINE               BITMAP  DISCARDABLE     "gline.bmp"
+IDB_GRECT               BITMAP  DISCARDABLE     "grect.bmp"
+IDB_GRRECT              BITMAP  DISCARDABLE     "grrect.bmp"
+IDB_GCIRCLE             BITMAP  DISCARDABLE     "gcircle.bmp"
+IDB_GELLIPSE            BITMAP  DISCARDABLE     "gellipse.bmp"
+IDB_GPOLYLINE           BITMAP  DISCARDABLE     "gpolylin.bmp"
+IDB_GCPOLYLINE          BITMAP  DISCARDABLE     "gcpolyli.bmp"
+IDB_GCURVE              BITMAP  DISCARDABLE     "gcurve.bmp"
+IDB_GCCURVE             BITMAP  DISCARDABLE     "gccurve.bmp"
+IDB_GALPHA1             BITMAP  DISCARDABLE     "galpha1.bmp"
+IDB_GALPHA2             BITMAP  DISCARDABLE     "galpha2.bmp"
+IDB_GGROUP              BITMAP  DISCARDABLE     "ggroup.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_BUTTON40017
+    BUTTON      ID_BUTTON40018
+    BUTTON      ID_BUTTON40019
+    SEPARATOR
+    BUTTON      ID_BUTTON40020
+    BUTTON      ID_BUTTON40029
+    BUTTON      ID_BUTTON40022
+    BUTTON      ID_BUTTON40023
+    BUTTON      ID_BUTTON40024
+    BUTTON      ID_BUTTON40025
+    BUTTON      ID_BUTTON40026
+    BUTTON      ID_BUTTON40017
+    BUTTON      ID_BUTTON40028
+    BUTTON      ID_BUTTON40029
+    BUTTON      ID_BUTTON40030
+    BUTTON      ID_BUTTON40031
+    BUTTON      ID_BUTTON40032
+    BUTTON      ID_BUTTON40033
+    BUTTON      ID_BUTTON40034
+    BUTTON      ID_BUTTON40035
+    BUTTON      ID_BUTTON40036
+    BUTTON      ID_BUTTON40038
+    BUTTON      ID_BUTTON40039
+    BUTTON      ID_BUTTON40040
+    SEPARATOR
+    BUTTON      ID_BUTTON40046
+    BUTTON      ID_BUTTON40041
+    BUTTON      ID_BUTTON40042
+    BUTTON      ID_BUTTON40047
+    BUTTON      ID_BUTTON40048
+    BUTTON      ID_BUTTON40049
+    BUTTON      ID_BUTTON40050
+    BUTTON      ID_BUTTON40051
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON    DISCARDABLE     "appicon.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+FR_GALPHABETDIALOG DIALOGEX 400, 200, 185, 293
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Alphabet Grec"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Annuler",IDCANCEL,69,268,50,14
+    CONTROL         201,IDC_GKEY002,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         202,IDC_GKEY003,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         203,IDC_GKEY004,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         204,IDC_GKEY005,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         205,IDC_GKEY006,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,6,18,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         206,IDC_GKEY007,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         207,IDC_GKEY008,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         200,IDC_GKEY001,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         208,IDC_GKEY009,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         209,IDC_GKEY010,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,6,17,16,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         210,IDC_GKEY011,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         211,IDC_GKEY012,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         212,IDC_GKEY013,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         216,IDC_GKEY014,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         217,IDC_GKEY015,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         218,IDC_GKEY016,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,22,18,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         219,IDC_GKEY017,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,23,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         220,IDC_GKEY018,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         221,IDC_GKEY019,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         222,IDC_GKEY020,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,22,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         223,IDC_GKEY021,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         224,IDC_GKEY022,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         225,IDC_GKEY023,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         226,IDC_GKEY024,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         227,IDC_GKEY025,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         228,IDC_GKEY026,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,38,18,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         229,IDC_GKEY027,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         230,IDC_GKEY028,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         231,IDC_GKEY029,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         232,IDC_GKEY030,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,38,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         233,IDC_GKEY031,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         234,IDC_GKEY032,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         235,IDC_GKEY033,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,55,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         236,IDC_GKEY034,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         237,IDC_GKEY035,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         238,IDC_GKEY036,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,54,18,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         239,IDC_GKEY037,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         240,IDC_GKEY038,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         241,IDC_GKEY039,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         242,IDC_GKEY040,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,54,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         243,IDC_GKEY041,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         244,IDC_GKEY042,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         245,IDC_GKEY043,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         246,IDC_GKEY044,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         247,IDC_GKEY045,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         248,IDC_GKEY046,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,70,18,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         249,IDC_GKEY047,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         250,IDC_GKEY048,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         251,IDC_GKEY049,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         252,IDC_GKEY050,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,70,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         253,IDC_GKEY051,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         254,IDC_GKEY052,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         255,IDC_GKEY053,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         256,IDC_GKEY054,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         257,IDC_GKEY055,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         258,IDC_GKEY056,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         259,IDC_GKEY057,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         260,IDC_GKEY058,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         261,IDC_GKEY059,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         262,IDC_GKEY060,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,86,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         263,IDC_GKEY061,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         264,IDC_GKEY062,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         265,IDC_GKEY063,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         266,IDC_GKEY064,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         267,IDC_GKEY065,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         268,IDC_GKEY066,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         269,IDC_GKEY067,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         270,IDC_GKEY068,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         271,IDC_GKEY069,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         272,IDC_GKEY070,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,102,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         273,IDC_GKEY071,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         274,IDC_GKEY072,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         275,IDC_GKEY073,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         276,IDC_GKEY074,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         277,IDC_GKEY075,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         278,IDC_GKEY076,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         279,IDC_GKEY077,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         280,IDC_GKEY078,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         281,IDC_GKEY079,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         282,IDC_GKEY080,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,118,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         283,IDC_GKEY081,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         284,IDC_GKEY082,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         285,IDC_GKEY083,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         286,IDC_GKEY084,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         287,IDC_GKEY085,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         288,IDC_GKEY086,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         289,IDC_GKEY087,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         290,IDC_GKEY088,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         291,IDC_GKEY089,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         292,IDC_GKEY090,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,134,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         293,IDC_GKEY091,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         294,IDC_GKEY092,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         295,IDC_GKEY093,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         296,IDC_GKEY094,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         297,IDC_GKEY095,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         298,IDC_GKEY096,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         299,IDC_GKEY097,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         300,IDC_GKEY098,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         301,IDC_GKEY099,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         302,IDC_GKEY100,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,150,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         303,IDC_GKEY101,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         304,IDC_GKEY102,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         305,IDC_GKEY103,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         306,IDC_GKEY104,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         307,IDC_GKEY105,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         308,IDC_GKEY106,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         309,IDC_GKEY107,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         310,IDC_GKEY108,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         311,IDC_GKEY109,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         312,IDC_GKEY110,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,166,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         313,IDC_GKEY111,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         314,IDC_GKEY112,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         315,IDC_GKEY113,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         316,IDC_GKEY114,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         317,IDC_GKEY115,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         318,IDC_GKEY116,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         319,IDC_GKEY117,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         320,IDC_GKEY118,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         321,IDC_GKEY119,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         322,IDC_GKEY120,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,182,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         323,IDC_GKEY121,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         324,IDC_GKEY122,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         325,IDC_GKEY123,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         326,IDC_GKEY124,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         327,IDC_GKEY125,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         328,IDC_GKEY126,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         329,IDC_GKEY127,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         330,IDC_GKEY128,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         331,IDC_GKEY129,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         332,IDC_GKEY130,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,198,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         333,IDC_GKEY131,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         334,IDC_GKEY132,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         335,IDC_GKEY133,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         336,IDC_GKEY134,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         337,IDC_GKEY135,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         338,IDC_GKEY136,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         339,IDC_GKEY137,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         340,IDC_GKEY138,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         341,IDC_GKEY139,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         342,IDC_GKEY140,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,214,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         343,IDC_GKEY141,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         344,IDC_GKEY142,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         345,IDC_GKEY143,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         346,IDC_GKEY144,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         347,IDC_GKEY145,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         348,IDC_GKEY146,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         349,IDC_GKEY147,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         350,IDC_GKEY148,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         351,IDC_GKEY149,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         352,IDC_GKEY150,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,230,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         353,IDC_GKEY151,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,7,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         354,IDC_GKEY152,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,24,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         355,IDC_GKEY153,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,41,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         356,IDC_GKEY154,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,58,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         357,IDC_GKEY155,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,75,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         358,IDC_GKEY156,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,92,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         359,IDC_GKEY157,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,109,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         360,IDC_GKEY158,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,126,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         361,IDC_GKEY159,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,143,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         362,IDC_GKEY160,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,160,247,17,15,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+END
+
+FR_GETSAVEDIALOG DIALOG DISCARDABLE  100, 100, 263, 65
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sauvegarder sous"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Confirmer",ID_CONFIRM,44,40,50,14
+    PUSHBUTTON      "Annuler",IDCANCEL,170,40,50,14
+    EDITTEXT        IDC_EDITDOCSAVE,7,7,246,17,ES_AUTOHSCROLL
+    PUSHBUTTON      "Explorer",IDC_BROWSE,102,40,57,14
+END
+
+FR_BGIMAGEDIALOG DIALOG DISCARDABLE  100, 100, 184, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Image de fond"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Confirmer",ID_CONFIRM,19,100,33,15
+    PUSHBUTTON      "Annuler",IDCANCEL,135,101,33,14
+    PUSHBUTTON      "RAZ",ID_CLEAR,60,101,28,14
+    LTEXT           "URL de l'image ou appuyez sur Explorer",
+                    IDC_OPENLOCATION,7,7,174,11
+    EDITTEXT        IDC_BGLOCATION,7,18,168,15,ES_AUTOHSCROLL
+    GROUPBOX        "Mode de répétition",IDC_REPEATMODE,62,40,65,51,WS_GROUP
+    CONTROL         "Repeat",IDC_REPEAT,"Button",BS_AUTORADIOBUTTON,68,49,42,
+                    8
+    CONTROL         "Repeat-X",IDC_REPEATX,"Button",BS_AUTORADIOBUTTON,68,58,
+                    47,11
+    CONTROL         "Repeat-Y",IDC_REPEATY,"Button",BS_AUTORADIOBUTTON,68,69,
+                    48,9
+    CONTROL         "No-repeat",IDC_NOREPEAT,"Button",BS_AUTORADIOBUTTON,68,
+                    78,46,10
+    PUSHBUTTON      "Explorer",IDC_BROWSE,93,101,36,14
+END
+
+FR_FORMATDIALOG DIALOG DISCARDABLE  100, 100, 204, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Format ..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Appliquer",ID_APPLY,35,193,50,14
+    PUSHBUTTON      "Terminer",ID_DONE,101,193,50,14
+    GROUPBOX        "Alignement",-1,7,7,51,79,WS_GROUP
+    CONTROL         "",IDC_LEFT,"Button",BS_AUTORADIOBUTTON,13,18,11,12
+    CONTROL         "",IDC_RIGHT,"Button",BS_AUTORADIOBUTTON,13,33,9,17
+    CONTROL         "",IDC_CENTER,"Button",BS_AUTORADIOBUTTON,13,49,11,17
+    CONTROL         "Défaut",IDC_DEFAULTALIGN,"Button",BS_AUTORADIOBUTTON,13,
+                    68,42,14
+    CONTROL         1104,IDC_BLEFT,"Static",SS_BITMAP | SS_NOTIFY,25,17,25,
+                    12
+    CONTROL         1106,IDC_BCENTER,"Static",SS_BITMAP | SS_NOTIFY,27,52,25,
+                    12
+    CONTROL         1107,IDC_BRIGHT,"Static",SS_BITMAP | SS_NOTIFY,25,34,25,
+                    12
+    LTEXT           "Renforcement (pt)",IDC_INDENTPT,66,26,60,11
+    LTEXT           "0 .. 300",IDC_INDENTPTVALUE,80,37,28,11
+    EDITTEXT        IDC_INDENTPTEDIT,66,51,60,15,ES_AUTOHSCROLL
+    GROUPBOX        "Renforcement",-1,141,7,56,78,WS_GROUP
+    CONTROL         "",IDC_INDENT1,"Button",BS_AUTORADIOBUTTON,146,18,10,10
+    CONTROL         "",IDC_INDENT2,"Button",BS_AUTORADIOBUTTON,146,44,11,12
+    CONTROL         "Défaut",IDC_INDENTDEFAULT,"Button",BS_AUTORADIOBUTTON,
+                    146,68,51,13
+    CONTROL         150,IDC_BINDENT1,"Static",SS_BITMAP | SS_NOTIFY,161,18,
+                    25,12
+    CONTROL         151,IDC_BINDENT2,"Static",SS_BITMAP | SS_NOTIFY,161,44,
+                    25,12
+    GROUPBOX        "Justification",-1,7,100,51,84,WS_GROUP
+    CONTROL         "Oui",IDC_JUSTIFYES,"Button",BS_AUTORADIOBUTTON,14,113,
+                    43,17
+    CONTROL         "Non",IDC_JUSTIFNO,"Button",BS_AUTORADIOBUTTON,15,129,38,
+                    19
+    CONTROL         "Défaut",IDC_JUSTIFDEFAULT,"Button",BS_AUTORADIOBUTTON,
+                    15,147,39,21
+    CTEXT           "Interligne (pt)",IDC_LINESPACINGPT,68,122,52,11
+    LTEXT           "1 .. 200",IDC_LINESPACINGPTVALUE,77,137,30,9
+    EDITTEXT        IDC_LINESPACINGEDIT,67,150,51,14,ES_AUTOHSCROLL
+    GROUPBOX        "Interligne",-1,126,99,71,86,WS_GROUP
+    CONTROL         "",IDC_SSMALL,"Button",BS_AUTORADIOBUTTON,130,112,9,12
+    CONTROL         "",IDC_SMEDIUM,"Button",BS_AUTORADIOBUTTON,130,130,9,13
+    CONTROL         "",IDC_SLARGE,"Button",BS_AUTORADIOBUTTON,130,148,9,12
+    CONTROL         "Défaut",IDC_SPACINGDEFAULT,"Button",BS_AUTORADIOBUTTON,
+                    130,167,46,12
+    CONTROL         152,IDC_BSSMALL,"Static",SS_BITMAP | SS_NOTIFY,140,111,
+                    30,14
+    CONTROL         153,IDC_BSMEDIUM,"Static",SS_BITMAP | SS_NOTIFY,140,129,
+                    30,14
+    CONTROL         154,IDC_BSLARGE,"Static",SS_BITMAP | SS_NOTIFY,140,149,
+                    30,14
+END
+
+FR_PRINTINPROGRESS DIALOG DISCARDABLE  100, 100, 131, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Impression ..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Annuler",IDCANCEL,32,28,67,14
+    LTEXT           "Impression en cours",IDC_STATIC,29,14,72,9
+END
+
+FR_SPELLCHECKDIALOG DIALOG DISCARDABLE  100, 100, 258, 198
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Corriger"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Chercher",ID_SKIPNEXT,8,180,36,15
+    PUSHBUTTON      "Suivant (+dic)",ID_SKIPDIC,46,180,54,15
+    PUSHBUTTON      "Remplacer",ID_REPLACENEXT,103,180,46,15
+    PUSHBUTTON      "Remplacer (+dic)",ID_REPLACEDIC,152,180,63,15
+    PUSHBUTTON      "Terminer",ID_DONE,219,180,33,15
+    GROUPBOX        "Où corriger",-1,8,113,100,61,WS_GROUP
+    CONTROL         "Avant la sélection",IDC_BEFORE,"Button",
+                    BS_AUTORADIOBUTTON,14,124,93,11
+    CONTROL         "Dans la sélection",IDC_WITHIN,"Button",
+                    BS_AUTORADIOBUTTON,14,135,93,13
+    CONTROL         "Après la sélection",IDC_AFTER,"Button",
+                    BS_AUTORADIOBUTTON,14,146,92,13
+    CONTROL         "Dans tout le document",IDC_WHOLEDOC,"Button",
+                    BS_AUTORADIOBUTTON,14,158,94,10
+    LTEXT           "Nombre de propositions",IDC_NBPROPOSALS,137,42,85,9
+    LTEXT           "1..10",IDC_PROPOSALS,162,54,22,9
+    EDITTEXT        IDC_EDITPROPOSALS,137,66,68,18,ES_AUTOHSCROLL
+    GROUPBOX        "Ignorer les mots",-1,137,95,115,79,WS_GROUP
+    CONTROL         "en lettres capitales",IDC_IGNORE1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,146,106,94,13
+    CONTROL         "incluant des chiffres",IDC_IGNORE2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,146,119,91,11
+    CONTROL         "en chiffres romains",IDC_IGNORE3,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,146,130,96,11
+    CONTROL         "incluant les caractères",IDC_IGNORE4,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,146,143,96,11
+    EDITTEXT        IDC_EDITIGNORE,158,154,81,15,ES_AUTOHSCROLL
+END
+
+FR_AUTHENTIFICATIONDIALOG DIALOG DISCARDABLE  100, 100, 151, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialogue d'authentification"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Confirmer",ID_CONFIRM,18,131,50,14
+    PUSHBUTTON      "Annuler",IDCANCEL,84,131,50,14
+    LTEXT           "Nom",IDC_STATIC,7,68,30,12
+    EDITTEXT        IDC_NAMEEDIT,7,80,135,13,ES_AUTOHSCROLL
+    LTEXT           "Mot de passe",IDC_STATIC,7,96,52,10
+    EDITTEXT        IDC_PASSWDEDIT,7,108,135,13,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_AUTHSERVER,42,49,80,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Saisissez vos données d'authentication:",IDC_STATIC,6,
+                    10,125,13
+    LTEXT           "Serveur",IDC_STATIC,7,51,26,13
+    EDITTEXT        IDC_AUTHREALM,42,26,80,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Domaine",IDC_STATIC,7,28,30,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    FR_GETSAVEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    FR_BGIMAGEDIALOG, DIALOG
+    BEGIN
+        VERTGUIDE, 68
+        HORZGUIDE, 115
+    END
+
+    FR_FORMATDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 197
+        VERTGUIDE, 7
+        VERTGUIDE, 126
+        VERTGUIDE, 130
+        VERTGUIDE, 140
+        VERTGUIDE, 176
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 207
+        HORZGUIDE, 105
+        HORZGUIDE, 185
+        HORZGUIDE, 207
+    END
+
+    "FR_PRINTINPROGRESS", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 124
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    FR_SPELLCHECKDIALOG, DIALOG
+    BEGIN
+        VERTGUIDE, 14
+        VERTGUIDE, 164
+        BOTTOMMARGIN, 195
+        HORZGUIDE, 135
+        HORZGUIDE, 146
+        HORZGUIDE, 158
+        HORZGUIDE, 168
+        HORZGUIDE, 174
+    END
+
+    FR_AUTHENTIFICATIONDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        VERTGUIDE, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_AMAYALOGO           BITMAP  DISCARDABLE     "amaya.bmp"
+IDB_MATH                BITMAP  DISCARDABLE     "math.bmp"
+IDB_MATHD               BITMAP  DISCARDABLE     "mathd.bmp"
+IDB_ROOT                BITMAP  DISCARDABLE     "root.bmp"
+IDB_SROOT               BITMAP  DISCARDABLE     "sroot.bmp"
+IDB_DIV                 BITMAP  DISCARDABLE     "div.bmp"
+IDB_POWIND              BITMAP  DISCARDABLE     "powind.bmp"
+IDB_POW                 BITMAP  DISCARDABLE     "pow.bmp"
+IDB_IND                 BITMAP  DISCARDABLE     "ind.bmp"
+IDB_UPDN                BITMAP  DISCARDABLE     "updn.bmp"
+IDB_UP                  BITMAP  DISCARDABLE     "up.bmp"
+IDB_DOWN                BITMAP  DISCARDABLE     "down.bmp"
+IDB_PAREXP              BITMAP  DISCARDABLE     "parexp.bmp"
+IDB_UDLR                BITMAP  DISCARDABLE     "udlr.bmp"
+IDB_SYM                 BITMAP  DISCARDABLE     "sym.bmp"
+IDB_GKEY001             BITMAP  DISCARDABLE     "gkey001.bmp"
+IDB_GKEY002             BITMAP  DISCARDABLE     "gkey002.bmp"
+IDB_GKEY003             BITMAP  DISCARDABLE     "gkey003.bmp"
+IDB_GKEY004             BITMAP  DISCARDABLE     "gkey004.bmp"
+IDB_GKEY005             BITMAP  DISCARDABLE     "gkey005.bmp"
+IDB_GKEY006             BITMAP  DISCARDABLE     "gkey006.bmp"
+IDB_GKEY007             BITMAP  DISCARDABLE     "gkey007.bmp"
+IDB_GKEY008             BITMAP  DISCARDABLE     "gkey008.bmp"
+IDB_GKEY009             BITMAP  DISCARDABLE     "gkey009.bmp"
+IDB_GKEY010             BITMAP  DISCARDABLE     "gkey010.bmp"
+IDB_GKEY011             BITMAP  DISCARDABLE     "gkey011.bmp"
+IDB_GKEY012             BITMAP  DISCARDABLE     "gkey012.bmp"
+IDB_GKEY013             BITMAP  DISCARDABLE     "gkey013.bmp"
+IDB_GKEY014             BITMAP  DISCARDABLE     "gkey014.bmp"
+IDB_GKEY015             BITMAP  DISCARDABLE     "gkey015.bmp"
+IDB_GKEY016             BITMAP  DISCARDABLE     "gkey016.bmp"
+IDB_GKEY017             BITMAP  DISCARDABLE     "gkey017.bmp"
+IDB_GKEY018             BITMAP  DISCARDABLE     "gkey018.bmp"
+IDB_GKEY019             BITMAP  DISCARDABLE     "gkey019.bmp"
+IDB_GKEY020             BITMAP  DISCARDABLE     "gkey020.bmp"
+IDB_GKEY021             BITMAP  DISCARDABLE     "gkey021.bmp"
+IDB_GKEY022             BITMAP  DISCARDABLE     "gkey022.bmp"
+IDB_GKEY023             BITMAP  DISCARDABLE     "gkey023.bmp"
+IDB_GKEY024             BITMAP  DISCARDABLE     "gkey024.bmp"
+IDB_GKEY025             BITMAP  DISCARDABLE     "gkey025.bmp"
+IDB_GKEY026             BITMAP  DISCARDABLE     "gkey026.bmp"
+IDB_GKEY027             BITMAP  DISCARDABLE     "gkey027.bmp"
+IDB_GKEY028             BITMAP  DISCARDABLE     "gkey028.bmp"
+IDB_GKEY029             BITMAP  DISCARDABLE     "gkey029.bmp"
+IDB_GKEY030             BITMAP  DISCARDABLE     "gkey030.bmp"
+IDB_GKEY031             BITMAP  DISCARDABLE     "gkey031.bmp"
+IDB_GKEY032             BITMAP  DISCARDABLE     "gkey032.bmp"
+IDB_GKEY033             BITMAP  DISCARDABLE     "gkey033.bmp"
+IDB_GKEY034             BITMAP  DISCARDABLE     "gkey034.bmp"
+IDB_GKEY035             BITMAP  DISCARDABLE     "gkey035.bmp"
+IDB_GKEY036             BITMAP  DISCARDABLE     "gkey036.bmp"
+IDB_GKEY037             BITMAP  DISCARDABLE     "gkey037.bmp"
+IDB_GKEY038             BITMAP  DISCARDABLE     "gkey038.bmp"
+IDB_GKEY039             BITMAP  DISCARDABLE     "gkey039.bmp"
+IDB_GKEY040             BITMAP  DISCARDABLE     "gkey040.bmp"
+IDB_GKEY041             BITMAP  DISCARDABLE     "gkey041.bmp"
+IDB_GKEY042             BITMAP  DISCARDABLE     "gkey042.bmp"
+IDB_GKEY043             BITMAP  DISCARDABLE     "gkey043.bmp"
+IDB_GKEY044             BITMAP  DISCARDABLE     "gkey044.bmp"
+IDB_GKEY045             BITMAP  DISCARDABLE     "gkey045.bmp"
+IDB_GKEY046             BITMAP  DISCARDABLE     "gkey046.bmp"
+IDB_GKEY047             BITMAP  DISCARDABLE     "gkey047.bmp"
+IDB_GKEY048             BITMAP  DISCARDABLE     "gkey048.bmp"
+IDB_GKEY049             BITMAP  DISCARDABLE     "gkey049.bmp"
+IDB_GKEY050             BITMAP  DISCARDABLE     "gkey050.bmp"
+IDB_GKEY051             BITMAP  DISCARDABLE     "gkey051.bmp"
+IDB_GKEY052             BITMAP  DISCARDABLE     "gkey052.bmp"
+IDB_GKEY053             BITMAP  DISCARDABLE     "gkey053.bmp"
+IDB_GKEY054             BITMAP  DISCARDABLE     "gkey054.bmp"
+IDB_GKEY055             BITMAP  DISCARDABLE     "gkey055.bmp"
+IDB_GKEY056             BITMAP  DISCARDABLE     "gkey056.bmp"
+IDB_GKEY057             BITMAP  DISCARDABLE     "gkey057.bmp"
+IDB_GKEY058             BITMAP  DISCARDABLE     "gkey058.bmp"
+IDB_GKEY059             BITMAP  DISCARDABLE     "gkey059.bmp"
+IDB_GKEY060             BITMAP  DISCARDABLE     "gkey060.bmp"
+IDB_GKEY061             BITMAP  DISCARDABLE     "gkey061.bmp"
+IDB_GKEY062             BITMAP  DISCARDABLE     "gkey062.bmp"
+IDB_GKEY063             BITMAP  DISCARDABLE     "gkey063.bmp"
+IDB_GKEY064             BITMAP  DISCARDABLE     "gkey064.bmp"
+IDB_GKEY065             BITMAP  DISCARDABLE     "gkey065.bmp"
+IDB_GKEY066             BITMAP  DISCARDABLE     "gkey066.bmp"
+IDB_GKEY067             BITMAP  DISCARDABLE     "gkey067.bmp"
+IDB_GKEY068             BITMAP  DISCARDABLE     "gkey068.bmp"
+IDB_GKEY069             BITMAP  DISCARDABLE     "gkey069.bmp"
+IDB_GKEY070             BITMAP  DISCARDABLE     "gkey070.bmp"
+IDB_GKEY071             BITMAP  DISCARDABLE     "gkey071.bmp"
+IDB_GKEY072             BITMAP  DISCARDABLE     "gkey072.bmp"
+IDB_GKEY073             BITMAP  DISCARDABLE     "gkey073.bmp"
+IDB_GKEY074             BITMAP  DISCARDABLE     "gkey074.bmp"
+IDB_GKEY075             BITMAP  DISCARDABLE     "gkey075.bmp"
+IDB_GKEY076             BITMAP  DISCARDABLE     "gkey076.bmp"
+IDB_GKEY077             BITMAP  DISCARDABLE     "gkey077.bmp"
+IDB_GKEY078             BITMAP  DISCARDABLE     "gkey078.bmp"
+IDB_GKEY079             BITMAP  DISCARDABLE     "gkey079.bmp"
+IDB_GKEY080             BITMAP  DISCARDABLE     "gkey080.bmp"
+IDB_GKEY081             BITMAP  DISCARDABLE     "gkey081.bmp"
+IDB_GKEY082             BITMAP  DISCARDABLE     "gkey082.bmp"
+IDB_GKEY083             BITMAP  DISCARDABLE     "gkey083.bmp"
+IDB_GKEY084             BITMAP  DISCARDABLE     "gkey084.bmp"
+IDB_GKEY085             BITMAP  DISCARDABLE     "gkey085.bmp"
+IDB_GKEY086             BITMAP  DISCARDABLE     "gkey086.bmp"
+IDB_GKEY087             BITMAP  DISCARDABLE     "gkey087.bmp"
+IDB_GKEY088             BITMAP  DISCARDABLE     "gkey088.bmp"
+IDB_GKEY089             BITMAP  DISCARDABLE     "gkey089.bmp"
+IDB_GKEY090             BITMAP  DISCARDABLE     "gkey090.bmp"
+IDB_GKEY091             BITMAP  DISCARDABLE     "gkey091.bmp"
+IDB_GKEY092             BITMAP  DISCARDABLE     "gkey092.bmp"
+IDB_GKEY093             BITMAP  DISCARDABLE     "gkey093.bmp"
+IDB_GKEY094             BITMAP  DISCARDABLE     "gkey094.bmp"
+IDB_GKEY095             BITMAP  DISCARDABLE     "gkey095.bmp"
+IDB_GKEY096             BITMAP  DISCARDABLE     "gkey096.bmp"
+IDB_GKEY097             BITMAP  DISCARDABLE     "gkey097.bmp"
+IDB_GKEY098             BITMAP  DISCARDABLE     "gkey098.bmp"
+IDB_GKEY099             BITMAP  DISCARDABLE     "gkey099.bmp"
+IDB_GKEY100             BITMAP  DISCARDABLE     "gkey100.bmp"
+IDB_GKEY101             BITMAP  DISCARDABLE     "gkey101.bmp"
+IDB_GKEY102             BITMAP  DISCARDABLE     "gkey102.bmp"
+IDB_GKEY103             BITMAP  DISCARDABLE     "gkey103.bmp"
+IDB_GKEY104             BITMAP  DISCARDABLE     "gkey104.bmp"
+IDB_GKEY105             BITMAP  DISCARDABLE     "gkey105.bmp"
+IDB_GKEY106             BITMAP  DISCARDABLE     "gkey106.bmp"
+IDB_GKEY107             BITMAP  DISCARDABLE     "gkey107.bmp"
+IDB_GKEY108             BITMAP  DISCARDABLE     "gkey108.bmp"
+IDB_GKEY109             BITMAP  DISCARDABLE     "gkey109.bmp"
+IDB_GKEY110             BITMAP  DISCARDABLE     "gkey110.bmp"
+IDB_GKEY111             BITMAP  DISCARDABLE     "gkey111.bmp"
+IDB_GKEY112             BITMAP  DISCARDABLE     "gkey112.bmp"
+IDB_GKEY113             BITMAP  DISCARDABLE     "gkey113.bmp"
+IDB_GKEY114             BITMAP  DISCARDABLE     "gkey114.bmp"
+IDB_GKEY115             BITMAP  DISCARDABLE     "gkey115.bmp"
+IDB_GKEY116             BITMAP  DISCARDABLE     "gkey116.bmp"
+IDB_GKEY117             BITMAP  DISCARDABLE     "gkey117.bmp"
+IDB_GKEY118             BITMAP  DISCARDABLE     "gkey118.bmp"
+IDB_GKEY119             BITMAP  DISCARDABLE     "gkey119.bmp"
+IDB_GKEY120             BITMAP  DISCARDABLE     "gkey120.bmp"
+IDB_GKEY121             BITMAP  DISCARDABLE     "gkey121.bmp"
+IDB_GKEY122             BITMAP  DISCARDABLE     "gkey122.bmp"
+IDB_GKEY123             BITMAP  DISCARDABLE     "gkey123.bmp"
+IDB_GKEY124             BITMAP  DISCARDABLE     "gkey124.bmp"
+IDB_GKEY125             BITMAP  DISCARDABLE     "gkey125.bmp"
+IDB_GKEY126             BITMAP  DISCARDABLE     "gkey126.bmp"
+IDB_GKEY127             BITMAP  DISCARDABLE     "gkey127.bmp"
+IDB_GKEY128             BITMAP  DISCARDABLE     "gkey128.bmp"
+IDB_GKEY129             BITMAP  DISCARDABLE     "gkey129.bmp"
+IDB_GKEY130             BITMAP  DISCARDABLE     "gkey130.bmp"
+IDB_GKEY131             BITMAP  DISCARDABLE     "gkey131.bmp"
+IDB_GKEY132             BITMAP  DISCARDABLE     "gkey132.bmp"
+IDB_GKEY133             BITMAP  DISCARDABLE     "gkey133.bmp"
+IDB_GKEY134             BITMAP  DISCARDABLE     "gkey134.bmp"
+IDB_GKEY135             BITMAP  DISCARDABLE     "gkey135.bmp"
+IDB_GKEY136             BITMAP  DISCARDABLE     "gkey136.bmp"
+IDB_GKEY137             BITMAP  DISCARDABLE     "gkey137.bmp"
+IDB_GKEY138             BITMAP  DISCARDABLE     "gkey138.bmp"
+IDB_GKEY139             BITMAP  DISCARDABLE     "gkey139.bmp"
+IDB_GKEY140             BITMAP  DISCARDABLE     "gkey140.bmp"
+IDB_GKEY141             BITMAP  DISCARDABLE     "gkey141.bmp"
+IDB_GKEY142             BITMAP  DISCARDABLE     "gkey142.bmp"
+IDB_GKEY143             BITMAP  DISCARDABLE     "gkey143.bmp"
+IDB_GKEY144             BITMAP  DISCARDABLE     "gkey144.bmp"
+IDB_GKEY145             BITMAP  DISCARDABLE     "gkey145.bmp"
+IDB_GKEY146             BITMAP  DISCARDABLE     "gkey146.bmp"
+IDB_GKEY147             BITMAP  DISCARDABLE     "gkey147.bmp"
+IDB_GKEY148             BITMAP  DISCARDABLE     "gkey148.bmp"
+IDB_GKEY149             BITMAP  DISCARDABLE     "gkey149.bmp"
+IDB_GKEY150             BITMAP  DISCARDABLE     "gkey150.bmp"
+IDB_GKEY151             BITMAP  DISCARDABLE     "gkey151.bmp"
+IDB_GKEY152             BITMAP  DISCARDABLE     "gkey152.bmp"
+IDB_GKEY153             BITMAP  DISCARDABLE     "gkey153.bmp"
+IDB_GKEY154             BITMAP  DISCARDABLE     "gkey154.bmp"
+IDB_GKEY155             BITMAP  DISCARDABLE     "gkey155.bmp"
+IDB_GKEY156             BITMAP  DISCARDABLE     "gkey156.bmp"
+IDB_GKEY157             BITMAP  DISCARDABLE     "gkey157.bmp"
+IDB_GKEY158             BITMAP  DISCARDABLE     "gkey158.bmp"
+IDB_GKEY159             BITMAP  DISCARDABLE     "gkey159.bmp"
+IDB_GKEY160             BITMAP  DISCARDABLE     "gkey160.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_WINCURSOR           CURSOR  DISCARDABLE     "wincurso.cur"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x7L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040c04b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "W3C INRIA""è\0"
+            VALUE "FileDescription", "libwww\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "libwww\0"
+            VALUE "LegalCopyright", "Copyright © 1999\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "libwww.lib\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "W3C INRIA""è libwww\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x40c, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

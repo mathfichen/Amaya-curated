@@ -1,0 +1,216 @@
+0 Fichier
+1 Fichier
+2 Fichier
+3 Fichier
+4 Fichier
+5 Édition
+6 Structure
+7 Éléments
+8 Liens
+9 Vues
+10 Style
+11 Spécial
+12 Attributs
+13 Annotations
+14 Aide
+15 Nouveau
+16 Nouveau document HTML...
+17 Modèle
+18 Nouvelle feuille de style...
+19 Ouvrir...
+20 Ouvrir dans nouvelle fenêtre...
+21 Recharger le document
+22 Précédent
+23 Suivant
+24 Sauver
+25 Sauver comme...
+26 Synchroniser
+27 Paramétrer et imprimer...
+28 Imprimer
+29 Fermer
+30 Quitter
+31 Fermer la vue
+32 Défaire
+33 Refaire
+34 Couper
+35 Copier
+36 Coller
+37 Détruire
+38 Mode éditeur
+39 Rechercher...
+40 Vérifier orthographe...
+41 Transformer...
+42 base
+43 meta
+44 Lien (link)
+45 script
+46 style
+47 Commentaire
+48 Adresse (address)
+49 Zone active (area)
+50 Cercle
+51 Polygone
+52 Rectangle
+53 Citation (blockquote)
+54 Saut de ligne (br)
+55 Division (div)
+56 Formulaire
+57 Formulaire (form)
+58 Bouton (input)
+59 Bouton bascule (input)
+60 Sélecteur fichier (input)
+61 Contrôle caché (input)
+62 Image (input)...
+63 Mot de passe (input)
+64 Bouton radio (input)
+65 Réinitialisation (input)
+66 Soumission (input)
+67 Saisie de texte (input)
+68 Groupe de champs (fieldset)
+69 Étiquette (label)
+70 Menu (option)
+71 Sous-menu (optgroup)
+72 Zone de texte (textarea)
+73 En-tête
+74 Titre niveau 1 (h1)
+75 Titre niveau 2 (h2)
+76 Titre niveau 3 (h3)
+77 Titre niveau 4 (h4)
+78 Titre niveau 5 (h5)
+79 Titre niveau 6 (h6)
+80 Trait horizontal (hr)
+81 Cadre en ligne (iframe)
+82 Image (img)...
+83 Liste
+84 Liste à puces (ul)
+85 Liste numérotée (ol)
+86 Liste de définitions (dl)
+87 Terme (dt)
+88 Définition (dd)
+89 Math
+90 Nouvelle formule (math)
+91 Texte (mtext)
+92 Identificateur (mi)
+93 Nombre (mn)
+94 Opérateur (mo)
+95 Caractère (mchar)
+96 Racine (mroot)
+97 Racine carrée (msqrt)
+98 Englobe (menclose)
+99 Fraction (mfrac)
+100 Indice et exposant (msubsup)
+101 Indice (msub)
+102 Exposant (msup)
+103 Dessous et dessus (munderover)
+104 Dessous (munder)
+105 Dessus (mover)
+106 Parenthèses (mrow)
+107 Multiscripts (mmultiscripts)
+108 Matrice (mtable)
+109 Détruire une colonne de matrice
+110 noscript
+111 Objet
+112 Objet (object)
+113 Paramètre (param)
+114 Paragraphe (p)
+115 Préformaté (pre)
+116 Table
+117 table
+118 Légende (caption)
+119 colgroup
+120 Colonne (col)
+121 Têtière (thead)
+122 Corps (tbody)
+123 Pied (tfoot)
+124 Ligne (tr)
+125 Cellule (td)
+126 Cellule de tête (th)
+127 Détruire colonne de table
+128 Lier la cible créée
+129 Créer/changer lien...
+130 Créer cible
+131 Détruire ancre
+132 Montrer boutons
+133 Montrer adresse
+134 Montrer les zones actives
+135 Montrer les cibles
+136 Grossir
+137 Réduire
+138 Montrer la structure
+139 Montrer la vue alternée
+140 Montrer les liens
+141 Montrer la table des matières
+142 Montrer le source
+143 Style de caractères...
+144 Couleurs...
+145 Format...
+146 Image de fond...
+147 Créer une règle...
+148 Appliquer une classe...
+149 Feuilles de style
+150 Ajouter...
+151 Ouvrir...
+152 Désactiver...
+153 Réactiver...
+154 Retirer...
+155 Types information
+156 Accent (em)
+157 Force (strong)
+158 Citation (cite)
+159 Définition (dfn)
+160 Code (code)
+161 Variable (var)
+162 Exemple (samp)
+163 Clavier (kbd)
+164 Abréviation (abbr)
+165 Acronyme (acronym)
+166 Insertion (ins)
+167 Suppression (del)
+168 Éléments caractères
+169 Italique (i)
+170 Gras (b)
+171 Télétype (tt)
+172 Gros (big)
+173 Petit (small)
+174 Indice (sub)
+175 Exposant (sup)
+176 Citation (q)
+177 BiDi (bdo)
+178 Numéroter les sections
+179 Construire un livre
+180 Ouvrir fichier log
+181 Préférences
+182 Générales...
+183 Publication...
+184 Cache...
+185 Proxy...
+186 Couleurs...
+187 Géométrie...
+188 Négociation de Langues...
+189 Profiles...
+190 Modèles de page
+191 Ajouter annotation
+192 Montrer les annotations
+193 Charger les annotations
+194 Enregister une annotation
+195 À propos de Amaya
+196 À propos de Amaya au W3C
+197 Navigation
+198 Sélection
+199 Chercher
+200 Vues
+201 Création
+202 Liens
+203 Transformer
+204 Tables
+205 Math
+206 Zones actives
+207 Feuilles de style
+208 Attributs
+209 Corriger
+210 Publier
+211 Imprimer
+212 Numéroter
+213 Construire un livre
+214 Configurer Amaya
+215 Accessibilité d'Amaya

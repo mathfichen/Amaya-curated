@@ -1,0 +1,191 @@
+0 Fichiers
+1 Ouvrir le document
+2 RAZ
+3 Document sauvé : %s
+4 Attribut
+5 URL
+6 Texte
+7 Nom
+8 Mot de passe
+9 Utiliser comme classe
+10 Appliquer classe
+11 Sélectionner une classe ou une pseudo-classe
+12 Recherche de %s
+13 Impossible de charger %s
+14 C'est fini !
+15 Sélectionner la destination
+16 Destination invalide
+17 Adresse
+18 Titre
+19 Document modifié. Voulez-vous continuer ?
+20 Recherche de %s
+21 Dépassement de la limite de redirections
+22 Création impossible du document %s
+23 En attente d'un socket
+24 Lecture %s
+25 Écriture %s
+26 En attente d'une connexion
+27 Connexion vers %s
+28 Recherche de %s
+29 Statut inconnu
+30 Dialogue d'authentification
+31 Manque d'autorisation pour accéder à %s
+32 %s chargé mais ne comporte pas de données
+33 Interruption du transfert !
+34 Indisponibilité momentanée de %s. Réessayez plus tard
+35 %s chargé
+36 Sauvegarde de %s
+37 Impossible de sauvegarder dans : %s
+38 French system error messages
+39 Une ancre ne peut pas contenir ces éléments
+40 Impossible de créer une ancre dans une ancre
+41 Pas de support GET pour cette URL : %s
+42 Pas de support PUT pour cette URL : %s
+43 Cette version d'Amaya ne supporte pas cette option
+44 Fin d'écriture de %s
+45 Impossible de normaliser %s
+46 Impossible de créer le répertoire temporaire %s
+47 Aucune transformation possible
+48 La transformation a echoué
+49 HTML.trans erreur de syntaxe ligne %s
+50 Maths
+51 Graphique
+52 Sauvegarder sous
+53 Authentification requise pour le domaine \'%s\' du serveur \'%s\'
+54 Éditeur/Navigateur
+55 Délai expiré - le serveur n'a pas répondu
+56 %s existe déjà. Forcer l'écriture ?
+57 %s a changé. Forcer l'écriture ?
+58 Image de fond
+59 Image de fond interdite ici
+60 CSS
+61 La sauvegarde entraînera d'écraser les URLs suivantes :
+62 Erreur de sauvegarde de l'URL 
+63 Sauvegarder sur le disque ?
+64 Copier images
+65 Transformer les URL
+66 Adresse du document
+67 Répertoire des images
+68 Adresse de l'objet
+69 Fichier CSS                                         
+70 Amaya, un navigateur et éditeur pour le Web
+71 développé par le W3C (http://www.w3.org/)
+72 Erreur interne : URL de longueur supérieure à  %s caractères
+73 Seul le type par défaut est autorisé
+74 Mise à jour des liens : %s%% a été traité
+75 Rien à sauver
+76 repeat-y
+77 <HTML><HEAD><TITLE>ERREUR : URL inaccessible</TITLE></HEAD><BODY><H1>ERREUR : l'URL recherchée n'est pas accessible</H1><HR><P>Lors de la recherche de l'URL <A HREF=\"%s\">%s</A></P><P>l'erreur suivante s'est produite :</P><UL><LI><STRONG>Échec connexion</STRONG></UL><P>Le système indique:</P><PRE><I>(%d) %s</I></PRE><P>Ce qui veut dire :</P><PRE>Le site ou le serveur distant pourrait être en panne ou n'existe pas.</PRE><PRE>Essayer plus tard.</PRE><P></P><HR>\n</BODY></HTML>
+78 Entrer le nom utilisateur :
+79 Il y a %d requêtes en cours
+80 Pas de fichier CSS possible
+81 Interrompre le chargement
+82 Document précédent
+83 Document suivant
+84 Recharger
+85 Sauver
+86 Imprimer
+87 Chercher
+88 Mise en évidence
+89 Important
+90 Fonte fixe
+91 no-repeat
+92 Ajout d'une image
+93 Titre niveau 1
+94 Titre niveau 2
+95 Titre niveau 3
+96 Liste
+97 Liste numérotée
+98 Liste de définitions
+99 Lien
+100 Table
+101 Le document n'a pas de nom. Sauvé en :
+102 Plugins
+103 Erreur inconnue lors de la sauvegarde de %s
+104 Impossible d'ouvrir une connexion vers le serveur
+105 Accès interdit à %s
+106 Opération réussie pour %s
+107 La ressource %s a été créée
+108 La ressource %s a été mise à jour
+109 L'opération a fini avec un code %s
+110 Le serveur n'a pas compris la syntaxe de la requête
+111 La réponse du serveur n'a pas de corps
+112 Cette opération n'est pas permise
+113 L'accès à %s requiert votre authentification
+114 Vérification ...
+115 La sauvegarde distante de %s a échouée, sauvegarder sur disque ?
+116 La sauvegarde distante de %s semble corrompue, ignorer ?
+117 URL %s redirigée sur %s, ignorer ?
+118 Le relecture de %s a échouée, ignorer ?
+119 Le serveur rapporte une erreur 501:
+120 Le serveur rapporte une erreur 501
+121 Le serveur ne supporte pas cette méthode d'accès
+122 Filtrer
+123 transferts actifs
+124 transferts en attente
+125 Table des matières
+126 Table des liens
+127 Applets Java
+128 Mode de répétition
+129 repeat
+130 repeat-x
+131 Votre précédente session Amaya a planté. Voulez-vous recharger les documents modifiés ?
+132 Échec de l'authentification. Voulez-vous réessayer ?
+133 L'opération sera redirigée. Voulez-vous continuer ?
+134 Nombre de lignes
+135 Nombre de colonnes
+136 Épaisseur des traits
+137 Valeur de l'attribut ALT
+138 L'attribut ALT est obligatoire
+139 Imprimer l'URL
+140 Appliquer
+141 Défauts
+142 Vider le cache
+143 Configuration du cache
+144 Activer le cache
+145 Stocker dans le cache les documents protégés
+146 Mode déconnecté
+147 Ignorer l'en-tête Expires:
+148 Répertoire du cache
+149 Taille du cache (Mo)
+150 Taille maximale des entrées du cache (Mo)
+151 Configuration du proxy
+152 Proxy HTTP
+153 Ne pas utiliser un proxy avec ces domaines
+154 Configuration générale
+155 Page de démarrage
+156 Délai des infobulles (ms)
+157 Délai de double-clic (ms)
+158 Taille de la police dialogue 
+159 Zoom caractères
+160 Langue des dialogues
+161 Activer multi-key (accents)
+162 Montrer les images de fond
+163 Cliquer deux fois pour suivre un lien
+164 Configuration de la publication
+165 Utiliser les ETAGS et les pré-conditions
+166 Vérifier chaque PUT avec un GET
+167 Nom par défaut pour les URLs finissant par un  '/'
+168 Configuration de la géométrie
+169 Sauver la géométrie courante
+170 Restaurer la géométrie défaut
+171 Ces changements seront effectifs lors de l'ouverture d'une fenêtre
+172 Configuration des couleurs
+173 Couleur d'avant-plan des documents
+174 Couleur d'arrière-plan des documents
+175 Couleur d'avant-plan des menus
+176 Couleur d'arrière-plan des menus
+177 Impossible d'initialiser le cache. Vous avez peut-être specifié un répertoire invalide ou vous exécutez un autre Amaya en méme-temps.
+178 Page personelle
+179 Liste des langues préférées comme "fr, en" :
+180 Emplacement du fichier de définition de profils
+181 Sélection du profil
+182 Ces changements seront effectifs lors du prochain démarrage.
+183 Configuration du profil
+184 Entrez l'URL du serveur de modèles
+185 Configuration des modèles de pages
+186 Autoriser la redirection automatique du PUT dans ces domaines
+187 Sans feuilles de style
+188 Transformer en
+189 (séparer chaque entrée avec un espace)
+190 Nom du caractère
