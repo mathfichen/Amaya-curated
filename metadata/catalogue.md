@@ -24,7 +24,7 @@ Example of Item links:
 
 # SW_NAME Catalogue
 
-* ** Logos** 
+* **Logos** 
   * **[Original Amaya logo](./raw_materials/other/amaya_logo_65x50.png)**
     * *Origin:* [Amaya Website - Wayback Machine]([https://web.archive.org/web/19970605010725/https://www.w3.org/Amaya/](https://www.w3.org/Amaya/Overview.html))
     * *Authors:* [Unknown](./actors.md#name-surname)
@@ -215,7 +215,7 @@ Example of Item links:
     * *Notes:*   
  
 * **Press articles** 
-  * **[Whence the web]()**
+  * **Whence the web**
     * *Origin:* [OECD Observer](https://www.oecd-ilibrary.org/docserver/observer-v2001-1-en.pdf?expires=1683711965&id=id&accname=guest&checksum=ED12C28655CB260FA58A4A053EDB1843)
     * *Authors:* James Gillies, European Laboratory for particle physics (CERN)
     * *Date:* 2001/01
@@ -224,7 +224,7 @@ Example of Item links:
     * *Licence/Copyright:* [OECD](https://www.oecd-ilibrary.org/oecd/copyright)
     * *Notes:*  
  
-  * **[L'éditeur de W3C : Amaya 9.1]()**
+  * **L'éditeur de W3C : Amaya 9.1**
     * *Origin:* Linux Pratique hors série #1 Juin-Juillet 2005
     * *Authors:* James Gillies, European Laboratory for particle physics (CERN)
     * *Date:* 2005/06
