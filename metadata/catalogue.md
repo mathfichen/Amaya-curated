@@ -24,7 +24,7 @@ Example of Item links:
 
 # SW_NAME Catalogue
 
-* Logos 
+* ** Logos** 
   * **[Original Amaya logo](./raw_materials/other/amaya_logo_65x50.png)**
     * *Origin:* [Amaya Website - Wayback Machine]([https://web.archive.org/web/19970605010725/https://www.w3.org/Amaya/](https://www.w3.org/Amaya/Overview.html))
     * *Authors:* [Unknown](./actors.md#name-surname)
@@ -43,7 +43,7 @@ Example of Item links:
     * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
     * *Notes:*  
 
-* Screenshots 
+* **Screenshots** 
   * **[Screenshot Amaya User Interface 1998](./raw_materials/other/1998-amaya-ui.gif)**
     * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19980703153334/https://www.w3.org/Amaya/)
     * *Warehouse:* 
@@ -181,6 +181,57 @@ Example of Item links:
     * *Description:* A screenshot view of Amaya's user interface v10.0
     * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
     * *Notes:*    
+
+* **Web pages and forums** 
+  * **[Amaya NT bugs](./raw_materials/other/amaya_logo_65x50.png)**
+    * *Origin:* [Amaya public mailing list](https://lists.w3.org/Archives/Public/www-amaya/1997JulSep/0027.html)
+    * *Archive:* [Internet Archive](https://web.archive.org/web/19991012130447/https://lists.w3.org/Archives/Public/www-amaya/1997JulSep/0027.html)
+    * *Authors:* Tim Berners Lee
+    * *Date:* 1997
+    * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+    * *Description:* Email from Tim Berners-Lee to Irène Vatton regarding new Amaya release and related bugs
+    * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+    * *Notes:*  
+ 
+* **Scientific articles and technical documents** 
+  * **[An introduction to Amaya]**
+    * *Origin:* [W3C Website](https://www.w3.org/TR/NOTE-amaya)
+    * *Archive:* [Internet Archive](https://web.archive.org/web/20230320123115/https://www.w3.org/TR/NOTE-amaya)
+    * *Authors:* Vincent Quint, Irène Vatton
+    * *Date:* 1997/02/20
+    * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+    * *Description:* Note explaining the motivations, goals and design choices behind the development of Amaya
+    * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+    * *Notes:*  
+ 
+  * **[Towards active web clients]**
+    * *Origin:* [InriaAlpes.fr](http://wam.inrialpes.fr/publications/2005/DocEng05-Quint.html), initially published in the [Proceedings of the 2005 ACM symposium on Document engineering](https://dl.acm.org/doi/proceedings/10.1145/1096601)
+    * *Archive:* [Internet Archive](https://web.archive.org/web/20230320123115/https://www.w3.org/TR/NOTE-amaya)
+    * *Authors:* Vincent Quint, Irène Vatton
+    * *Date:* 2005/12/28
+    * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+    * *Description:* Paper presenting the main features needed to make Web clients more active as implemented in Amaya
+    * *Licence/Copyright:* Vincent Quint and Irène Vatton (?)
+    * *Notes:*   
+ 
+* **Press articles** 
+  * **[Whence the web]()**
+    * *Origin:* [OECD Observer](https://www.oecd-ilibrary.org/docserver/observer-v2001-1-en.pdf?expires=1683711965&id=id&accname=guest&checksum=ED12C28655CB260FA58A4A053EDB1843)
+    * *Authors:* James Gillies, European Laboratory for particle physics (CERN)
+    * *Date:* 2001/01
+    * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
+    * *Description:* Article about the web history, with mention of Amaya
+    * *Licence/Copyright:* [OECD](https://www.oecd-ilibrary.org/oecd/copyright)
+    * *Notes:*  
+ 
+  * **[L'éditeur de W3C : Amaya 9.1]()**
+    * *Origin:* Linux Pratique hors série #1 Juin-Juillet 2005
+    * *Authors:* James Gillies, European Laboratory for particle physics (CERN)
+    * *Date:* 2005/06
+    * *Collectors:* [Laurent Carcone](./actors.md#fichen-mathilde)
+    * *Description:* Technical article presenting the features of Amaya 9.1
+    * *Licence/Copyright:* Linux Pratique
+    * *Notes:*  
  
 # SW_NAME Catalogue Tree
 
