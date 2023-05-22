@@ -174,7 +174,7 @@ Example of Item links:
     * *Notes:*   
 
   * **[Screenshot Amaya User Interface 2008 v10.0](./raw_materials/other/2008-v-10-0-amaya-ui.png)**
-    * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/20080516202716/https://www.w3.org/Amaya/)
+    * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/20080701034149/http://www.w3.org/Amaya/screenshots/Overview.html)
     * *Authors:* W3C and Inria
     * *Date:* 2008 
     * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
