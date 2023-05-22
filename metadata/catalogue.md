@@ -78,7 +78,7 @@ Example of Item links:
      * *Authors:* W3C and Inria
      * *Date:* 1999 
      * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
-     * *Description:* A screenshot view of Amaya's MathML application. Possibly version 1.1 or earlier.
+     * *Description:* A screenshot view of Amaya's MathML application. Possibly version 2.1 or earlier.
      * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
      * *Notes:*  
 
