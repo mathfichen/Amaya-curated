@@ -165,7 +165,7 @@ Example of Item links:
     * *Notes:*  
 
   * **[Screenshot Amaya User Interface 2007 v9.99](./raw_materials/other/2007-v-9-99-amaya-ui.png)**
-    * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/20061025203901/http://www.w3.org/Amaya/Amaya.html)
+    * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/20071203113817/http://www.w3.org/Amaya/screenshots/Overview.html)
     * *Authors:* W3C and Inria
     * *Date:* 2007 
     * *Collectors:* [Mathilde Fichen](./actors.md#fichen-mathilde)
