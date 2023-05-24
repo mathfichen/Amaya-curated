@@ -204,6 +204,16 @@ Example of Item links:
     * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
     * *Notes:*  
  
+  * **[Amaya Poster](./additional_materials/scientific_articles/Amaya_poster.pdf)**
+    * *Origin:* 
+    * *Archive:* [Internet Archive](https://web.archive.org/web/20230320123115/https://www.w3.org/TR/NOTE-amaya)
+    * *Authors:* Laurent Carcone
+    * *Date:* Unknown
+    * *Collectors:* [Laurent Carcone](./actors.md#laurent-carcone)
+    * *Description:* Poster presenting the different features of Amaya in French. 
+    * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
+    * *Notes:*   
+ 
   * **[Towards active web clients]**
     * *Origin:* [InriaAlpes.fr](http://wam.inrialpes.fr/publications/2005/DocEng05-Quint.html), initially published in the [Proceedings of the 2005 ACM symposium on Document engineering](https://dl.acm.org/doi/proceedings/10.1145/1096601)
     * *Archive:* [Internet Archive](https://web.archive.org/web/20230320123115/https://www.w3.org/TR/NOTE-amaya)
@@ -232,6 +242,8 @@ Example of Item links:
     * *Description:* Technical article presenting the features of Amaya 9.1
     * *Licence/Copyright:* Linux Pratique
     * *Notes:*  
+
+ 
  
 # SW_NAME Catalogue Tree
 
