@@ -23,6 +23,8 @@ Example of Item links:
 
 
 # SW_NAME Catalogue
+ 
+[TOC] 
 
 * **Logos** 
   * **[Amaya logo](../raw_materials/other/amaya_logo_65x50.png)**
