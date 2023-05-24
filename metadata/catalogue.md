@@ -25,7 +25,7 @@ Example of Item links:
 # SW_NAME Catalogue
 
 * **Logos** 
-  * **[Amaya logo](./raw_materials/other/amaya_logo_65x50.png)**
+  * **[Amaya logo](../raw_materials/other/amaya_logo_65x50.png)**
     * *Origin:* [Amaya Website - Wayback Machine]([https://web.archive.org/web/19970605010725/https://www.w3.org/Amaya/](https://www.w3.org/Amaya/Overview.html))
     * *Authors:* [Unknown](./actors.md#name-surname)
     * *Date:* 2023
@@ -34,7 +34,7 @@ Example of Item links:
     * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
     * *Notes:* 
 
-  * **[Original Amaya logo](./raw_materials/other/amaya-logo-1997.gif)**
+  * **[Original Amaya logo](../raw_materials/other/amaya-logo-1997.gif)**
     * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19970605010725/https://www.w3.org/Amaya/)
     * *Authors:* [Unknown](./actors.md#name-surname)
     * *Date:* 1997
@@ -44,7 +44,7 @@ Example of Item links:
     * *Notes:*  
 
 * **Screenshots** 
-  * **[Screenshot Amaya User Interface 1998](./raw_materials/other/1998-amaya-ui.gif)**
+  * **[Screenshot Amaya User Interface 1998](../raw_materials/other/1998-amaya-ui.gif)**
     * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19980703153334/https://www.w3.org/Amaya/)
     * *Warehouse:* 
     * *Authors:* W3C and Inria
@@ -54,7 +54,7 @@ Example of Item links:
     * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
     * *Notes:* 
 
-   * **[Screenshot Amaya MathML application 1998](./raw_materials/other/1998-amaya-math.gif)**
+   * **[Screenshot Amaya MathML application 1998](../raw_materials/other/1998-amaya-math.gif)**
      * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19980703153334/https://www.w3.org/Amaya/)
      * *Authors:* W3C and Inria
      * *Date:* 1998 
@@ -64,7 +64,7 @@ Example of Item links:
      * *Notes:* 
 
 
-  * **[Screenshot Amaya User Interface 1999](./raw_materials/other/1999-v-2-1-amaya-ui.gif)**
+  * **[Screenshot Amaya User Interface 1999](../raw_materials/other/1999-v-2-1-amaya-ui.gif)**
     * *Origin:* [Amaya Website - Wayback Machine](https://web.archive.org/web/19990914133746/https://www.w3.org/Amaya/)
     * *Authors:* W3C and Inria
     * *Date:* 1999 
@@ -204,8 +204,8 @@ Example of Item links:
     * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
     * *Notes:*  
  
-  * **[Amaya Poster](./additional_materials/scientific_articles/Amaya_poster.pdf)**
-    * *Origin:* 
+  * **[Amaya Poster](../additional_materials/scientific_articles/Amaya_poster.pdf)**
+    * *Origin:* Laurent Carcone's collection
     * *Archive:* [Internet Archive](https://web.archive.org/web/20230320123115/https://www.w3.org/TR/NOTE-amaya)
     * *Authors:* Laurent Carcone
     * *Date:* Unknown
