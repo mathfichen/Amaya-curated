@@ -26,7 +26,7 @@ Example of Item links:
 
 
 * **Photos**
-  * **[Irène Vatton in her office at Inria Grenoble, 1996]**
+  * **[Irène Vatton in her office at Inria Grenoble, 1996](https://github.com/mathfichen/Amaya-Workbench/tree/master/additional_materials/photos)**
   * *Origin:* Irène Vatton personnal collection
   * *Authors:* Unknown
   * *Date:* 1996
