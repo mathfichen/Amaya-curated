@@ -21,29 +21,29 @@
   *  Image: https://cds.cern.ch/record/2665153/files/Screenshot-World-Wide-Web-project-small.png?subformat=icon-640
  
 *  30/04/1993
-  *  Date title: CERN publicly releases the Web software, paving the way to its worlwide adoption
-  *  Description: CERN relinquishes all intellectual property rights to this code, both source and binary and permission is given to anyone to use, duplicate, modify and distribute it
-  *  Image: https://mediastream.cern.ch/MediaArchive/Photo/Public/1993/9304003/9304003_01/9304003_01-A5-at-72-dpi.jpg
+   *  Date title: CERN publicly releases the Web software, paving the way to its worlwide adoption
+   *  Description: CERN relinquishes all intellectual property rights to this code, both source and binary and permission is given to anyone to use, duplicate, modify and distribute it
+   *  Image: https://mediastream.cern.ch/MediaArchive/Photo/Public/1993/9304003/9304003_01/9304003_01-A5-at-72-dpi.jpg
 
 *  01/10/1994
-  *  Date title: Tim Berners-Lee founds the World Wide Web Consortium (W3C) at MIT
-  *  Description: "The organization tries to foster compatibility and agreement among industry members in the adoption of new standards defined by the W3C
-  *  Image: https://upload.wikimedia.org/wikipedia/commons/e/ed/W3C%C2%AE_Icon.svg
+   *  Date title: Tim Berners-Lee founds the World Wide Web Consortium (W3C) at MIT
+   *  Description: "The organization tries to foster compatibility and agreement among industry members in the adoption of new standards defined by the W3C
+   *  Image: https://upload.wikimedia.org/wikipedia/commons/e/ed/W3C%C2%AE_Icon.svg
 
 *  01/04/1995
-  *  Date title: Inria becomes the European host of W3C
-  *  Description: In April 1995, the French Institute for Research in Computer Science and Automation became the European host of W3C
-  *  Image: https://upload.wikimedia.org/wikipedia/commons/9/9e/Inr_logo_fr_rouge.png
+   *  Date title: Inria becomes the European host of W3C
+   *  Description: In April 1995, the French Institute for Research in Computer Science and Automation became the European host of W3C
+   *  Image: https://upload.wikimedia.org/wikipedia/commons/9/9e/Inr_logo_fr_rouge.png
 
 *  XX/XX/1996 ?
-  *  Date title: Meeting between Tim Bernes Lee and Amaya team?
-  *  Description: Work on Amaya started at W3C and Inria in 1996 to showcase Web technologies in a fully-featured Web client. The main motivation for developing Amaya was to provide a framework that can integrate as many W3C technologies as possible
-  *  Image: https://commons.wikimedia.org/wiki/File:Amaya-logo-1997.gif
+   *  Date title: Meeting between Tim Bernes Lee and Amaya team?
+   *  Description: Work on Amaya started at W3C and Inria in 1996 to showcase Web technologies in a fully-featured Web client. The main motivation for developing Amaya was to provide a framework that can integrate as many W3C technologies as possible
+   *  Image: https://commons.wikimedia.org/wiki/File:Amaya-logo-1997.gif
 
 *  XX/XX/XXX
-  *  Date title: 
-  *  Description: 
-  *  Image:
+   *  Date title: 
+   *  Description: 
+   *  Image:
 
 
 ## Amaya's people
@@ -52,16 +52,16 @@
 * Subtitle: Amaya was developped at Inria by a team of researchers and engineers
 
 * Name: Vincent Quint
-* Description: Until 2013, Vincent Quint was a senior researcher at Inria and responsible for the team in charge of the Amaya project
-* Image: https://fossa2010.inrialpes.fr/files/2010/03/VQuint-150x150.jpg
+  * Description: Until 2013, Vincent Quint was a senior researcher at Inria and responsible for the team in charge of the Amaya project
+  * Image: https://fossa2010.inrialpes.fr/files/2010/03/VQuint-150x150.jpg
 
 * Name: Irène Vatton
-* Description: Irène Vatton was part of the Amaya team at Inria and its main developper
-* Image: http://wam.inrialpes.fr/people/vatton/photo.gif
+  * Description: Irène Vatton was part of the Amaya team at Inria and its main developper
+  * Image: http://wam.inrialpes.fr/people/vatton/photo.gif
 
 * Name: 
-* Description: 
-* Image:
+  * Description: 
+  * Image:
 
 ## Amaya's mailing list
 * Moment type: iframe
@@ -75,19 +75,76 @@
 * Subtitle:
 
 *  XX/XX/1996
-  *  Date title: Amaya original logo
-  *  Description: The original name of the editor/browser was Tamaya. A tamaya is a tree, as represented on the logo. It was chosen as a name because such a tree was present in the team’s office. The team members thought the tree could style both the image of the Net and the structure of a Web page. Unfortunately, they were not allowed to keep using the name since it was used as as trade mark by a French company. They decided to drop the first letter (T) and the browser became Amaya
-  *  Image: https://upload.wikimedia.org/wikipedia/commons/d/d1/Amaya-logo-1997.gif
+   *  Date title: Amaya original logo
+   *  Description: The original name of the editor/browser was Tamaya. A tamaya is a tree, as represented on the logo. It was chosen as a name because such a tree was present in the team’s office. The team members thought the tree could style both the image of the Net and the structure of a Web page. Unfortunately, they were not allowed to keep using the name since it was used as as trade mark by a French company. They decided to drop the first letter (T) and the browser became Amaya
+   *  Image: https://upload.wikimedia.org/wikipedia/commons/d/d1/Amaya-logo-1997.gif
 
-*  XX/XX/XXX
-  *  Date title: 
-  *  Description: 
-  *  Image:
+* 14/12/1996
+   *  Date title: Amaya v0.9 is published
+   *  Description: The earliest recovered version of Amaya was published in December 1996
+   *  Image: Do we have a screenshot?
 
-*  XX/XX/XXX
-  *  Date title: 
-  *  Description: 
-  *  Image:
+* 3/05/1997
+   *  Date title: Amaya V1.0 is published
+   *  Description: 
+   *  Image: https://upload.wikimedia.org/wikipedia/commons/7/71/1998-amaya-ui.gif
+
+* 3/06/1999
+   *  Date title: Amaya v2.0 is published
+   *  Description: 
+   *  Image: https://upload.wikimedia.org/wikipedia/commons/0/03/1999-v-2-1-amaya-ui.gif
+
+* 4/08/2001
+   *  Date title: Amaya v5.0 is published
+   *  Description: 
+   *  Image: https://upload.wikimedia.org/wikipedia/commons/7/77/2001-v-5-2-amaya-ui.gif
+
+* 24/02/2005
+   *  Date title: Amaya logos evolves to its final version
+   *  Description: Can you spot the Amaya letters in the logo?
+   *  Image: https://upload.wikimedia.org/wikipedia/commons/f/f4/Amaya_logo_65x50.png
+
+* 06/08/2006
+   *  Date title: Amaya v9.0 is published
+   *  Description: 
+   *  Image: https://upload.wikimedia.org/wikipedia/commons/b/be/2005-v-9-0-amaya-ui.png
+ 
+* 18/02/2012
+   *  Date title: Amaya v11.4.4 is published
+   *  Description: V11.4.4 was the last stable published version. Amaya was discountinued in 2013
+   *  Image: https://upload.wikimedia.org/wikipedia/commons/8/82/Amaya_inuse.png
+
+
+## Amaya source code
+
+* Moment type: software_heritage
+* Moment title: The Amaya source code
+* Subtitle: Amaya was mainly written in C
+* URL: https://archive.softwareheritage.org/browse/embed/swh:1:dir:149e1f4edfa1eac9edc3f8def631c4500b8ca4d5"
+swhid	"149e1f4edfa1eac9edc3f8def631c4500b8ca4d5
+
+
+## What the source code can teach us
+* Moment type: image
+* Moment title: The Amaya source code
+* Subtitle: Investigating the source code can tell us how the size and complexity of the software evolved with each new version
+* URL: https://upload.wikimedia.org/wikipedia/commons/b/be/LinesAndFilesPerVersions.png
+* Caption: Number of lines of codes and files for different versions of Amaya
+
+
+## What the source code can teach us
+* Moment type: image
+* Moment title: The Amaya source code
+* Subtitle: Investigating the source code can tell who contributed over time and in which proportion
+* URL: https://upload.wikimedia.org/wikipedia/commons/3/34/CommitsPerAuthorPerYear.png
+* Caption: Number of code contrubutions (commits) per author over the time
+
+
+
+
+
+
+
 
 SoftwareItem: Q108929297
 
