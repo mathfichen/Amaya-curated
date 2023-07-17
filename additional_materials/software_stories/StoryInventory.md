@@ -1,10 +1,93 @@
-# Story moments - a first attempt (revised)
+# Amaya Software Story
 
-*Wikidata items to be created are identified as Q\*xxx, for later reference inside this document. Once created, all references should be replaced with the actual Qid.*
+## Story title and subtitle
+* Title: Amaya web navigator and editor
+* Sub-title: The W3C testbed
 
-*In the statements, braces are used to pair the name-Pid and value of a property. The same holds for the fields of an uploaded image or video, iFrames, etc.*
+## Introduction image
+* Moment type: image
+* Moment title: Amaya was both a Web browser and editor
+* Subtitle: Amaya let users both browse and author Web pages. Users could easily create Web pages from scratch and upload them onto a server. Editing and browsing functions were integrated seamlessly in a single tool.
+* URL: https://upload.wikimedia.org/wikipedia/commons/7/77/2001-v-5-2-amaya-ui.gif
 
-## Wikidata entities for the story
+## Amaya general timeline
+* Moment type: timeline
+* Moment title: Amaya was developped as a testbed for the World Wide Web Consortium
+* Subtitle: Amaya allowed the W3C to test new norms and standards before they were pushed to the industry
+
+* 12/11/1990
+  *  Date title: Tim Berners-Lee and Robert Cailliau invent the World Wide Web (CERN)
+  *  Description: The World Wide Web enables documents and other web resources to be accessed over the Internet according to specific rules, the Hypertext Transfer Protocol. Here, the screenshot of the recreated page of the first website (© CERN)
+  *  Image: https://cds.cern.ch/record/2665153/files/Screenshot-World-Wide-Web-project-small.png?subformat=icon-640
+ 
+*  30/04/1993
+  *  Date title: CERN publicly releases the Web software, paving the way to its worlwide adoption
+  *  Description: CERN relinquishes all intellectual property rights to this code, both source and binary and permission is given to anyone to use, duplicate, modify and distribute it
+  *  Image: https://mediastream.cern.ch/MediaArchive/Photo/Public/1993/9304003/9304003_01/9304003_01-A5-at-72-dpi.jpg
+
+*  01/10/1994
+  *  Date title: Tim Berners-Lee founds the World Wide Web Consortium (W3C) at MIT
+  *  Description: "The organization tries to foster compatibility and agreement among industry members in the adoption of new standards defined by the W3C
+  *  Image: https://upload.wikimedia.org/wikipedia/commons/e/ed/W3C%C2%AE_Icon.svg
+
+*  01/04/1995
+  *  Date title: Inria becomes the European host of W3C
+  *  Description: In April 1995, the French Institute for Research in Computer Science and Automation became the European host of W3C
+  *  Image: https://upload.wikimedia.org/wikipedia/commons/9/9e/Inr_logo_fr_rouge.png
+
+*  XX/XX/1996 ?
+  *  Date title: Meeting between Tim Bernes Lee and Amaya team?
+  *  Description: Work on Amaya started at W3C and Inria in 1996 to showcase Web technologies in a fully-featured Web client. The main motivation for developing Amaya was to provide a framework that can integrate as many W3C technologies as possible
+  *  Image: https://commons.wikimedia.org/wiki/File:Amaya-logo-1997.gif
+
+*  XX/XX/XXX
+  *  Date title: 
+  *  Description: 
+  *  Image:
+
+
+## Amaya's people
+* Moment type: people
+* Moment Title: Amaya was developped by a team at Inria research center
+* Subtitle: Amaya was developped at Inria by a team of researchers and engineers
+
+* Name: Vincent Quint
+* Description: Until 2013, Vincent Quint was a senior researcher at Inria and responsible for the team in charge of the Amaya project
+* Image: https://fossa2010.inrialpes.fr/files/2010/03/VQuint-150x150.jpg
+
+* Name: Irène Vatton
+* Description: Irène Vatton was part of the Amaya team at Inria and its main developper
+* Image: http://wam.inrialpes.fr/people/vatton/photo.gif
+
+* Name: 
+* Description: 
+* Image:
+
+## Amaya's mailing list
+* Moment type: iframe
+* Moment title: The Amaya mailing list enabled its community to interact
+* Subtitle: Here, Tim Bernes Lee is providing feedback on new Amaya release
+* URL: https://lists.w3.org/Archives/Public/www-amaya/1997JulSep/0027.html
+
+## Amaya features and design timeline
+* Moment type: timeline
+* Moment title: Amaya features and design evolved throught time
+* Subtitle:
+
+*  XX/XX/1996
+  *  Date title: Amaya original logo
+  *  Description: The original name of the editor/browser was Tamaya. A tamaya is a tree, as represented on the logo. It was chosen as a name because such a tree was present in the team’s office. The team members thought the tree could style both the image of the Net and the structure of a Web page. Unfortunately, they were not allowed to keep using the name since it was used as as trade mark by a French company. They decided to drop the first letter (T) and the browser became Amaya
+  *  Image: https://upload.wikimedia.org/wikipedia/commons/d/d1/Amaya-logo-1997.gif
+
+*  XX/XX/XXX
+  *  Date title: 
+  *  Description: 
+  *  Image:
+
+*  XX/XX/XXX
+  *  Date title: 
+  *  Description: 
+  *  Image:
 
 SoftwareItem: Q108929297
 
