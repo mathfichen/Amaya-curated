@@ -1,0 +1,581 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <style>A:link { color : #0000FF }
+A:active { color : #7F007F }
+A:visited { color : #7F007F }</style>
+  <meta name="Author" content="V. Quint, I. Vatton">
+  <meta name="GENERATOR" content="amaya V3.1">
+  <title>An Introduction to Amaya</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+<p align="right"><a href="http://www.w3.org/pub/WWW/"><img border="0"
+src="http://www.w3.org/pub/WWW/Icons/WWW/w3c_home" alt="W3C" width="72"
+align="left" height="48"></a> NOTE-Amaya-970220</p>
+
+<h1 align="center">An Introduction to Amaya</h1>
+
+<h3 align="center">W3C NOTE 20-February-1997</h3>
+<dl>
+  <dt>Authors :</dt>
+    <dd>Vincent Quint, W3C, &lt;<a
+      href="mailto:quint@w3.org">quint@w3.org</a>>,
+      <p>Ir&egrave;ne Vatton, W3C, &lt;<a
+      href="mailto:vatton@w3.org">vatton@w3.org</a>></p>
+    </dd>
+  <dt>URL of this document:</dt>
+    <dd>Latest version: <a
+      href="http://www.w3.org/pub/WWW/TR/NOTE-amaya">http://www.w3.org/pub/WWW/TR/NOTE-amaya</a></dd>
+    <dd>This version: <a
+      href="http://www.w3.org/pub/WWW/TR/NOTE-amaya-970220">http://www.w3.org/pub/WWW/TR/NOTE-amaya-970220</a></dd>
+</dl>
+
+<p></p>
+
+<p></p>
+<hr>
+
+<h2><a name="L682">Status of this document</a></h2>
+<!-- draft-7 process compliant boilerplate -->
+
+<p>This document is a NOTE made available by the W3 Consortium for discussion
+only. This indicates no endorsement of its content, nor that the Consortium
+has, is, or will be allocating any resources to the issues addressed by the
+NOTE.</p>
+
+<p>A list of current NOTEs can be found at: <a
+href="http://www.w3.org/pub/WWW/TR/">http://www.w3.org/pub/WWW/TR/</a></p>
+
+<p>Since NOTEs are subject to change, you are advised to reference the URL for
+the "latest version".</p>
+
+<p>This document briefly presents <a
+href="http://www.w3.org/pub/WWW/Amaya/">Amaya</a>, the W3C testbed client. It
+explains the motivations for the development of the software as well as its
+goals. It also presents the main design choices that have been made to reach
+these goals.</p>
+
+<p></p>
+
+<p></p>
+<hr>
+
+<h2><a name="L418">Table of contents</a></h2>
+<ul>
+  <li><a href="#L682">Status of this document</a></li>
+  <li><a href="#L418">Table of contents</a></li>
+  <li><a href="#L417">Abstract</a></li>
+  <li><a href="#L419">A multi-purpose client</a></li>
+  <li><a href="#L420">Amaya's approach to HTML</a></li>
+  <li><a href="#L423">User interface</a>
+    <ul>
+      <li><a href="#L424">A WYSIWYG interface</a>
+        <ul>
+          <li><a href="#L425">Document elements</a></li>
+          <li><a href="#L426">Attributes</a></li>
+          <li><a href="#L427">Views</a></li>
+          <li><a href="#L428">Links</a></li>
+        </ul>
+      </li>
+      <li><a href="#L429">Style sheets</a></li>
+    </ul>
+  </li>
+  <li><a href="#L430">Publishing documents on the web</a></li>
+  <li><a href="#L431">Architecture</a>
+    <ul>
+      <li><a href="#L432">The Thot languages</a>
+        <ul>
+          <li><a href="#L433">Logical structures: language S</a></li>
+          <li><a href="#L434">Document presentation: language P</a></li>
+          <li><a href="#L435">External syntax: language T</a></li>
+          <li><a href="#L436">Application construction: language A</a></li>
+        </ul>
+      </li>
+      <li><a href="#L437">Thot libraries</a>
+        <ul>
+          <li><a href="#L438">Document manipulation functions</a></li>
+          <li><a href="#L439">Extension mechanism</a></li>
+        </ul>
+      </li>
+      <li><a href="#L440">Amaya as a Thot application</a></li>
+      <li><a href="#L441">An open-ended architecture</a></li>
+    </ul>
+  </li>
+  <li><a href="#L442">Further readings</a></li>
+</ul>
+
+<p></p>
+<hr>
+
+<h2><a name="L417">Abstract</a></h2>
+
+<p>As the web is based on a client-server architecture, both a client and a
+server are needed to experiment and demonstrate new specifications for the
+web. Within <a href="http://www.w3.org">W3C</a>, <a
+href="http://www.w3.org/pub/WWW/Jigsaw/">Jigsaw</a> plays this role on the
+server side. Amaya is developed to play the same role on the client side.</p>
+
+<p>This note presents the main choices that were made in the design of Amaya,
+as well as its key features. The user interface and the software architecture
+are also briefly described.</p>
+
+<h2><a name="L419">A multi-purpose client</a></h2>
+
+<p>Amaya is both a browser and an authoring tool dedicated to the World Wide
+Web. It has been specifically conceived to serve as a testbed client to
+experiment and demonstrate new web protocols and formats as well as new
+extensions to existing ones. This makes its features a bit specific.</p>
+
+<p>A testbed client must be versatile enough to allow a wide range of
+experiments and demonstrations. That is the reason why Amaya has been designed
+as an active client, i.e. a client that not only retrieves documents from the
+web and presents them to the user, but also an authoring tool that allows an
+author to create new documents, to edit existing ones and to publish these
+documents on remote web servers.</p>
+
+<p>To help investigate the impact of new specifications on the many aspects of
+a web client, Amaya has been designed with both</p>
+<ul>
+  <li>a WYSIWYG style of interface, which makes it easy to use,</li>
+  <li>a structured representation of documents, which allows it to stick to
+    the web specifications.</li>
+</ul>
+
+<p>The web is made of a number of documents linked together. While working on
+the web, a user needs to access several documents, specially when following,
+creating, or modifying links. For that reason, Amaya is able to work on
+several documents at a time and it can act as a browser and as an editor
+simultaneously on all these documents: the whole client functionality is
+available at any time for any document.</p>
+
+<p>In its basic version, Amaya implements many web protocols and formats:</p>
+<ul>
+  <li>it handles <a href="http://www.w3.org/pub/WWW/MarkUp">HTML</a> documents
+    with their hypertext links,</li>
+  <li>it can display pictures in several formats, including <a
+    href="http://www.w3.org/pub/WWW/Graphics">PNG</a>,</li>
+  <li>it supports <a href="http://www.w3.org/pub/WWW/Style/Activity">CSS
+    1</a>, which allows it to display documents with style sheets and to
+    create or edit style sheets,</li>
+  <li>it accesses remote sites by means of <a
+    href="http://www.w3.org/pub/WWW/Protocols/">HTTP 1.1</a>, as implemented
+    in <a href="http://www.w3.org/pub/WWW/Library/">libwww</a>.</li>
+</ul>
+
+<h2><a name="L420">Amaya's approach to HTML</a></h2>
+
+<p>HTML is the document format for the Web. As a web tool, Amaya must take all
+aspects of this format into account. Existing tools have shown that there are
+different approaches to consider HTML in a web client. Amaya has its own
+approach to HTML, that we describe below.</p>
+
+<p>Being an editor, Amaya processes HTML files in a specific way. An editor
+based on the WYSIWYG paradigm must allow the user to act on the formatted
+document for altering the HTML source. To allow that feature, the HTML source
+is treated as a data structure definition. When parsing a source file, Amaya
+builds an internal representation of the document structure, which is
+basically a tree. This logical structure is then utilized both for formatting
+and for editing.</p>
+
+<p>In Amaya, HTML is considered as an SGML application. The editor always
+follows the HTML DTD when manipulating the document structure and it performs
+only valid operations. The advantage of this approach is that it leads to well
+structured documents and allows other tools to further process the documents
+safely. The drawbacks are also well known: (1) manipulations are often complex
+from the user viewpoint and (2) documents that are not strictly correct are
+often rejected. The later is a real nuisance, as many documents are
+syntactically or structurally incorrect on the web.</p>
+
+<p>To address the first drawback, a particular attention has been paid to the
+user interface. Most commands issued by the user are the same as those
+proposed by usual word processors, but they are interpreted by the editor in
+terms of the internal document structure. Specific structure manipulation
+commands are thus avoided, as well as context sensitive menus.</p>
+
+<p>To address the second drawback, the HTML parser has been designed in such a
+way Amaya <em>never</em> rejects <em>any</em> document. When it parses a
+document that is not structurally correct, it tries to transform the structure
+of the document. Sometimes this structure is so bizarre that it's not possible
+to automatically generate a fully HTML conformant structure. In that case, the
+parser nevertheless loads the document, but if the user attempts to modify it,
+the editor performs only valid operations. Thus, the document structure is
+improved and, even if it is not guaranteed to be <em>always</em> correct, it's
+not worse than before when it is saved, and the user is not prevented from
+working on any document.</p>
+
+<h2><a name="L423">User interface</a></h2>
+
+<h3><a name="L424">A WYSIWYG interface</a></h3>
+
+<p>Users are not supposed to know the HTML or CSS languages to author web
+pages. Amaya does not ask them to write nor to read the documents they create
+under their HTML syntax. The HTML file is automatically produced by the tool,
+as well as the CSS syntax. But Amaya is not simply a word processor with an
+HTML filter. As it is intended to implement as many aspects of the web
+specifications as possible, Amaya should be able to implement every HTML
+feature. It must then be modelled after HTML while letting users interact with
+it in a very simple and natural way.</p>
+
+<p>For these reasons, the WYSIWYG paradigm has been chosen for the user
+interface, with a structured model for the internal representation. Document
+are presented to the user with the aspect they would have if displayed by the
+most popular browsers and the user interacts with the editor on the basis of
+this external representation. Simultaneously, the editor maintains an internal
+representation that follows the HTML rules and constraints, as stated in the
+DTD.</p>
+
+<h4><a name="L425">Document elements</a></h4>
+
+<p>A user can manipulate text in the same way as if s/he were using a simple
+word processor. At any time, the user can select any part of that text and
+assign to it an HTML type (H1, LI, EM, etc.), by means of the Types menu or of
+the shortcut buttons. Such a command transforms the selected part into an
+element of the chosen type. If some other elements need to be created or
+transformed to keep the document HTML conformant, these transformations are
+also performed. This allows the author to type in the contents first and to
+provide structure <em>afterwards</em>, but the opposite is also possible, as
+the type of an element can also be chosen <em>before</em> entering its
+contents.</p>
+
+<p>In Amaya, this is the only way to manipulate the document structure. The
+user does not enter or edit tags. Only the editor directly acts on the
+document structure, and when it makes a change, it checks the change against
+the HTML DTD, to make sure that the structure remains correct.</p>
+
+<p>This kind of user interface may require complex structure transformations
+to be done by the editor. The user may select a passage that has a given
+structure (say a bulleted list) and ask for a completely different structure
+(say a table). For such complex transformations, the editor cannot rely only
+on the DTD, as some semantics is involved. The problem is solved by a
+<em>transformation language</em>. This language is used to define complex
+structure transformations. It allows users to define structure patterns and
+the corresponding transformed structures. With these definitions, the editor
+may perform any transformation that the user may need and the user may define
+new transformations as needed.</p>
+
+<p>This approach has a number of advantages:</p>
+<ul>
+  <li>The user is not constrained by editing modes: at any time any element
+    type can be created or changed and new elements can be created before of
+    after their contents.</li>
+  <li>The document structure can be transformed freely, thus relieving the
+    user from the burden of complex interaction imposed by most structure
+    editors.</li>
+  <li>The document is always structurally correct regarding the HTML DTD.</li>
+</ul>
+
+<h4><a name="L426">Attributes</a></h4>
+
+<p>In HTML, various attributes can be associated with a number of elements,
+and the allowed attributes depend on the element type. This is stated by the
+DTD. To help the user choose the right attributes, a specific menu offers at
+any time all attributes that can be associated with the selected element(s),
+and only those attributes.</p>
+
+<p>As there is no other means than this menu to associate attributes with
+elements, only valid attributes can be entered. Moreover, when attributes are
+allowed to take only some predefined values, these values are also proposed in
+a specific menu, in such a way that only valid values are entered.</p>
+
+<p>This enforces the structured approach that guarantees that documents are
+always structurally correct.</p>
+
+<h4><a name="L427">Views</a></h4>
+
+<p>In some cases, the structure of a HTML document may be complex, with a
+number of nested elements of several types. That complexity may lead to
+ambiguity, as different structures may look very similar when displayed in
+their formatted representation. As a help to the user in such situations,
+Amaya can display the actual structure of the document being edited. This is
+called the <em>structure view</em> and it is displayed in a separate window
+that the user can see at the same time as the formatted view.</p>
+
+<p>The structure view presents the document's hierarchical structure as an
+indented list and displays the type and attributes of every element. This view
+is not a static representation. The user can act on it. S/he can select any
+element there; s/he can modify the document exactly in the same way as in the
+formatted view. Moreover, all editing commands are executed in both views
+simultaneously, whatever the view chosen for issuing the command.</p>
+
+<p>The principle of showing the same document in different windows
+simultaneously is not restricted to the structure view. An <em>alternate
+view</em> is also available. It shows the document as if it would be displayed
+on a dumb terminal. Like the structure view, the alternate view may be used
+for editing, as well as the other views. It's not simply a preview that allows
+to check the document from a different viewpoint; it's a dynamic
+representation, where the user can make any change.</p>
+
+<p>The concept of a view may be used for showing other aspects of a document.
+It is fairly simple to define new views and one can imagine a window showing
+links, another showing headings (a table of contents), etc.</p>
+
+<h4><a name="L428">Links</a></h4>
+
+<p>Links are first class citizens in web pages. Therefore a particular
+attention has been paid to their manipulation. Most often, the user does not
+have to type URLs to edit links. Instead, the browsing function of Amaya is
+used to load different documents. Links are then created or modified by simply
+clicking on the target document or anchor that is displayed on the screen.
+Thus, the user can see the actual target of a link and avoid any mistake when
+setting links.</p>
+
+<h3><a name="L429">Style sheets</a></h3>
+
+<p>A web page is not only ruled by the HTML specification. It can also include
+stylistic stuff that conforms the CSS (Cascading Style Sheets) specification.
+For CSS, the same approach has been taken as for HTML: the user does not write
+CSS syntax directly. S/he interacts on a formatted document and sees
+immediately the result of his/her commands on the formatted document and in
+other views. Amaya is in charge of producing the actual CSS syntax.</p>
+
+<p>As the same result may be achieved by associating some style declarations
+at several locations in an HTML document, the formatted view is not enough.
+Other means should be provided for avoiding any ambiguity. Like for HTML, the
+structure view fulfills this need. It clearly shows where style rules are
+located: as Style attributes associated with HTML elements, as Style elements
+in the heading of a document, or as a link to a style sheet.</p>
+
+<h2><a name="L430">Publishing documents on the web</a></h2>
+
+<p>Amaya is not simply a structured editor. It is a complete web authoring
+environment. When working with Amaya you are on the web and you can access any
+web resource. You can browse the web and find the information you need while
+writing a document. You can copy and paste from any document, directly on the
+formatted representation. You can create links pointing at any place and you
+can check these links immediately. All these actions can be performed in a
+single consistent environment, as the editing and browsing functions are
+integrated seamlessly in a single tool.</p>
+
+<p>Access to the web is not restricted to browsing: the document you edit can
+also be published on remote servers where you are allowed to write. Publishing
+on the web is as simple as saving a document to a local file. Just type an URL
+instead of a file name when saving a document and Amaya does the rest.
+Included objects such as pictures are also saved and all URLs are updated
+accordingly if the document has moved from its original location.</p>
+
+<p>Transferring documents and other resources to and from remote servers is
+done by the <a href="http://www.w3.org/pub/WWW/Library/">libwww</a>. Access to
+these servers is done exclusively by means of HTTP methods: GET to load remote
+documents, POST/GET to send forms, and PUT to publish documents. Amaya takes
+advantage of the most advanced features of HTTP, such as content negotiation
+to retrieve the most appropriate picture format, for instance, or keep alive
+connections to save bandwidth.</p>
+
+<h2><a name="L431">Architecture</a></h2>
+
+<p>Amaya's internal design reflects its testbed role. The software
+architecture allows easy extensions. Several APIs and mechanisms are available
+to change and extend its functionality with as less modifications as possible
+within the source code.</p>
+
+<p>To allow its handling of documents in a structured way, Amaya has been
+designed as an application on top of the Thot tool kit. Thot is a set of
+libraries that implement document manipulation functions. It is based on a
+structured document model that clearly separates content, structure, and
+presentation.</p>
+
+<h3><a name="L432">The Thot languages</a></h3>
+
+<p>All editing and formatting functions in Thot rely on the document logical
+structure. In any application that uses Thot, a document is represented
+internally as a tree that assembles typed elements, such as headings,
+paragraphs, lists, highlighted phrases, etc. These elements may have
+attributes which provide more information about the element's role in the
+document structure, exactly like in HTML and SGML.</p>
+
+<p>Thot provides four languages that are used to write fout types of
+<em>schemas</em>. A schema is a set of <em>rules</em> which define the
+behaviour of the editor regarding the logical structure of documents, their
+presentation, their external syntax, or some specific treatments.</p>
+
+<h4><a name="L433">Logical structures: language S</a></h4>
+
+<p>The logical structure of a document is constrained by certain rules.
+Structure rules specify the available element types and attributes, they
+indicate how these elements may be assembled to make a valid structure, and
+they state what attributes can be associated with each element type. In Thot,
+structure rules are gathered in <em>structure schemas</em>. A structure schema
+defines the logical structure of a document type; it is written in a simple
+declarative language, called S.</p>
+
+<p>Amaya uses a structure schema to specify the logical structure of HTML
+documents. This schema is equivalent to the HTML DTD.</p>
+
+<h4><a name="L434">Document presentation: language P</a></h4>
+
+<p>The document image displayed in different views is defined by a
+<em>presentation schema</em>, written in language P. A presentation schema
+specifies the views to be proposed to the user and it indicates in
+<em>presentation rules</em> how the elements and attributes defined in the
+corresponding structure schema should be displayed in these views.</p>
+
+<p>Amaya uses several presentation schemas, which specify different layouts
+and styles for HTML documents: one for color screens, one for printers, etc.
+These schemas define the default presentation to be applied to HTML documents,
+when no particular style information is associated. If CSS is used, these
+presentation schemas are dynamically extended with presentation rules that
+correspond to the CSS rules included in or referred from the document.</p>
+
+<h4><a name="L435">External syntax: language T</a></h4>
+
+<p>A structure schema only specifies the internal logical structure of
+documents, but not their external syntax. The same structure can be conveyed
+by different syntaxes, and when the document is saved several syntaxes can be
+used. The output syntax is defined by a <em>translation schema</em>, written
+in language T. This language is also declarative. It specifies how each
+element and attribute defined by a structure schema should be represented in
+the external representation.</p>
+
+<p>A translation schema is used in Amaya to define the HTML syntax. Other
+schemas can be used to save the document in ASCII or in
+L<sup>A</sup>T<sub><big>E</big></sub>X, for instance.</p>
+
+<h4><a name="L436">Application construction: language A</a></h4>
+
+<p>The fourth language of Thot is language A. It is used to define the user
+interface of an application as well as its specific commands (basic editing
+commands are provided by Thot). With an <em>application schema</em>, written
+in language A, a developer specifies the menu bar that appears at the top of
+each view, the contents of the corresponding pull-down menus and the functions
+that are called by these menus. An application schema also allows to extend or
+modify the basic editing functions provided by Thot.</p>
+
+<p>Amaya is a Thot application described in language A. It uses the basic
+editing functions provided by Thot, to which it adds some particular commands
+that are specific to the web and the HTML structure.<br>
+</p>
+
+<p>Each language has its own compiler. The S, P, and T compilers generate
+files that are loaded dynamically by the Thot library at running time, while
+the A compiler generates C code that must be compiled and linked with the
+modules implementing the application.</p>
+
+<h3><a name="L437">Thot libraries</a></h3>
+
+<p>The main Thot library provides developers with an API that allows them to
+handle all entities and objects that make a document and its environment.
+There are functions for creating, modifying, deleting, opening, accessing,
+finding, moving, etc. such things as documents, logical structures, elements,
+attributes, links, views, etc.</p>
+
+<h4><a name="L438">Document manipulation functions</a></h4>
+
+<p>All document manipulation functions are based on the schemas presented
+above. As an example, an application program needs only to call two functions
+(<code>NewTree</code> and <code>InsertTree</code>) to create a new subtree in
+the document structure. Function <code>NewTree</code> receives as a parameter
+the type of the element that must become the root of the new tree, and
+according to the structure schema, it creates all the required elements in the
+subtree. Function <code>InsertTree</code> uses the structure schema to check
+whether the tree can be inserted at the required place in the document
+structure and it uses the presentation schema to redisplay only what is needed
+in all open views. The developer cares only about the document logical
+structure and all the rest is performed by Thot. This makes the development of
+applications very simple.</p>
+
+<p>Thot also provides a library of graphical user interface functions that,
+along with language A, makes the development of a user interface also very
+simple.</p>
+
+<h4><a name="L439">Extension mechanism</a></h4>
+
+<p>A number of standard editing functions are provided by Thot, but these
+functions may need to be modified, extended or replaced by the application in
+some cases. For that reason, application schemas allow developers to specify
+some specific functions (that they have to write) that must be called before,
+after or instead of the standard functions. They can specify different
+functions that are performed according to the element type or attribute
+concerned. This allows to change the behavior of the standard editing
+functions without making any change within the Thot code itself.</p>
+
+<p>As an example, activating an element by double-clicking it with the mouse
+is a standard Thot function, but in Amaya, when an anchor is clicked, a
+specific function must be performed to get and display the referred document.
+Language A allows a developer to declare that, when an element of type anchor
+is clicked, a specific function must be called instead of the standard Thot
+function. That function, written by the developer, uses the Thot library to
+access the HREF attribute associated with the clicked anchor, then it uses
+libwww to get the corresponding document, and again the Thot library to
+display that document.</p>
+
+<h3><a name="L440">Amaya as a Thot application</a></h3>
+
+<p>Amaya inherits a lot of functions from the Thot library, such as text
+editing, formatting, basic structure manipulations, user dialogue, picture
+display, etc. More specific functions are implemented by the following
+software components:</p>
+<dl>
+  <dt>HTML parser</dt>
+    <dd>The HTML parser reads an HTML stream, parses it and builds the logical
+      structure of the corresponding documents, using the Thot API.</dd>
+  <dt>CSS parser</dt>
+    <dd>The CSS parser reads CSS syntax contained in a style sheet, in the
+      <code>HEAD</code> of a HTML file or in a <code>STYLE</code> attribute,
+      and generates the corresponding presentation rules for Thot.</dd>
+  <dt>User interface</dt>
+    <dd>The user interface is partly inherited from Thot, for the most common
+      functions, and partly specified in language A, for the specific Amaya
+      commands.</dd>
+  <dt>Specific editing functions</dt>
+    <dd>Specific editing functions are declared in language A and implemented
+      on top of the Thot API.</dd>
+  <dt>Structure transformations</dt>
+    <dd>Simple structure transformations are implemented by the Thot library,
+      based on the structure schema. More complex transformations are
+      described by the transformation language.</dd>
+  <dt>libwww</dt>
+    <dd>Amaya access remote web servers through the latest version of libwww,
+      which implements HTTP 1.1.</dd>
+</dl>
+
+<h3><a name="L441">An open-ended architecture</a></h3>
+
+<p>The architecture described above allows Amaya to be extended in many ways
+and most extensions can be made very simply, often without programming. Due to
+the Thot library and its API, most basic editing functions are available and
+can be reused very easily. Due to the available declarative languages, many
+changes to the software can be made simply by changing some declarations.</p>
+
+<p>These features have already been used to experiment some proposed
+extensions to HTML, such as an extended table model or the OBJECT element
+associated with a plug-in mechanism. An experiment with web collections is
+also in progress for printing large documents published as a set of smaller
+HTML pages. Additional experiments are planned in the W3C team, but other
+interested parties are encouraged to use Amaya for experimenting other
+extensions and develop their own applications.</p>
+
+<h2><a name="L442">Further readings</a></h2>
+
+<p>The following documents are available on the web:</p>
+<ul>
+  <li>Description of the <a
+    href="http://www.w3.org/pub/WWW/Amaya/User/Manual.html">user
+  interface</a></li>
+  <li>Specification of <a href="/Amaya/User/languages.toc.html">Thot
+    languages</a> (S: structure, P: presentation, T: translation)</li>
+  <li>The <a href="/Amaya/User/APIman.toc.html">Thot API</a></li>
+  <li>The <a
+    href="http://www.w3.org/pub/WWW/Amaya/User/Transform.html">structure
+    transformation mechanism</a> and its language</li>
+  <li>How to <a
+    href="http://www.w3.org/pub/WWW/Amaya/User/AmayaArchi.html">modify or
+    extend Amaya</a></li>
+  <li>How to <a
+    href="http://www.w3.org/pub/WWW/Amaya/User/SourceDist.html">download the
+    source code</a></li>
+  <li>and <a href="http://www.w3.org/pub/WWW/Amaya/User/">more</a>...</li>
+</ul>
+
+<p></p>
+<hr>
+<address>
+  <a href="mailto:quint@w3.org">V. Quint</a> and <a
+  href="mailto:vatton@w3.org">I. Vatton</a><br>
+  Created: 20-Feb-1997<br>
+  Last modified: $Date: 2017/10/02 10:48:06 $ 
+</address>
+<script src="https://www.w3.org/scripts/TR/fixup.js"></script></body>
+</html>
