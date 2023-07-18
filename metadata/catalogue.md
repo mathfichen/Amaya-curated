@@ -23,7 +23,17 @@ Example of Item links:
 
 
 # SW_NAME Catalogue
- 
+
+
+* **Photos**
+  * **[Irène Vatton in her office at Inria Grenoble, 1996](https://github.com/mathfichen/Amaya-Workbench/tree/master/additional_materials/photos)**
+  * *Origin:* Irène Vatton personnal collection
+  * *Authors:* Unknown
+  * *Date:* 1996
+  * *Collectors:* [Irène Vatton](./actors.md#irene-vatton)
+  * *Description:* Irène Vatton in her office at Inria Grenoble, 1996
+  * *Licence/Copyright:* Copyright Irène Vatton. Licence to store on Github and use in Software Stories
+  * *Notes:*   
 
 * **Logos** 
   * **[Amaya logo](../raw_materials/other/amaya_logo_65x50.png)**

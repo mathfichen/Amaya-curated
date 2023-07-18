@@ -1,5 +1,7 @@
 # SW_NAME SWH-stories workplace
 
+TO DO : to deit
+
 ### This folder provides a template supporting the presentation of the SW_NAME software project in a [SWH-story](https://swh.stories.k2.services/).
 
 The images, videos, documents, etc. to be put in the story should be collected here, divided per *moment*, according to the sub-folder structure.

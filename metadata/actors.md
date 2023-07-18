@@ -25,6 +25,28 @@ Example of Item link:
 # Amaya Actors
 
 
+* # Irène Vatton
+  * *Affiliation* 
+     * *Current:* 
+       * *Email:* 
+       * *Github handle:* 
+       * *Website:* 
+     * *Historical:* [Inria](https://www.inria.fr/fr)
+       * *Email:* 
+  * *Roles:* Author, Collector, Curator
+
+ 
+* # Vincent Quint
+  * *Affiliation* 
+     * *Current:* 
+       * *Email:* 
+       * *Github handle:* 
+       * *Website:* 
+     * *Historical:* [Inria](https://www.inria.fr/fr)
+       * *Email:* 
+  * *Roles:* Author, Collector, Curator
+
+
 * # Laurent Carcone
   * *Affiliation* 
      * *Current:* [ERCIM](https://www.ercim.eu/), [W3C](https://www.w3.org/)
