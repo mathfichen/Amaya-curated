@@ -162,6 +162,12 @@ TO DO: Vincent, Irène, Laurent, sauriez-vous identifier quelques grandes évolu
    *  Description: V11.4.4 was the last stable published version. Amaya was discountinued in 2013
    *  Image: https://upload.wikimedia.org/wikipedia/commons/8/82/Amaya_inuse.png
 
+## Amaya's meeting notes
+* Moment type: iframe
+* Moment title: User needs were at the center of Amaya conception
+* Subtitle: Meeting note from Amaya's team analyzing user needs in 1996
+* URL: https://www.w3.org/Amaya/history/tamaya-960314.html
+
 
 ## Amaya source code
 
