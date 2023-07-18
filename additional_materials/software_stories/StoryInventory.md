@@ -95,6 +95,13 @@ TO DO: Irène et Vincent, pouvez-vous regarder le petit texte descriptif et le m
   * Description: 
   * Image:
 
+## Amaya's team in Grenoble
+* Moment type: picture
+* Moment title: TThe team was located at Inria Grenoble
+* Subtitle: Here, Tim Bernes Lee is providing feedback on new Amaya release
+* URL: https://stories-api-stage.s3.amazonaws.com/images/1996_IreneVatton_Grenoble.original.jpg"
+
+
 ## Amaya's mailing list
 * Moment type: iframe
 * Moment title: The Amaya mailing list enabled its community to interact
