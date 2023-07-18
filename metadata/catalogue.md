@@ -183,6 +183,16 @@ Example of Item links:
     * *Licence/Copyright:* [W3C Software licence](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
     * *Notes:*    
 
+
+  * **[Screenshot Grif interface](./raw_materials)**
+    * *Origin:* Vincent Quint
+    * *Authors:* Grif team / Inria
+    * *Date:* Unknown 
+    * *Collectors:* [Vincent Quint](./actors.md#vincent-quint)
+    * *Description:* A screenshot view of Grif's user interface 
+    * *Licence/Copyright:* 
+    * *Notes:*   
+
 * **Web pages and forums** 
   * **[Amaya NT bugs](./raw_materials/other/amaya_logo_65x50.png)**
     * *Origin:* [Amaya public mailing list](https://lists.w3.org/Archives/Public/www-amaya/1997JulSep/0027.html)
