@@ -35,6 +35,15 @@ Example of Item links:
   * *Licence/Copyright:* Copyright Irène Vatton. Licence to store on Github and use in Software Stories
   * *Notes:*   
 
+  * **[Nabil Layaïda presenting Grif in Darmstadt, 1995](https://github.com/mathfichen/Amaya-Workbench/tree/master/additional_materials/photos)**
+  * *Origin:* Vincent Quint personnal collection
+  * *Authors:* Unknown
+  * *Date:* 1995
+  * *Collectors:* [Vincent Quint](./actors.md#irene-vatton)
+  * *Description:* Une photo prise à Darmstadt en 1995 de Nabil Layaïda qui présentait le logiciel Grif. Nabil est l'un des contributeurs de Grif.
+  * *Licence/Copyright:* 
+  * *Notes:* 
+
 * **Logos** 
   * **[Amaya logo](../raw_materials/other/amaya_logo_65x50.png)**
     * *Origin:* [Amaya Website - Wayback Machine]([https://web.archive.org/web/19970605010725/https://www.w3.org/Amaya/](https://www.w3.org/Amaya/Overview.html))
@@ -194,10 +203,10 @@ Example of Item links:
     * *Notes:*    
 
 
-  * **[Screenshot Grif interface](./raw_materials)**
+  * **[Screenshot Grif interface, 1987](./raw_materials)**
     * *Origin:* Vincent Quint
     * *Authors:* Grif team / Inria
-    * *Date:* Unknown 
+    * *Date:* 1987
     * *Collectors:* [Vincent Quint](./actors.md#vincent-quint)
     * *Description:* A screenshot view of Grif's user interface 
     * *Licence/Copyright:* 
@@ -262,6 +271,15 @@ Example of Item links:
     * *Collectors:* [Laurent Carcone](./actors.md#fichen-mathilde)
     * *Description:* Technical article presenting the features of Amaya 9.1
     * *Licence/Copyright:* Linux Pratique
+    * *Notes:*  
+
+  * **Chosen extracts from Weaving the Web (Tim Bernes-Lee)**
+    * *Origin:* Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web, Tim Berners-Lee
+    * *Authors:* James Gillies, European Laboratory for particle physics (CERN)
+    * *Date:* 2000
+    * *Collectors:* [Laurent Carcone](./actors.md#fichen-mathilde)
+    * *Description:* Chosen extracts featuring Grif or Amaya
+    * *Licence/Copyright:* T. Berners-Lee
     * *Notes:*  
 
  
