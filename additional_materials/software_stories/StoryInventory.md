@@ -206,7 +206,7 @@ swhid	"149e1f4edfa1eac9edc3f8def631c4500b8ca4d5
 * Moment title: The Amaya source code
 * Subtitle: Investigating the source code can tell us how the size and complexity of the software evolved with each new version
 * URL: https://upload.wikimedia.org/wikipedia/commons/b/be/LinesAndFilesPerVersions.png
-* Caption: Number of lines of codes and files for different versions of Amaya
+* Caption: Left side: Number of code contrubutions (commits) per author over the time. Right side: number of lines of codes and files for different versions of Amaya. 
 
 
 ## What the source code can teach us
