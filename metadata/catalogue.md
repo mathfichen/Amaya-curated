@@ -212,6 +212,15 @@ Example of Item links:
     * *Licence/Copyright:* 
     * *Notes:*   
 
+  * **[Screenshot Web-adapted Grif editor, 1991](./raw_materials)**
+    * *Origin:* https://www.sciencedirect.com/science/article/pii/0169755295000389
+    * *Authors:* Grif team / Inria
+    * *Date:* 1991
+    * *Collectors:* [Mathilde Fichen](./actors.md#mathilde-fichen)
+    * *Description:* Different views of HTML pages, adapted from Grif editor
+    * *Licence/Copyright:* 
+    * *Notes:*   
+
 * **Web pages and forums** 
   * **[Amaya NT bugs](./raw_materials/other/amaya_logo_65x50.png)**
     * *Origin:* [Amaya public mailing list](https://lists.w3.org/Archives/Public/www-amaya/1997JulSep/0027.html)
