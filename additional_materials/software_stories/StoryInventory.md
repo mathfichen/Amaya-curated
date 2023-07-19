@@ -42,10 +42,21 @@ The template proposed below is structured from the more general information rega
 TO DO: Irène et Vincent, pouvez-vous regarder la timeline et indiquer ce qu'il faudrait modifier/ajouter? Je pense notamment à ajouter des éléments sur Grif, sur la rencontre entre les équipes d'Inria et celles du WWW, et sur la genèse d'Amaya.
 *************
 
+* 1983
+  *  Date title: The Grif project starts at Inria
+  *  Description: INRIA, CNRS and the University of Grenoble start the Grif project. At that time, producing documents with a computer was much more complex than today. The project aimed at combining the advantages of structured formatters (such as LateX) and those of interactive and real-time rendering systems. The first version was developed on a PERQ workstation, one of the first personal computers with a graphical interface. 
+  *  Image: http://www.chilton-computing.org.uk/gallery/1981/r35005_med.jpg
+
 * 12/11/1990
   *  Date title: Tim Berners-Lee and Robert Cailliau invent the World Wide Web (CERN)
   *  Description: The World Wide Web enables documents and other web resources to be accessed over the Internet according to specific rules, the Hypertext Transfer Protocol. Here, the screenshot of the recreated page of the first website (© CERN)
   *  Image: https://cds.cern.ch/record/2665153/files/Screenshot-World-Wide-Web-project-small.png?subformat=icon-640
+
+* 1991
+  *  Date title: Tamaya, a Webified Grif editor
+  *  Description: In 1991, the Inria team conducts its first experiment with the web. The Grif editor is quickly adapted for editing web pages. Several additional developments allowed for the integration of the libwww library for direct web access and hypertext link management. The \"webified\" Grif editor is named Tamaya, after the Tamaya tree in the team's office
+  *  Image: 
+
  
 *  30/04/1993
    *  Date title: CERN publicly releases the Web software, paving the way to its worlwide adoption
@@ -62,10 +73,15 @@ TO DO: Irène et Vincent, pouvez-vous regarder la timeline et indiquer ce qu'il 
    *  Description: In April 1995, the French Institute for Research in Computer Science and Automation became the European host of W3C
    *  Image: https://upload.wikimedia.org/wikipedia/commons/9/9e/Inr_logo_fr_rouge.png
 
+*  11/12/1995
+   *  Date title: Tamaya presented at W3C 4th Conference in Boston
+   *  Description: In December 1995, the 4th W3C conference took place in Boston, where Tamaya was presented as a demonstration. The W3C team quickly showed interest in it.
+   *  Image: https://www.w3.org/Icons/WWW95/WWW4_big.gif
+
 *  XX/XX/1996 ?
-   *  Date title: Meeting between Tim Bernes Lee and Amaya team?
-   *  Description: Work on Amaya started at W3C and Inria in 1996 to showcase Web technologies in a fully-featured Web client. The main motivation for developing Amaya was to provide a framework that can integrate as many W3C technologies as possible
-   *  Image: https://commons.wikimedia.org/wiki/File:Amaya-logo-1997.gif
+   *  Date title: W3C adopts Amaya
+   *  Description: Tamaya becomes Amaya and is adopted by the W3C as a test environmenent to showcase Web technologies in a fully-featured Web client. The main motivation for developing Amaya is to provide a framework that can integrate as many W3C technologies as possible, including Web pages edition. The picture shows Amaya main developper, Irène Vatton in her office in 1996
+   *  Image: https://stories-api-prod.s3.amazonaws.com/images/IreneVatton_Grenoble_1996.original.jpg
 
 *  XX/XX/XXX
    *  Date title: 
@@ -95,12 +111,6 @@ TO DO: Irène et Vincent, pouvez-vous regarder le petit texte descriptif et le m
   * Description: 
   * Image:
 
-## Amaya's team in Grenoble
-* Moment type: picture
-* Moment title: TThe team was located at Inria Grenoble
-* Subtitle: Here, Tim Bernes Lee is providing feedback on new Amaya release
-* URL: https://stories-api-stage.s3.amazonaws.com/images/1996_IreneVatton_Grenoble.original.jpg"
-
 
 ## Amaya's mailing list
 * Moment type: iframe
@@ -112,7 +122,7 @@ TO DO: Irène et Vincent, pouvez-vous regarder le petit texte descriptif et le m
 TO DO: Laurent, apparemment l'erreur dans l'affichae de l'iframe est [la suivante](https://hedgedoc.softwareheritage.org/uploads/5c2fc621-36f4-46ac-ae44-3d428ce781c7.png). Sais-tu si ce paramétrage peut être modifié sur le site d'Amaya?
 *************
 
-## Amaya features and design timeline
+## From Grif to Amaya,  25 years of evolution
 * Moment type: timeline
 * Moment title: Amaya features and design evolved throught time
 * Subtitle:
@@ -121,6 +131,15 @@ TO DO: Laurent, apparemment l'erreur dans l'affichae de l'iframe est [la suivant
 TO DO: Vincent, Irène, Laurent, sauriez-vous identifier quelques grandes évolutions de fonctionnalités qu'il serait intéressant de faire figurer? Voyez-vous d'autres choses à ajouter?
 *************
 
+*  1987
+   *  Date title: The Grif editor interface for interactive document editing
+   *  Description: The Grif editor allowed for structured document editing and real-time rendering (also called WYSIWYG \"What You See Is What You Get\")
+   *  Image: https://stories-api-prod.s3.amazonaws.com/images/Grif.original.png
+ 
+*  1995
+  *  Date title: A webified Grif editor
+  *  Description: The Grif editor is adapted to the edition of web pages in HTML language
+  *  Image: https://stories-api-prod.s3.amazonaws.com/images/WebifiedGrif_1995.original.png
 
 *  XX/XX/1996
    *  Date title: Amaya original logo
