@@ -1,21 +1,15 @@
 # Supporting the preservation of legacy source code.
 
-Instantiating this template creates a workbench to support the acquisition of legacy source code, according to [SWHAP](https://www.softwareheritage.org/swhap/), the [Software Heritage](https://www.softwareheritage.org/) Acquisition Process defined by the [SWHAP\@Pisa](
-    #TODO:
-) project.
+This project aims at preserving the source code and the history of the Amaya browser and editor, developped at Inria and W3C between 1996 and 2013. 
 
-The workbench comes with the predefined folders that are used in the supported process. Namely:
+The project is structured within two different branches.
 
-- Folder [raw materials](./raw_materials) is for the original materials, as they have been found or submitted.
+- The SourceCode branch features the source code of Amaya and its different versions. The original code was stored on a CVS server of the W3C and [archived on Github](https://github.com/w3c/Amaya-Editor) by Laurent Carcone (W3C, Irnia)
+- The Depository branch showcases different documents collected during the preservation processes.
+  - The `raw_source_code` and `browsable_source_code` feature some extra versions of the Amaya source code retrieved from the archived Amaya Website by Internet Archive.
+  - The `additional_material` folder contains extra material collected during the process (photos, articles)
+  - The `metadata` folder contains a catalogue, featuring all the collected item and some other metadata regarding the curation process.
 
-- Folder [browsable source](./browsable_source) is for a browsable version of the source code. Source files, with the right extension, have to be accessible through the GitHub web interface, e.g., archives should be decompressed, code should be transcribed if provided by images, etc.
-
-- Folder [source](./source) is for the curated revision of the source code, as a base for the reconstruction of the development history as a git repository.
-
-- Folder [metadata](/.metadata) holds various files with meta information (catalogue, actors, journal, tags) to be updated throughout the process. 
-
-- Folder [additional materials](./additional_materials) is for materials originated during the recovery process to document it or to shed new light on the recovered software project.
-
-Please note that this file need be **replaced** in the instantiated workbench.
+This project gave birth to a presentation of Amaya that can be found here: [Amaya's Software Story](https://stories.k2.services/publisher/collections/50/embed/stories/Q455973?api-key=tN5X1y7O.2NhLogJVhLsYANuCtSP1FjHPZHA6TUBd) (link to be updated). 
 
 Please look at the [SWHAPPE repository](https://github.com/Unipisa/SWHAPPE/blob/master/README.md) and the [guidelines](https://github.com/SoftwareHeritage/swhapguide/blob/master/SWHAP%40Pisa.pdf)  for more details. 
