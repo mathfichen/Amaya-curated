@@ -1,3 +1,7 @@
+[![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/mathfichen/Amaya-curated/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/mathfichen/Amaya-curated)
+
+[![SWH](https://archive.softwareheritage.org/badge/swh:1:dir:b4704d8b0f40ce567caa3430edc84263d26c909a/)](https://archive.softwareheritage.org/swh:1:dir:b4704d8b0f40ce567caa3430edc84263d26c909a;origin=https://github.com/mathfichen/Amaya-curated;visit=swh:1:snp:02496665bf225b4dc2ed0bfaf492ab6d3cc37acd;anchor=swh:1:rev:319440460197e961fd304442700188b2badba68e)
+
 # Supporting the preservation of legacy source code.
 
 This project aims at preserving the source code and the history of the Amaya browser and editor, developped at Inria and W3C between 1996 and 2013. 
